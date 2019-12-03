@@ -263,7 +263,7 @@
         
           
         
-        嗯..! 目前共计 5 篇日志。 继续努力。
+        嗯..! 目前共计 6 篇日志。 继续努力。
       </span>
 
       
@@ -277,6 +277,41 @@
           <div class="collection-title">
             <h1 class="archive-year" id="archive-year-2019">2019</h1>
           </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/12/02/bosuanzi-md/" itemprop="url">
+              
+                <span itemprop="name">bosuanzi.md</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-12-02T15:16:30+08:00" content="2019-12-02">
+          12-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
         
         
 
@@ -501,7 +536,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -591,26 +626,28 @@
   <span class="author" itemprop="copyrightHolder">Qian JinGuo</span>
   <span><a href="https://jinguo.tech">苏ICP备19059185号</a></span>
   
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">945</span>
    
 </div>
 
  <!-- 新增访客统计代码 -->
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="busuanzi-count">
-    
     <span class="site-uv">
       <i class="fa fa-user"></i>
       访问用户： <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人
     </span>
-    <div class="powered-by"></div>
     <span class="site-uv">
       <i class="fa fa-eye"></i>
       访问次数： <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次
-    </span>
-    <!-- 博客字数统计 -->
-    <span class="site-pv">
-      <i class="fa fa-file-o"></i>
-      博客全站共： <span class="post-count"></span> 字
     </span>
 </div>
 <!-- 新增访客统计代码 END-->
@@ -755,26 +792,30 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'MBKBwVbB6zXBsHRBkID7LOwD-gzGzoHsz',
+        appKey: 'HW8pyycEtAoDfaQFUWqyRAf0',
+        placeholder: 'Whisper for you in comment space,thanks buddy!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
