@@ -265,6 +265,188 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jinguo.tech/2019/12/26/StormDRPC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qian JinGuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="架构师成长之旅">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/26/StormDRPC/" itemprop="url">StormDRPC</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-26T16:53:06+08:00">
+                2019-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/12/26/StormDRPC/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/26/StormDRPC/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  0
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://jinguo.tech/2019/12/26/Netty-Study/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -376,7 +558,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  28
+                  29
                 </span>
               
             </div>
@@ -444,7 +626,7 @@
 <h3 id="3-ChannelFuture-异步通知"><a href="#3-ChannelFuture-异步通知" class="headerlink" title="3. ChannelFuture-异步通知"></a>3. ChannelFuture-异步通知</h3><p>Netty 中所有的 I/O 操作都是异步的,用于在之后的某个时间点确定其结果的方法</p>
 <h3 id="4-ChannelHandler和ChannelPipeline"><a href="#4-ChannelHandler和ChannelPipeline" class="headerlink" title="4. ChannelHandler和ChannelPipeline"></a>4. ChannelHandler和ChannelPipeline</h3><p>ChannelHandler负责Channel中的逻辑处理<br>其旨在简化应用程序处理逻辑的开发过程<br>充当了所有处理入站和出站数据的应用程序逻辑的容器<br>ChannelHandler子接口：<br>ChannelInboundHandler——处理入站数据以及各种状态变化<br>ChannelOutboundHandler——处理出站数据并且允许拦截所有的操作<br>ChannelInboundHandler的方法:<br><img src="https://ws1.sinaimg.cn/large/005Vjva3gy1g2qektcmgnj30w70gyjxt.jpg" alt><br>ChannelOutboundHandler的方法:<br><img src="https://ws1.sinaimg.cn/large/005Vjva3gy1g2qems6khbj30w70glaex.jpg" alt></p>
 <p>ChannelPipeline 提供了 ChannelHandler链的容器<br>定义了用于在该链上传播入站和出站事件流的API</p>
-<p>###5. ByteBuf-Netty的数据容器<br>Java NIO提供了ByteBuffer作为它的字节容器<br>Netty的ByteBuffer替代品是ByteBuf  </p>
+<h3 id="5-ByteBuf-Netty的数据容器"><a href="#5-ByteBuf-Netty的数据容器" class="headerlink" title="5. ByteBuf-Netty的数据容器"></a>5. ByteBuf-Netty的数据容器</h3><p>Java NIO提供了ByteBuffer作为它的字节容器<br>Netty的ByteBuffer替代品是ByteBuf  </p>
 <h5 id="A-它可以被用户自定义的缓冲区类型扩展，通过内置的复合缓冲区类型实现了透明的零拷贝；"><a href="#A-它可以被用户自定义的缓冲区类型扩展，通过内置的复合缓冲区类型实现了透明的零拷贝；" class="headerlink" title="A. 它可以被用户自定义的缓冲区类型扩展，通过内置的复合缓冲区类型实现了透明的零拷贝；"></a>A. 它可以被用户自定义的缓冲区类型扩展，通过内置的复合缓冲区类型实现了透明的零拷贝；</h5><h5 id="B-容量可以按需增长（类似于-JDK-的-StringBuilder）"><a href="#B-容量可以按需增长（类似于-JDK-的-StringBuilder）" class="headerlink" title="B.容量可以按需增长（类似于 JDK 的 StringBuilder）"></a>B.容量可以按需增长（类似于 JDK 的 StringBuilder）</h5><h5 id="C-读和写使用了不同的索引"><a href="#C-读和写使用了不同的索引" class="headerlink" title="C.读和写使用了不同的索引"></a>C.读和写使用了不同的索引</h5><h5 id="D-支持方法的链式调用"><a href="#D-支持方法的链式调用" class="headerlink" title="D.支持方法的链式调用"></a>D.支持方法的链式调用</h5><h5 id="E-支持引用计数"><a href="#E-支持引用计数" class="headerlink" title="E.支持引用计数"></a>E.支持引用计数</h5><h5 id="F-支持池化"><a href="#F-支持池化" class="headerlink" title="F.支持池化"></a>F.支持池化</h5><h3 id="6-Bootstap-引导客户端和无连接协议"><a href="#6-Bootstap-引导客户端和无连接协议" class="headerlink" title="6. Bootstap-引导客户端和无连接协议"></a>6. Bootstap-引导客户端和无连接协议</h3><p>Bootstrap类负责为客户端和使用无连接协议的应用程序创建 Channel<br><img src="http://ww1.sinaimg.cn/large/005Vjva3gy1g2q8bxb9z6j30h109mgn0.jpg" alt></p>
 <h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>使用EmbeddedChannel 测试 ChannelHandler  </p>
 <ol>
@@ -490,14 +672,13 @@
 <li>为什么要选择Netty框架？<br>Netty是业界最流行的NIO框架之一，它的健壮性、功能、性能、可定制性和可扩展性在同类框架中都是首屈一指的，它已经得到成百上千的商用项目验证，例如Hadoop的RPC框架Avro使用Netty作为通信框架。很多其它业界主流的RPC和分布式服务框架，也使用Netty来构建高性能的异步通信能力。<br>Netty的优点总结如下：<br>①API使用简单，开发门槛低；<br>②功能强大，预置了多种编解码功能，支持多种主流协议；<br>③定制能力强，可以通过ChannelHandler对通信框架进行灵活的扩展；<br>④性能高，通过与其它业界主流的NIO框架对比，Netty的综合性能最优；<br>⑤成熟、稳定，Netty修复了已经发现的所有JDK NIO BUG，业务开发人员不需要再为NIO的BUG而烦恼；<br>⑥社区活跃，版本迭代周期短，发现的BUG可以被及时修复，同时，更多的新功能会被加入；<br>⑦经历了大规模的商业应用考验，质量得到验证。在互联网、大数据、网络游戏、企业应用、电信软件等众多行业得到成功商用，证明了它完全满足不同行业的商用标准。</li>
 </ol>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="1-基于Netty的客户端和服务端的简单通信"><a href="#1-基于Netty的客户端和服务端的简单通信" class="headerlink" title="1. 基于Netty的客户端和服务端的简单通信"></a>1. 基于Netty的客户端和服务端的简单通信</h3><h5 id="要点："><a href="#要点：" class="headerlink" title="要点："></a>要点：</h5><p>①为初始化客户端， 创建了一个 Bootstrap 实例<br>②为进行事件处理分配了一个 NioEventLoopGroup 实例， 其中事件处理包括创建新的连接以及处理入站和出站数据；<br>③为服务器连接创建了一个 InetSocketAddress 实例；<br>④当连接被建立时，一个 EchoClientHandler 实例会被安装到（该 Channel 的）ChannelPipeline 中；<br>⑤在一切都设置完成后，调用 Bootstrap.connect()方法连接到远程节点；<br><img src="https://ws1.sinaimg.cn/large/005Vjva3gy1g2qkgzymnyj30gq0bht9k.jpg" alt></p>
-<h3 id="EchoServerHandler"><a href="#EchoServerHandler" class="headerlink" title="EchoServerHandler"></a>EchoServerHandler</h3><h5 id="channelRead-—对于每个传入的消息都要调用；"><a href="#channelRead-—对于每个传入的消息都要调用；" class="headerlink" title="channelRead()—对于每个传入的消息都要调用；"></a>channelRead()—对于每个传入的消息都要调用；</h5><h5 id="channelReadComplete-—通知ChannelInboundHandler最后一次对channelRead-的调用是当前批量读取中的最后一条消息；"><a href="#channelReadComplete-—通知ChannelInboundHandler最后一次对channelRead-的调用是当前批量读取中的最后一条消息；" class="headerlink" title="channelReadComplete()—通知ChannelInboundHandler最后一次对channelRead()的调用是当前批量读取中的最后一条消息；"></a>channelReadComplete()—通知ChannelInboundHandler最后一次对channelRead()的调用是当前批量读取中的最后一条消息；</h5><h5 id="exceptionCaught-—在读取操作期间，有异常抛出时会调用。"><a href="#exceptionCaught-—在读取操作期间，有异常抛出时会调用。" class="headerlink" title="exceptionCaught()—在读取操作期间，有异常抛出时会调用。"></a>exceptionCaught()—在读取操作期间，有异常抛出时会调用。</h5><p>​        //标示一个ChannelHandler可以被多个 Channel 安全地共享<br>​        @Sharable<br>​        public class EchoServerHandler extends ChannelInboundHandlerAdapter {<br>​            @Override<br>​            public void channelRead(ChannelHandlerContext ctx, Object msg) {<br>​                ByteBuf in = (ByteBuf) msg;<br>​                //将消息记录到控制台<br>​                System.out.println(<br>​                        “Server received: “ + in.toString(CharsetUtil.UTF_8));<br>​                //将接收到的消息写给发送者，而不冲刷出站消息<br>​                ctx.write(in);<br>​            }<br>​        </p>
+<h3 id="EchoServerHandler"><a href="#EchoServerHandler" class="headerlink" title="EchoServerHandler"></a>EchoServerHandler</h3><h5 id="channelRead-—对于每个传入的消息都要调用；"><a href="#channelRead-—对于每个传入的消息都要调用；" class="headerlink" title="channelRead()—对于每个传入的消息都要调用；"></a>channelRead()—对于每个传入的消息都要调用；</h5><h5 id="channelReadComplete-—通知ChannelInboundHandler最后一次对channelRead-的调用是当前批量读取中的最后一条消息；"><a href="#channelReadComplete-—通知ChannelInboundHandler最后一次对channelRead-的调用是当前批量读取中的最后一条消息；" class="headerlink" title="channelReadComplete()—通知ChannelInboundHandler最后一次对channelRead()的调用是当前批量读取中的最后一条消息；"></a>channelReadComplete()—通知ChannelInboundHandler最后一次对channelRead()的调用是当前批量读取中的最后一条消息；</h5><h5 id="exceptionCaught-—在读取操作期间，有异常抛出时会调用。"><a href="#exceptionCaught-—在读取操作期间，有异常抛出时会调用。" class="headerlink" title="exceptionCaught()—在读取操作期间，有异常抛出时会调用。"></a>exceptionCaught()—在读取操作期间，有异常抛出时会调用。</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//标示一个ChannelHandler可以被多个 Channel 安全地共享</span></span><br><span class="line">		<span class="meta">@Sharable</span></span><br><span class="line">		<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EchoServerHandler</span> <span class="keyword">extends</span> <span class="title">ChannelInboundHandlerAdapter</span> </span>&#123;</span><br><span class="line">		    <span class="meta">@Override</span></span><br><span class="line">		    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">channelRead</span><span class="params">(ChannelHandlerContext ctx, Object msg)</span> </span>&#123;</span><br><span class="line">		        ByteBuf in = (ByteBuf) msg;</span><br><span class="line">		        <span class="comment">//将消息记录到控制台</span></span><br><span class="line">		        System.out.println(</span><br><span class="line">		                <span class="string">"Server received: "</span> + in.toString(CharsetUtil.UTF_8));</span><br><span class="line">		        <span class="comment">//将接收到的消息写给发送者，而不冲刷出站消息</span></span><br><span class="line">		        ctx.write(in);</span><br><span class="line">		    &#125;</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    @Override</span><br><span class="line">    public void channelReadComplete(ChannelHandlerContext ctx)</span><br><span class="line">            throws Exception &#123;</span><br><span class="line">        //将未决消息冲刷到远程节点，并且关闭该 Channel</span><br><span class="line">        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER)</span><br><span class="line">                .addListener(ChannelFutureListener.CLOSE);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void exceptionCaught(ChannelHandlerContext ctx,</span><br><span class="line">        Throwable cause) &#123;</span><br><span class="line">        //打印异常栈跟踪</span><br><span class="line">        cause.printStackTrace();</span><br><span class="line">        //关闭该Channel</span><br><span class="line">        ctx.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="EchoServer"><a href="#EchoServer" class="headerlink" title="EchoServer"></a>EchoServer</h3><h5 id="绑定到服务器将在其上监听并接受传入连接请求的端口；"><a href="#绑定到服务器将在其上监听并接受传入连接请求的端口；" class="headerlink" title="绑定到服务器将在其上监听并接受传入连接请求的端口；"></a>绑定到服务器将在其上监听并接受传入连接请求的端口；</h5><h5 id="配置-Channel，以将有关的入站消息通知给-EchoServerHandler-实例。"><a href="#配置-Channel，以将有关的入站消息通知给-EchoServerHandler-实例。" class="headerlink" title="配置 Channel，以将有关的入站消息通知给 EchoServerHandler 实例。"></a>配置 Channel，以将有关的入站消息通知给 EchoServerHandler 实例。</h5><p>​        public class EchoServer {<br>​            private final int port;<br>​        </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">    public EchoServer(int port) &#123;</span><br><span class="line">        this.port = port;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">        throws Exception &#123;</span><br><span class="line">        if (args.length != 1) &#123;</span><br><span class="line">            System.err.println(&quot;Usage: &quot; + EchoServer.class.getSimpleName() +</span><br><span class="line">                &quot; &lt;port&gt;&quot;</span><br><span class="line">            );</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        //设置端口值（如果端口参数的格式不正确，则抛出一个NumberFormatException）</span><br><span class="line">        int port = Integer.parseInt(args[0]);</span><br><span class="line">        //调用服务器的 start()方法</span><br><span class="line">        new EchoServer(port).start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void start() throws Exception &#123;</span><br><span class="line">        final EchoServerHandler serverHandler = new EchoServerHandler();</span><br><span class="line">        //(1) 创建EventLoopGroup</span><br><span class="line">        EventLoopGroup group = new NioEventLoopGroup();</span><br><span class="line">        try &#123;</span><br><span class="line">            //(2) 创建ServerBootstrap</span><br><span class="line">            ServerBootstrap b = new ServerBootstrap();</span><br><span class="line">            b.group(group)</span><br><span class="line">                //(3) 指定所使用的 NIO 传输 Channel</span><br><span class="line">                .channel(NioServerSocketChannel.class)</span><br><span class="line">                //(4) 使用指定的端口设置套接字地址</span><br><span class="line">                .localAddress(new InetSocketAddress(port))</span><br><span class="line">                //(5) 添加一个EchoServerHandler到于Channel的 ChannelPipeline</span><br><span class="line">                .childHandler(new ChannelInitializer&lt;SocketChannel&gt;() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public void initChannel(SocketChannel ch) throws Exception &#123;</span><br><span class="line">                        //EchoServerHandler 被标注为@Shareable，所以我们可以总是使用同样的实例</span><br><span class="line">                        //这里对于所有的客户端连接来说，都会使用同一个 EchoServerHandler，因为其被标注为@Sharable，</span><br><span class="line">                        //这将在后面的章节中讲到。</span><br><span class="line">                        ch.pipeline().addLast(serverHandler);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            //(6) 异步地绑定服务器；调用 sync()方法阻塞等待直到绑定完成</span><br><span class="line">            ChannelFuture f = b.bind().sync();</span><br><span class="line">            System.out.println(EchoServer.class.getName() +</span><br><span class="line">                &quot; started and listening for connections on &quot; + f.channel().localAddress());</span><br><span class="line">            //(7) 获取 Channel 的CloseFuture，并且阻塞当前线程直到它完成</span><br><span class="line">            f.channel().closeFuture().sync();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            //(8) 关闭 EventLoopGroup，释放所有的资源</span><br><span class="line">            group.shutdownGracefully().sync();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="EchoServer"><a href="#EchoServer" class="headerlink" title="EchoServer"></a>EchoServer</h3><h5 id="绑定到服务器将在其上监听并接受传入连接请求的端口；"><a href="#绑定到服务器将在其上监听并接受传入连接请求的端口；" class="headerlink" title="绑定到服务器将在其上监听并接受传入连接请求的端口；"></a>绑定到服务器将在其上监听并接受传入连接请求的端口；</h5><h5 id="配置-Channel，以将有关的入站消息通知给-EchoServerHandler-实例"><a href="#配置-Channel，以将有关的入站消息通知给-EchoServerHandler-实例" class="headerlink" title="配置 Channel，以将有关的入站消息通知给 EchoServerHandler 实例"></a>配置 Channel，以将有关的入站消息通知给 EchoServerHandler 实例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">public class EchoServer &#123;</span><br><span class="line">	private final int port;</span><br><span class="line">    public EchoServer(int port) &#123;</span><br><span class="line">        this.port = port;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">        throws Exception &#123;</span><br><span class="line">        if (args.length != 1) &#123;</span><br><span class="line">            System.err.println(&quot;Usage: &quot; + EchoServer.class.getSimpleName() +</span><br><span class="line">                &quot; &lt;port&gt;&quot;</span><br><span class="line">            );</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        //设置端口值（如果端口参数的格式不正确，则抛出一个NumberFormatException）</span><br><span class="line">        int port = Integer.parseInt(args[0]);</span><br><span class="line">        //调用服务器的 start()方法</span><br><span class="line">        new EchoServer(port).start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void start() throws Exception &#123;</span><br><span class="line">        final EchoServerHandler serverHandler = new EchoServerHandler();</span><br><span class="line">        //(1) 创建EventLoopGroup</span><br><span class="line">        EventLoopGroup group = new NioEventLoopGroup();</span><br><span class="line">        try &#123;</span><br><span class="line">            //(2) 创建ServerBootstrap</span><br><span class="line">            ServerBootstrap b = new ServerBootstrap();</span><br><span class="line">            b.group(group)</span><br><span class="line">                //(3) 指定所使用的 NIO 传输 Channel</span><br><span class="line">                .channel(NioServerSocketChannel.class)</span><br><span class="line">                //(4) 使用指定的端口设置套接字地址</span><br><span class="line">                .localAddress(new InetSocketAddress(port))</span><br><span class="line">                //(5) 添加一个EchoServerHandler到于Channel的 ChannelPipeline</span><br><span class="line">                .childHandler(new ChannelInitializer&lt;SocketChannel&gt;() &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public void initChannel(SocketChannel ch) throws Exception &#123;</span><br><span class="line">                        //EchoServerHandler 被标注为@Shareable，所以我们可以总是使用同样的实例</span><br><span class="line">                        //这里对于所有的客户端连接来说，都会使用同一个 EchoServerHandler，因为其被标注为									 @Sharable，</span><br><span class="line">                        //这将在后面的章节中讲到。</span><br><span class="line">                        ch.pipeline().addLast(serverHandler);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            //(6) 异步地绑定服务器；调用 sync()方法阻塞等待直到绑定完成</span><br><span class="line">            ChannelFuture f = b.bind().sync();</span><br><span class="line">            System.out.println(EchoServer.class.getName() +</span><br><span class="line">                &quot; started and listening for connections on &quot; + f.channel().localAddress());</span><br><span class="line">            //(7) 获取 Channel 的CloseFuture，并且阻塞当前线程直到它完成</span><br><span class="line">            f.channel().closeFuture().sync();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            //(8) 关闭 EventLoopGroup，释放所有的资源</span><br><span class="line">            group.shutdownGracefully().sync();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="通过-ChannelHandler-实现客户端逻辑"><a href="#通过-ChannelHandler-实现客户端逻辑" class="headerlink" title="通过 ChannelHandler 实现客户端逻辑"></a>通过 ChannelHandler 实现客户端逻辑</h3><h5 id="channelActive-——在到服务器的连接已经建立之后将被调用；"><a href="#channelActive-——在到服务器的连接已经建立之后将被调用；" class="headerlink" title="channelActive()——在到服务器的连接已经建立之后将被调用；"></a>channelActive()——在到服务器的连接已经建立之后将被调用；</h5><h5 id="channelRead0-——当服务器接收到一条消息时被调用"><a href="#channelRead0-——当服务器接收到一条消息时被调用" class="headerlink" title="channelRead0()——当服务器接收到一条消息时被调用"></a>channelRead0()——当服务器接收到一条消息时被调用</h5><h5 id="exceptionCaught-——在处理过程中引发异常时被调用。"><a href="#exceptionCaught-——在处理过程中引发异常时被调用。" class="headerlink" title="exceptionCaught()——在处理过程中引发异常时被调用。"></a>exceptionCaught()——在处理过程中引发异常时被调用。</h5><p>​        @Sharable<br>​        //标记该类的实例可以被多个 Channel 共享<br>​        public class EchoClientHandler<br>​            extends SimpleChannelInboundHandler<bytebuf> {<br>​            @Override<br>​            public void channelActive(ChannelHandlerContext ctx) {<br>​                //当被通知 Channel是活跃的时候，发送一条消息<br>​                ctx.writeAndFlush(Unpooled.copiedBuffer(“Netty rocks!”,<br>​                        CharsetUtil.UTF_8));<br>​            }<br>​        </bytebuf></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">    @Override</span><br><span class="line">    public void channelRead0(ChannelHandlerContext ctx, ByteBuf in) &#123;</span><br><span class="line">        //记录已接收消息的转储</span><br><span class="line">        System.out.println(</span><br><span class="line">                &quot;Client received: &quot; + in.toString(CharsetUtil.UTF_8));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    //在发生异常时，记录错误并关闭Channel</span><br><span class="line">    public void exceptionCaught(ChannelHandlerContext ctx,</span><br><span class="line">        Throwable cause) &#123;</span><br><span class="line">        cause.printStackTrace();</span><br><span class="line">        ctx.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="通过-ChannelHandler-实现客户端逻辑"><a href="#通过-ChannelHandler-实现客户端逻辑" class="headerlink" title="通过 ChannelHandler 实现客户端逻辑"></a>通过 ChannelHandler 实现客户端逻辑</h3><h5 id="channelActive-——在到服务器的连接已经建立之后将被调用；"><a href="#channelActive-——在到服务器的连接已经建立之后将被调用；" class="headerlink" title="channelActive()——在到服务器的连接已经建立之后将被调用；"></a>channelActive()——在到服务器的连接已经建立之后将被调用；</h5><h5 id="channelRead0-——当服务器接收到一条消息时被调用"><a href="#channelRead0-——当服务器接收到一条消息时被调用" class="headerlink" title="channelRead0()——当服务器接收到一条消息时被调用"></a>channelRead0()——当服务器接收到一条消息时被调用</h5><h5 id="exceptionCaught-——在处理过程中引发异常时被调用。"><a href="#exceptionCaught-——在处理过程中引发异常时被调用。" class="headerlink" title="exceptionCaught()——在处理过程中引发异常时被调用。"></a>exceptionCaught()——在处理过程中引发异常时被调用。</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Sharable</span></span><br><span class="line">	<span class="comment">//标记该类的实例可以被多个 Channel 共享</span></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EchoClientHandler</span></span></span><br><span class="line"><span class="class">	    <span class="keyword">extends</span> <span class="title">SimpleChannelInboundHandler</span>&lt;<span class="title">ByteBuf</span>&gt; </span>&#123;</span><br><span class="line">	    <span class="meta">@Override</span></span><br><span class="line">	    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">channelActive</span><span class="params">(ChannelHandlerContext ctx)</span> </span>&#123;</span><br><span class="line">	        <span class="comment">//当被通知 Channel是活跃的时候，发送一条消息</span></span><br><span class="line">	        ctx.writeAndFlush(Unpooled.copiedBuffer(<span class="string">"Netty rocks!"</span>,</span><br><span class="line">	                CharsetUtil.UTF_8));</span><br><span class="line">	    &#125;</span><br><span class="line">       <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">channelRead0</span><span class="params">(ChannelHandlerContext ctx, ByteBuf in)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//记录已接收消息的转储</span></span><br><span class="line">        System.out.println(</span><br><span class="line">                <span class="string">"Client received: "</span> + in.toString(CharsetUtil.UTF_8));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="comment">//在发生异常时，记录错误并关闭Channel</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">exceptionCaught</span><span class="params">(ChannelHandlerContext ctx,</span></span></span><br><span class="line"><span class="function"><span class="params">        Throwable cause)</span> </span>&#123;</span><br><span class="line">        cause.printStackTrace();</span><br><span class="line">        ctx.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="引导客户端"><a href="#引导客户端" class="headerlink" title="引导客户端"></a>引导客户端</h3><h5 id="客户端是使用主机和端口参数来连接远程地址，也就是Echo-服务器的地址，而不是绑定到一个一直被监听的端口"><a href="#客户端是使用主机和端口参数来连接远程地址，也就是Echo-服务器的地址，而不是绑定到一个一直被监听的端口" class="headerlink" title="客户端是使用主机和端口参数来连接远程地址，也就是Echo 服务器的地址，而不是绑定到一个一直被监听的端口"></a>客户端是使用主机和端口参数来连接远程地址，也就是Echo 服务器的地址，而不是绑定到一个一直被监听的端口</h5><p>​        public class EchoClient {<br>​            private final String host;<br>​            private final int port;<br>​            public EchoClient(String host, int port) {<br>​                this.host = host;<br>​                this.port = port;<br>​        </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void start()</span><br><span class="line">        throws Exception &#123;</span><br><span class="line">        EventLoopGroup group = new NioEventLoopGroup();</span><br><span class="line">        try &#123;</span><br><span class="line">            //创建 Bootstrap</span><br><span class="line">            Bootstrap b = new Bootstrap();</span><br><span class="line">            //指定 EventLoopGroup 以处理客户端事件；需要适用于 NIO 的实现</span><br><span class="line">            b.group(group)</span><br><span class="line">                //适用于 NIO 传输的Channel 类型</span><br><span class="line">                .channel(NioSocketChannel.class)</span><br><span class="line">                //设置服务器的InetSocketAddress</span><br><span class="line">                .remoteAddress(new InetSocketAddress(host, port))</span><br><span class="line">                //在创建Channel时，向 ChannelPipeline中添加一个 EchoClientHandler实例</span><br><span class="line">                .handler(new ChannelInitializer&lt;SocketChannel&gt;()    &#123;</span><br><span class="line">                    @Override</span><br><span class="line">                    public void initChannel(SocketChannel ch)</span><br><span class="line">                        throws Exception &#123;</span><br><span class="line">                        ch.pipeline().addLast(</span><br><span class="line">                             new EchoClientHandler());</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            //连接到远程节点，阻塞等待直到连接完成</span><br><span class="line">            ChannelFuture f = b.connect().sync();</span><br><span class="line">            //阻塞，直到Channel 关闭</span><br><span class="line">            f.channel().closeFuture().sync();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            //关闭线程池并且释放所有的资源</span><br><span class="line">            group.shutdownGracefully().sync();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">            throws Exception &#123;</span><br><span class="line">        if (args.length != 2) &#123;</span><br><span class="line">            System.err.println(&quot;Usage: &quot; + EchoClient.class.getSimpleName() +</span><br><span class="line">                    &quot; &lt;host&gt; &lt;port&gt;&quot;</span><br><span class="line">            );</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        final String host = args[0];</span><br><span class="line">        final int port = Integer.parseInt(args[1]);</span><br><span class="line">        new EchoClient(host, port).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -590,6 +771,192 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jinguo.tech/2019/12/26/restart-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qian JinGuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="架构师成长之旅">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/26/restart-blog/" itemprop="url">restart blog.md</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-26T15:46:28+08:00">
+                2019-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/12/26/restart-blog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/26/restart-blog/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  25
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="学习计划："><a href="#学习计划：" class="headerlink" title="学习计划："></a>学习计划：</h1><h2 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h2><p>1博客搭建完成</p>
+<p>2kindle阅读</p>
+<p>3实体书</p>
+<p>4视频</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -638,7 +1005,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -649,7 +1016,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -660,7 +1027,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
