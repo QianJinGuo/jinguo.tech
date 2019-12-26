@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Netty,">
 
 
 
@@ -81,17 +81,34 @@
 
 
 
-<meta name="description" content="从初学者开始，学习涵盖Java,Scala,Python,Go等核心编程语言，逐步掌握分布式、高并发的开发诀窍。习得算法，框架原理，工程化的开发流程。练代码修炼之道，提升知识软实力，项目开发实战。">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
-<meta property="og:type" content="website">
-<meta property="og:title" content="架构师成长之旅">
-<meta property="og:url" content="https://jinguo.tech/index.html">
+<meta name="description" content="业界哪些流行的开源框架用Netty作为底层通信框架 Dubbo： 阿里开源的高性能RPC框架 RocketMQ： 阿里出品的高性能消息队列 Spark： 炙手可热的大数据处理引擎，底层使用Netty Elasticsearch： 分布式多用户的全文搜索引擎 Apache Cassandra：开源分布式搜索数据库 Flink:分布式高性能高可用的流处理框架 Netty-SocketIO的java服务">
+<meta name="keywords" content="Netty">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Netty Study">
+<meta property="og:url" content="https://jinguo.tech/2019/12/26/Netty-Study/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="从初学者开始，学习涵盖Java,Scala,Python,Go等核心编程语言，逐步掌握分布式、高并发的开发诀窍。习得算法，框架原理，工程化的开发流程。练代码修炼之道，提升知识软实力，项目开发实战。">
+<meta property="og:description" content="业界哪些流行的开源框架用Netty作为底层通信框架 Dubbo： 阿里开源的高性能RPC框架 RocketMQ： 阿里出品的高性能消息队列 Spark： 炙手可热的大数据处理引擎，底层使用Netty Elasticsearch： 分布式多用户的全文搜索引擎 Apache Cassandra：开源分布式搜索数据库 Flink:分布式高性能高可用的流处理框架 Netty-SocketIO的java服务">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2khv8xo9uj30xv0hnjwl.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2jjx06me9j30wi0jj0z8.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2kf4qvkn2j30wm0m4ti7.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2q5th3hz7j30fu0cyq43.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2q87lnpb3j30om0dm42s.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005Vjva3gy1g2qektcmgnj30w70gyjxt.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005Vjva3gy1g2qems6khbj30w70glaex.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2q8bxb9z6j30h109mgn0.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2kg7oiieaj30tm0ds43k.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2kgfjm05gj314u0qg1kx.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2kgxvgph7j31880o7nf4.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005Vjva3gy1g2qilnmzwij30se0htwqp.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005Vjva3gy1g2qipchj94j30s20chth5.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005Vjva3gy1g2qkgzymnyj30gq0bht9k.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005Vjva3gy1g2qj3z3tr0j30er089dfu.jpg">
+<meta property="og:updated_time" content="2019-12-26T08:01:35.629Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="从初学者开始，学习涵盖Java,Scala,Python,Go等核心编程语言，逐步掌握分布式、高并发的开发诀窍。习得算法，框架原理，工程化的开发流程。练代码修炼之道，提升知识软实力，项目开发实战。">
+<meta name="twitter:title" content="Netty Study">
+<meta name="twitter:description" content="业界哪些流行的开源框架用Netty作为底层通信框架 Dubbo： 阿里开源的高性能RPC框架 RocketMQ： 阿里出品的高性能消息队列 Spark： 炙手可热的大数据处理引擎，底层使用Netty Elasticsearch： 分布式多用户的全文搜索引擎 Apache Cassandra：开源分布式搜索数据库 Flink:分布式高性能高可用的流处理框架 Netty-SocketIO的java服务">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/005Vjva3gy1g2khv8xo9uj30xv0hnjwl.jpg">
 
 
 
@@ -121,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://jinguo.tech/">
+  <link rel="canonical" href="https://jinguo.tech/2019/12/26/Netty-Study/">
 
 
 
 
 
-  <title>架构师成长之旅</title>
+  <title>Netty Study | 架构师成长之旅</title>
   
 
 
@@ -146,8 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -250,9 +266,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -282,9 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/26/Netty-Study/" itemprop="url">Netty Study</a></h1>
+          <h1 class="post-title" itemprop="name headline">Netty Study</h1>
         
 
         <div class="post-meta">
@@ -397,9 +411,7 @@
       
 
       
-        
-          
-            <h2 id="业界哪些流行的开源框架用Netty作为底层通信框架"><a href="#业界哪些流行的开源框架用Netty作为底层通信框架" class="headerlink" title="业界哪些流行的开源框架用Netty作为底层通信框架"></a>业界哪些流行的开源框架用Netty作为底层通信框架</h2><ul>
+        <h2 id="业界哪些流行的开源框架用Netty作为底层通信框架"><a href="#业界哪些流行的开源框架用Netty作为底层通信框架" class="headerlink" title="业界哪些流行的开源框架用Netty作为底层通信框架"></a>业界哪些流行的开源框架用Netty作为底层通信框架</h2><ul>
 <li>Dubbo： 阿里开源的高性能RPC框架</li>
 <li>RocketMQ： 阿里出品的高性能消息队列</li>
 <li>Spark： 炙手可热的大数据处理引擎，底层使用Netty</li>
@@ -605,8 +617,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IAsyncObjectProxy client = rpcClient.createAsync(HelloService.class);</span><br><span class="line">RPCFuture helloFuture = client.call(&quot;hello&quot;, Integer.toString(i));</span><br><span class="line">String result = (String) helloFuture.get(3000, TimeUnit.MILLISECONDS);</span><br></pre></td></tr></table></figure>
 
 
-          
-        
       
     </div>
     
@@ -621,14 +631,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Netty/" rel="tag"># Netty</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -638,10 +654,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -649,6 +666,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -669,8 +693,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -755,6 +788,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#业界哪些流行的开源框架用Netty作为底层通信框架"><span class="nav-number">1.</span> <span class="nav-text">业界哪些流行的开源框架用Netty作为底层通信框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业界有哪些公司在使用Netty"><span class="nav-number">2.</span> <span class="nav-text">业界有哪些公司在使用Netty</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Netty是什么"><span class="nav-number">3.</span> <span class="nav-text">Netty是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Netty的特性总结"><span class="nav-number">4.</span> <span class="nav-text">Netty的特性总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Socket-amp-Netty"><span class="nav-number">5.</span> <span class="nav-text">Socket &amp; Netty</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#A-它可以被用户自定义的缓冲区类型扩展，通过内置的复合缓冲区类型实现了透明的零拷贝；"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">A. 它可以被用户自定义的缓冲区类型扩展，通过内置的复合缓冲区类型实现了透明的零拷贝；</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#B-容量可以按需增长（类似于-JDK-的-StringBuilder）"><span class="nav-number">5.0.0.2.</span> <span class="nav-text">B.容量可以按需增长（类似于 JDK 的 StringBuilder）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#C-读和写使用了不同的索引"><span class="nav-number">5.0.0.3.</span> <span class="nav-text">C.读和写使用了不同的索引</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#D-支持方法的链式调用"><span class="nav-number">5.0.0.4.</span> <span class="nav-text">D.支持方法的链式调用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#E-支持引用计数"><span class="nav-number">5.0.0.5.</span> <span class="nav-text">E.支持引用计数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#F-支持池化"><span class="nav-number">5.0.0.6.</span> <span class="nav-text">F.支持池化</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#单元测试"><span class="nav-number">6.</span> <span class="nav-text">单元测试</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -907,6 +956,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
