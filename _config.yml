@@ -85,4 +85,45 @@ deploy:
 # 将头像放置主题目录下的 source/uploads/ （新建uploads目录若不存在） 配置为：
 avatar: /uploads/avatar.png
 
+# live2d    
+live2d:
+  enable: true
+  scriptFrom: local
+  model:
+    use: live2d-widget-model-tororo
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true
 
+# markdown-it配置emoji表情包
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-emoji  #用emoji插件
+  anchors:
+   level: 1
+   collisionSuffix: 'v'
+   permalink: true
+   permalinkClass: header-anchor
+   permalinkSymbol: ''
+
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
