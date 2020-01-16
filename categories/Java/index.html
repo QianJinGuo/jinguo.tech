@@ -92,7 +92,7 @@
 <meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
 <meta property="og:type" content="website">
 <meta property="og:title" content="架构师成长之旅">
-<meta property="og:url" content="https://jinguo.tech/categories/Java/index.html">
+<meta property="og:url" content="https://jinguo.tech/categories/java/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
 <meta property="og:description" content="从初学者开始，学习涵盖Java,Scala,Python,Go等核心编程语言，逐步掌握分布式、高并发的开发诀窍。习得算法，框架原理，工程化的开发流程。练代码修炼之道，提升知识软实力，项目开发实战。">
 <meta property="og:locale" content="zh-Hans">
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://jinguo.tech/categories/Java/">
+  <link rel="canonical" href="https://jinguo.tech/categories/java/">
 
 
 
 
 
-  <title>分类: Java | 架构师成长之旅</title>
+  <title>分类: java | 架构师成长之旅</title>
   
 
 
@@ -296,7 +296,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Java<small>分类</small>
+        <h1>java<small>分类</small>
         </h1>
       </div>
 
@@ -308,69 +308,17 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/12/26/StormDRPC/" itemprop="url">
+            <a class="post-title-link" href="/2019/12/26/restart-blog/" itemprop="url">
               
-                <span itemprop="name">StormDRPC</span>
+                <span itemprop="name">restart blog.md</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-12-26T16:53:06+08:00" content="2019-12-26">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-12-26T15:46:28+08:00" content="2019-12-26">
           12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/12/26/Netty-Study/" itemprop="url">
-              
-                <span itemprop="name">Netty Study</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-12-26T15:59:12+08:00" content="2019-12-26">
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/16/RocketMQ实战/" itemprop="url">
-              
-                <span itemprop="name">RocketMQ实战</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-16T14:15:08+08:00" content="2019-01-16">
-          01-16
         </time>
       </div>
 
@@ -531,7 +479,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.8k</span>
+    <span title="Site words total count">7.6k</span>
    
 </div>
 
@@ -1011,6 +959,59 @@
           }
 
           // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+  // remove loading animation
           $(".local-search-pop-overlay").remove();
           $('body').css('overflow', '');
 
