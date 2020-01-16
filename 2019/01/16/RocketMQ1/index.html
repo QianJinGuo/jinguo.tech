@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="RocketMQ（一） 1. RocketMQ 是什么 RocketMQ是一款[1]、[2]、[3]、易于使用的消息中间件 RocketMQ具有以下特性  支持发布/订阅（Pub/Sub）和点对点（P2P）消息模型 在一个队列中可靠的先进先出（FIFO）和严格的顺序传递 支持拉（pull）和推（push）两种消息模式 单一队列百万消息的堆积能力 支持多种消息协议，如 JMS、MQTT 等 分布式高">
+<meta name="description" content="1. RocketMQ 是什么 RocketMQ是一款[1]、[2]、[3]、易于使用的消息中间件 RocketMQ具有以下特性  支持发布/订阅（Pub/Sub）和点对点（P2P）消息模型 在一个队列中可靠的先进先出（FIFO）和严格的顺序传递 支持拉（pull）和推（push）两种消息模式 单一队列百万消息的堆积能力 支持多种消息协议，如 JMS、MQTT 等 分布式高可用的部署架构,满足至少">
 <meta name="keywords" content="MQ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RocketMQ（一）">
-<meta property="og:url" content="https://jinguo.tech/2019/01/16/RocketMQ(上)/index.html">
+<meta property="og:url" content="https://jinguo.tech/2019/01/16/RocketMQ1/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="RocketMQ（一） 1. RocketMQ 是什么 RocketMQ是一款[1]、[2]、[3]、易于使用的消息中间件 RocketMQ具有以下特性  支持发布/订阅（Pub/Sub）和点对点（P2P）消息模型 在一个队列中可靠的先进先出（FIFO）和严格的顺序传递 支持拉（pull）和推（push）两种消息模式 单一队列百万消息的堆积能力 支持多种消息协议，如 JMS、MQTT 等 分布式高">
+<meta property="og:description" content="1. RocketMQ 是什么 RocketMQ是一款[1]、[2]、[3]、易于使用的消息中间件 RocketMQ具有以下特性  支持发布/订阅（Pub/Sub）和点对点（P2P）消息模型 在一个队列中可靠的先进先出（FIFO）和严格的顺序传递 支持拉（pull）和推（push）两种消息模式 单一队列百万消息的堆积能力 支持多种消息协议，如 JMS、MQTT 等 分布式高可用的部署架构,满足至少">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-16T06:19:42.506Z">
+<meta property="og:updated_time" content="2020-01-16T06:22:16.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RocketMQ（一）">
-<meta name="twitter:description" content="RocketMQ（一） 1. RocketMQ 是什么 RocketMQ是一款[1]、[2]、[3]、易于使用的消息中间件 RocketMQ具有以下特性  支持发布/订阅（Pub/Sub）和点对点（P2P）消息模型 在一个队列中可靠的先进先出（FIFO）和严格的顺序传递 支持拉（pull）和推（push）两种消息模式 单一队列百万消息的堆积能力 支持多种消息协议，如 JMS、MQTT 等 分布式高">
+<meta name="twitter:description" content="1. RocketMQ 是什么 RocketMQ是一款[1]、[2]、[3]、易于使用的消息中间件 RocketMQ具有以下特性  支持发布/订阅（Pub/Sub）和点对点（P2P）消息模型 在一个队列中可靠的先进先出（FIFO）和严格的顺序传递 支持拉（pull）和推（push）两种消息模式 单一队列百万消息的堆积能力 支持多种消息协议，如 JMS、MQTT 等 分布式高可用的部署架构,满足至少">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="https://jinguo.tech/2019/01/16/RocketMQ(上)/">
+  <link rel="canonical" href="https://jinguo.tech/2019/01/16/RocketMQ1/">
 
 
 
@@ -304,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jinguo.tech/2019/01/16/RocketMQ(上)/">
+    <link itemprop="mainEntityOfPage" href="https://jinguo.tech/2019/01/16/RocketMQ1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qian JinGuo">
@@ -374,8 +374,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/01/16/RocketMQ(上)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/16/RocketMQ(上)/" itemprop="commentCount"></span>
+                <a href="/2019/01/16/RocketMQ1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/16/RocketMQ1/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  688
+                  686
                 </span>
               
 
@@ -434,8 +434,7 @@
       
 
       
-        <h1 id="RocketMQ（一）"><a class="header-anchor" href="#RocketMQ（一）"></a>RocketMQ（一）</h1>
-<h2 id="1-RocketMQ-是什么"><a class="header-anchor" href="#1-RocketMQ-是什么"></a>1. RocketMQ 是什么</h2>
+        <h2 id="1-RocketMQ-是什么"><a class="header-anchor" href="#1-RocketMQ-是什么"></a>1. RocketMQ 是什么</h2>
 <h4 id="RocketMQ是一款、、、易于使用的消息中间件"><a class="header-anchor" href="#RocketMQ是一款、、、易于使用的消息中间件"></a>RocketMQ是一款<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>、<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>、<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>、易于使用的消息中间件</h4>
 <h4 id="RocketMQ具有以下特性"><a class="header-anchor" href="#RocketMQ具有以下特性"></a>RocketMQ具有以下特性</h4>
 <ul>
@@ -505,7 +504,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jinguo.tech/2019/01/16/RocketMQ(上)/" title="RocketMQ（一）">https://jinguo.tech/2019/01/16/RocketMQ(上)/</a>
+    <a href="https://jinguo.tech/2019/01/16/RocketMQ1/" title="RocketMQ（一）">https://jinguo.tech/2019/01/16/RocketMQ1/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -623,7 +622,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -701,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RocketMQ（一）"><span class="nav-number">1.</span> <span class="nav-text">RocketMQ（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-RocketMQ-是什么"><span class="nav-number">1.1.</span> <span class="nav-text">1. RocketMQ 是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RocketMQ是一款、、、易于使用的消息中间件"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">RocketMQ是一款[1]、[2]、[3]、易于使用的消息中间件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RocketMQ具有以下特性"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">RocketMQ具有以下特性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Producer"><span class="nav-number">1.1.1.</span> <span class="nav-text">Producer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Producer-Group"><span class="nav-number">1.1.2.</span> <span class="nav-text">Producer Group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Consumer"><span class="nav-number">1.1.3.</span> <span class="nav-text">Consumer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Consumer-Group"><span class="nav-number">1.1.4.</span> <span class="nav-text">Consumer Group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topic"><span class="nav-number">1.1.5.</span> <span class="nav-text">Topic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Message"><span class="nav-number">1.1.6.</span> <span class="nav-text">Message</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag"><span class="nav-number">1.1.7.</span> <span class="nav-text">Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Broker"><span class="nav-number">1.1.8.</span> <span class="nav-text">Broker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Name-Server"><span class="nav-number">1.1.9.</span> <span class="nav-text">Name Server</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-RocketMQ-是什么"><span class="nav-number">1.</span> <span class="nav-text">1. RocketMQ 是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RocketMQ是一款、、、易于使用的消息中间件"><span class="nav-number">1.0.1.</span> <span class="nav-text">RocketMQ是一款[1]、[2]、[3]、易于使用的消息中间件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RocketMQ具有以下特性"><span class="nav-number">1.0.2.</span> <span class="nav-text">RocketMQ具有以下特性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Producer"><span class="nav-number">1.1.</span> <span class="nav-text">Producer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Producer-Group"><span class="nav-number">1.2.</span> <span class="nav-text">Producer Group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Consumer"><span class="nav-number">1.3.</span> <span class="nav-text">Consumer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Consumer-Group"><span class="nav-number">1.4.</span> <span class="nav-text">Consumer Group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topic"><span class="nav-number">1.5.</span> <span class="nav-text">Topic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Message"><span class="nav-number">1.6.</span> <span class="nav-text">Message</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag"><span class="nav-number">1.7.</span> <span class="nav-text">Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Broker"><span class="nav-number">1.8.</span> <span class="nav-text">Broker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Name-Server"><span class="nav-number">1.9.</span> <span class="nav-text">Name Server</span></a></li></ol></div>
             
 
           </div>
