@@ -79,7 +79,9 @@ theme: next  # 主题
 ## Docs: https://hexo.io/docs/deployment.html  部署
 deploy: 
   type: git
-  repo:  git@github.com:QianJinGuo/qianjinguo.github.io.git
+  repo: 
+    github: git@github.com:QianJinGuo/qianjinguo.github.io.git
+    coding: git@e.coding.net:jinguo/jinguo.coding.me.git
   branch: master
 
 # 将头像放置主题目录下的 source/uploads/ （新建uploads目录若不存在） 配置为：
