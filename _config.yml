@@ -82,7 +82,7 @@ deploy:
   repo: 
     github: git@github.com:QianJinGuo/qianjinguo.github.io.git,master
     coding: git@e.coding.net:jinguo/jinguo.coding.me.git,master   
-#  test in thinkpad
+    
 #  branch: master
 
 # 将头像放置主题目录下的 source/uploads/ （新建uploads目录若不存在） 配置为：
