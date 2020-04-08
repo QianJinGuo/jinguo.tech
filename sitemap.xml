@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jinguo.tech/2020/01/16/Netty%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2020-04-08T17:01:49.583Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jinguo.tech/tags/index.html</loc>
     
     <lastmod>2020-01-22T02:46:50.388Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://jinguo.tech/2020/01/16/RocketMQ-%E4%B8%8A/</loc>
     
     <lastmod>2020-01-22T02:46:50.380Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinguo.tech/2020/01/16/Netty%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2020-01-22T02:46:50.379Z</lastmod>
     
   </url>
   
