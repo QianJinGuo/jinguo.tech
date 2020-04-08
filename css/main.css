@@ -1947,7 +1947,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d5f4ff;
+  background: #0803ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3384,7 +3384,7 @@ strong {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 body {
-  background: url("https://source.unsplash.com/1600x900/?nature,water");
+  background: url("https://img.jinguo.tech/blog/20200408/RGKSTfHgeQIT.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
