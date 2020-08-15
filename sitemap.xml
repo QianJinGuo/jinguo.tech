@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jinguo.tech/2020/08/15/hive-%E5%BF%83%E5%BE%97/</loc>
+    <loc>https://jinguo.tech/2020/08/15/%E6%B5%8B%E8%AF%95/</loc>
     
-    <lastmod>2020-08-15T03:13:26.595Z</lastmod>
+    <lastmod>2020-08-15T03:17:34.113Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinguo.tech/2020/01/16/RocketMQ-%E4%B8%8A/</loc>
+    
+    <lastmod>2020-08-15T03:17:27.185Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://jinguo.tech/about/index.html</loc>
     
     <lastmod>2020-01-22T02:46:50.382Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinguo.tech/2020/01/16/RocketMQ-%E4%B8%8A/</loc>
-    
-    <lastmod>2020-01-22T02:46:50.380Z</lastmod>
     
   </url>
   
