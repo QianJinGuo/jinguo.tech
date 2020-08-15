@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jinguo.tech/hive/index.html</loc>
+    
+    <lastmod>2020-08-15T03:09:04.547Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinguo.tech/2020/01/16/storm-%E5%BF%83%E5%BE%97/</loc>
+    
+    <lastmod>2020-08-05T19:19:11.593Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinguo.tech/2020/01/16/storm-%E5%BF%83%E5%BE%97%EF%BC%88%E4%B8%8A%EF%BC%89/</loc>
+    
+    <lastmod>2020-08-05T19:19:01.767Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jinguo.tech/2020/01/16/Netty%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2020-08-05T18:34:59.479Z</lastmod>
