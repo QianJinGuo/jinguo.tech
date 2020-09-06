@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinguo.tech/"/>
-  <updated>2020-09-06T05:24:53.782Z</updated>
+  <updated>2020-09-06T07:50:35.533Z</updated>
   <id>https://jinguo.tech/</id>
   
   <author>
@@ -17,17 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://jinguo.tech/2020/09/06/test/"/>
-    <id>https://jinguo.tech/2020/09/06/test/</id>
-    <published>2020-09-06T05:24:53.000Z</published>
-    <updated>2020-09-06T05:24:53.782Z</updated>
+    <title>bigdata</title>
+    <link href="https://jinguo.tech/2020/09/06/bigdata/"/>
+    <id>https://jinguo.tech/2020/09/06/bigdata/</id>
+    <published>2020-09-06T07:48:31.000Z</published>
+    <updated>2020-09-06T07:50:35.533Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hive"><a class="header-anchor" href="#Hive"></a>Hive</h1>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Hive&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Hive&quot;&gt;&lt;/a&gt;Hive&lt;/h1&gt;
+
+      
     
     </summary>
     
     
+    
+      <category term="hive" scheme="https://jinguo.tech/tags/hive/"/>
     
   </entry>
   
