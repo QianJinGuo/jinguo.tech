@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinguo.tech/"/>
-  <updated>2021-03-28T13:25:10.488Z</updated>
+  <updated>2021-04-27T14:46:38.380Z</updated>
   <id>https://jinguo.tech/</id>
   
   <author>
@@ -17,25 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>开启新的人生.md</title>
-    <link href="https://jinguo.tech/2021/03/28/%E5%BC%80%E5%90%AF%E6%96%B0%E7%9A%84%E4%BA%BA%E7%94%9F/"/>
-    <id>https://jinguo.tech/2021/03/28/%E5%BC%80%E5%90%AF%E6%96%B0%E7%9A%84%E4%BA%BA%E7%94%9F/</id>
-    <published>2021-03-28T13:23:30.000Z</published>
-    <updated>2021-03-28T13:25:10.488Z</updated>
+    <title>笔记</title>
+    <link href="https://jinguo.tech/2021/04/27/%E7%AC%94%E8%AE%B0/"/>
+    <id>https://jinguo.tech/2021/04/27/%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-04-27T14:45:49.000Z</published>
+    <updated>2021-04-27T14:46:38.380Z</updated>
     
-    <content type="html"><![CDATA[<p>心态建设 格局眼界</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="idea-dubbo在debug（调试）模式下，启动很慢的问题解决方法"><a class="header-anchor" href="#idea-dubbo在debug（调试）模式下，启动很慢的问题解决方法"></a>idea dubbo在debug（调试）模式下，启动很慢的问题解决方法</h1><p>idea 在debug模式下启动dubbo的时候，dubbo注册的时候会非常慢，但是在非调试模式下，就正常！后来在debug模式下，将所有断点都清除后，速度立马就上来了！所以在debug模式下启动，需要将断点都清除再启动！</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;心态建设 格局眼界&lt;/p&gt;
-
+        &lt;h1 id=&quot;idea-dubbo在debug（调试）模式下，启动很慢的问题解决方法&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#idea-dubbo在debug（调试）模式下，启动很慢的问题解决方法&quot;&gt;&lt;/a&gt;idea dubbo在debug（调试）模式
       
     
     </summary>
     
     
+    
+      <category term="java" scheme="https://jinguo.tech/tags/java/"/>
     
   </entry>
   
