@@ -1,0 +1,467 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第一章 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Chapter2/Netty笔记.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="Hive实操.html">
+            
+                <a href="Hive实操.html">
+            
+                    
+                    第一章
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter2/Netty笔记.html">
+            
+                <a href="../Chapter2/Netty笔记.html">
+            
+                    
+                    第二章
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第一章</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E00;&#x7AE0;">&#x7B2C;&#x4E00;&#x7AE0;</h1>
+<h1 id="hive-&#x5B9E;&#x64CD;">Hive &#x5B9E;&#x64CD;</h1>
+<h2 id="&#x4E00;&#x3001;database">&#x4E00;&#x3001;Database</h2>
+<h3 id="11-&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x5217;&#x8868;">1.1 &#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x5217;&#x8868;</h3>
+<pre><code class="lang-sql"><span class="hljs-keyword">show</span> <span class="hljs-keyword">databases</span>;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200902204156290.png?imageslim" alt="image-20200902204156290"></p>
+<h3 id="12-&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x5217;&#x8868;">1.2 &#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x5217;&#x8868;</h3>
+<pre><code class="lang-sql"><span class="hljs-keyword">use</span> database_name;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200902204350677.png?imageslim" alt="image-20200902204350677"></p>
+<h3 id="13-&#x65B0;&#x5EFA;&#x6570;&#x636E;&#x5E93;">1.3 &#x65B0;&#x5EFA;&#x6570;&#x636E;&#x5E93;</h3>
+<ul>
+<li><p>&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> (<span class="hljs-keyword">DATABASE</span>|<span class="hljs-keyword">SCHEMA</span>) [<span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span>] database_name   <span class="hljs-comment">--DATABASE|SCHEMA &#x662F;&#x7B49;&#x4EF7;&#x7684;</span>
+  [<span class="hljs-keyword">COMMENT</span> database_comment] <span class="hljs-comment">--&#x6570;&#x636E;&#x5E93;&#x6CE8;&#x91CA;</span>
+  [LOCATION hdfs_path] <span class="hljs-comment">--&#x5B58;&#x50A8;&#x5728; HDFS &#x4E0A;&#x7684;&#x4F4D;&#x7F6E;</span>
+  [<span class="hljs-keyword">WITH</span> DBPROPERTIES (property_name=property_value, ...)]; <span class="hljs-comment">--&#x6307;&#x5B9A;&#x989D;&#x5916;&#x5C5E;&#x6027;</span>
+</code></pre>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> hive_test
+  <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;hive database for test&apos;</span>
+  <span class="hljs-keyword">WITH</span> DBPROPERTIES (<span class="hljs-string">&apos;create&apos;</span>=<span class="hljs-string">&apos;jinguo&apos;</span>);
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200902203705654.png?imageslim" alt="image-20200902203705654"></p>
+</li>
+</ul>
+<h3 id="14-&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;">1.4 &#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;</h3>
+<ul>
+<li>&#x8BED;&#x6CD5;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">DESC DATABASE [EXTENDED] db_name; <span class="hljs-comment">--EXTENDED &#x8868;&#x793A;&#x662F;&#x5426;&#x663E;&#x793A;&#x989D;&#x5916;&#x5C5E;&#x6027;</span>
+</code></pre>
+<ul>
+<li>&#x793A;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">DESC DATABASE  EXTENDED hive_test;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200903100904811.png?imageslim" alt="image-20200903100904811"></p>
+<h3 id="15-&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;">1.5 &#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">DROP</span> (<span class="hljs-keyword">DATABASE</span>|<span class="hljs-keyword">SCHEMA</span>) [<span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span>] database_name [RESTRICT|<span class="hljs-keyword">CASCADE</span>];
+</code></pre>
+<p><em>&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x662F; <strong>RESTRICT</strong>&#xFF0C;&#x5982;&#x679C;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5B58;&#x5728;&#x8868;&#x5219;&#x5220;&#x9664;&#x5931;&#x8D25;&#x3002;&#x8981;&#x60F3;&#x5220;&#x9664;&#x5E93;&#x53CA;&#x5176;&#x4E2D;&#x7684;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>CASCADE</strong> &#x7EA7;&#x8054;&#x5220;&#x9664;&#x3002;</em></p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span> hive_test;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200903111952592.png?imageslim" alt="image-20200903111952592"></p>
+<pre><code class="lang-verilog">Error <span class="hljs-keyword">while</span> processing statement: FAILED: Execution Error, return code <span class="hljs-number">1</span> from org.apache.hadoop.hive.ql.exec.DDLTask. InvalidOperationException(message:Database hive_test is <span class="hljs-keyword">not</span> empty. One <span class="hljs-keyword">or</span> more tables exist.)
+</code></pre>
+<p><em>&#x5F53;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5B58;&#x5728;&#x8868;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5220;&#x9664;&#x65F6;&#x9700;&#x8981;&#x7528;<strong>CASCADE</strong></em>&#x5173;&#x952E;&#x5B57;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span> hive_test <span class="hljs-keyword">CASCADE</span>;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200903112539723.png?imageslim" alt="image-20200903112539723"></p>
+<h2 id="&#x4E8C;&#x3001;&#x521B;&#x5EFA;&#x8868;">&#x4E8C;&#x3001;&#x521B;&#x5EFA;&#x8868;</h2>
+<h3 id="21-&#x5EFA;&#x8868;&#x8BED;&#x6CD5;">2.1 &#x5EFA;&#x8868;&#x8BED;&#x6CD5;</h3>
+<ul>
+<li>&#x8BED;&#x6CD5;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> [<span class="hljs-keyword">TEMPORARY</span>] [<span class="hljs-keyword">EXTERNAL</span>] <span class="hljs-keyword">TABLE</span> [<span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span>] [db_name.]table_name     <span class="hljs-comment">--&#x8868;&#x540D;</span>
+  [(col_name data_type [<span class="hljs-keyword">COMMENT</span> col_comment],
+    ... [constraint_specification])]  <span class="hljs-comment">--&#x5217;&#x540D; &#x5217;&#x6570;&#x636E;&#x7C7B;&#x578B;</span>
+  [<span class="hljs-keyword">COMMENT</span> table_comment]   <span class="hljs-comment">--&#x8868;&#x63CF;&#x8FF0;</span>
+  [PARTITIONED <span class="hljs-keyword">BY</span> (col_name data_type [<span class="hljs-keyword">COMMENT</span> col_comment], ...)]  <span class="hljs-comment">--&#x5206;&#x533A;&#x8868;&#x5206;&#x533A;&#x89C4;&#x5219;</span>
+  [
+    CLUSTERED <span class="hljs-keyword">BY</span> (col_name, col_name, ...) 
+   [SORTED <span class="hljs-keyword">BY</span> (col_name [<span class="hljs-keyword">ASC</span>|<span class="hljs-keyword">DESC</span>], ...)] <span class="hljs-keyword">INTO</span> num_buckets BUCKETS
+  ]  <span class="hljs-comment">--&#x5206;&#x6876;&#x8868;&#x5206;&#x6876;&#x89C4;&#x5219;</span>
+  [SKEWED <span class="hljs-keyword">BY</span> (col_name, col_name, ...) <span class="hljs-keyword">ON</span> ((col_value, col_value, ...), (col_value, col_value, ...), ...)  
+   [<span class="hljs-keyword">STORED</span> <span class="hljs-keyword">AS</span> DIRECTORIES] 
+  ]  <span class="hljs-comment">--&#x6307;&#x5B9A;&#x503E;&#x659C;&#x5217;&#x548C;&#x503C;</span>
+  [
+   [<span class="hljs-keyword">ROW</span> <span class="hljs-keyword">FORMAT</span> row_format]    
+   [<span class="hljs-keyword">STORED</span> <span class="hljs-keyword">AS</span> file_format]
+     | <span class="hljs-keyword">STORED</span> <span class="hljs-keyword">BY</span> <span class="hljs-string">&apos;storage.handler.class.name&apos;</span> [<span class="hljs-keyword">WITH</span> SERDEPROPERTIES (...)]  
+  ]  <span class="hljs-comment">-- &#x6307;&#x5B9A;&#x884C;&#x5206;&#x9694;&#x7B26;&#x3001;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x6216;&#x91C7;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x5B58;&#x50A8;&#x683C;&#x5F0F;</span>
+  [LOCATION hdfs_path]  <span class="hljs-comment">-- &#x6307;&#x5B9A;&#x8868;&#x7684;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;</span>
+  [TBLPROPERTIES (property_name=property_value, ...)]  <span class="hljs-comment">--&#x6307;&#x5B9A;&#x8868;&#x7684;&#x5C5E;&#x6027;</span>
+  [<span class="hljs-keyword">AS</span> select_statement];   <span class="hljs-comment">--&#x4ECE;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x521B;&#x5EFA;&#x8868;</span>
+</code></pre>
+<h3 id="22-&#x521B;&#x5EFA;&#x5185;&#x90E8;&#x8868;">2.2 &#x521B;&#x5EFA;&#x5185;&#x90E8;&#x8868;</h3>
+<ul>
+<li>&#x793A;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-sql"> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> emp(
+    empno <span class="hljs-built_in">INT</span>,
+    ename <span class="hljs-keyword">STRING</span>,
+    job <span class="hljs-keyword">STRING</span>,
+    mgr <span class="hljs-built_in">INT</span>,
+    hiredate <span class="hljs-keyword">TIMESTAMP</span>,
+    sal <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>),
+    comm <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>),
+    deptno <span class="hljs-built_in">INT</span>)
+    <span class="hljs-keyword">ROW</span> <span class="hljs-keyword">FORMAT</span> <span class="hljs-keyword">DELIMITED</span> <span class="hljs-keyword">FIELDS</span> <span class="hljs-keyword">TERMINATED</span> <span class="hljs-keyword">BY</span> <span class="hljs-string">&quot;\t&quot;</span>;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200903180953529.png?imageslim" alt="image-20200903180953529"></p>
+<h3 id="23-&#x521B;&#x5EFA;&#x5916;&#x90E8;&#x8868;">2.3 &#x521B;&#x5EFA;&#x5916;&#x90E8;&#x8868;</h3>
+<ul>
+<li>&#x793A;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-sql"> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">EXTERNAL</span> <span class="hljs-keyword">TABLE</span> emp_external(
+    empno <span class="hljs-built_in">INT</span>,
+    ename <span class="hljs-keyword">STRING</span>,
+    job <span class="hljs-keyword">STRING</span>,
+    mgr <span class="hljs-built_in">INT</span>,
+    hiredate <span class="hljs-keyword">TIMESTAMP</span>,
+    sal <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>),
+    comm <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>),
+    deptno <span class="hljs-built_in">INT</span>)
+    <span class="hljs-keyword">ROW</span> <span class="hljs-keyword">FORMAT</span> <span class="hljs-keyword">DELIMITED</span> <span class="hljs-keyword">FIELDS</span> <span class="hljs-keyword">TERMINATED</span> <span class="hljs-keyword">BY</span> <span class="hljs-string">&quot;\t&quot;</span>
+    LOCATION <span class="hljs-string">&apos;/hive/emp_external&apos;</span>;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200903181743473.png?imageslim" alt="image-20200903181743473"></p>
+<p><em>&#x7528;<strong>DESC TABLENAME</strong>&#x67E5;&#x770B;&#x8868;&#x683C;&#x4FE1;&#x606F;</em></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200903184628794.png?imageslim" alt="image-20200903184628794"></p>
+<p><em>&#x7528;<strong>DESC FORMATTED TABLENAME</strong>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x8868;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</em></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200903190348379.png?imageslim" alt="image-20200903190348379"></p>
+<p><em>&#x901A;&#x8FC7;<strong>hdfs dfs -ls</strong>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x770B;&#x5230;Location&#x7684;&#x5916;&#x90E8;&#x8868;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;</em></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200903185141700.png?imageslim" alt="image-20200903185141700"></p>
+<h3 id="24-&#x5185;&#x90E8;&#x8868;&#x548C;&#x5916;&#x90E8;&#x8868;&#x533A;&#x522B;">2.4 &#x5185;&#x90E8;&#x8868;&#x548C;&#x5916;&#x90E8;&#x8868;&#x533A;&#x522B;</h3>
+<p><strong>&#x521B;&#x5EFA;&#x8868;&#x65F6;</strong></p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x5185;&#x90E8;&#x8868;&#xFF1A;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x79FB;&#x52A8;&#x5230;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x6307;&#x5411;&#x7684;&#x8DEF;&#x5F84;&#xFF1B;</li>
+<li>&#x521B;&#x5EFA;&#x5916;&#x90E8;&#x8868;&#xFF1A;&#x4EC5;&#x8BB0;&#x5F55;&#x6570;&#x636E;&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;&#xFF0C; &#x4E0D;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x4F4D;&#x7F6E;&#x505A;&#x4EFB;&#x4F55;&#x6539;&#x53D8;&#x3002;</li>
+</ul>
+<p><strong>&#x5220;&#x9664;&#x8868;&#x65F6;</strong></p>
+<ul>
+<li>&#x5185;&#x90E8;&#x8868;&#x7684;&#x5143;&#x6570;&#x636E;&#x548C;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x4E00;&#x8D77;&#x5220;&#x9664;</li>
+<li>&#x5916;&#x90E8;&#x8868;&#x53EA;&#x5220;&#x9664;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x5220;&#x9664;&#x6570;&#x636E;&#x3002;&#x5916;&#x90E8;&#x8868;&#x76F8;&#x5BF9;&#x6765;&#x8BF4;&#x66F4;&#x52A0;&#x5B89;&#x5168;&#xFF0C;&#x6570;&#x636E;&#x7EC4;&#x7EC7;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#xFF0C;&#x65B9;&#x4FBF;&#x5171;&#x4EAB;&#x6E90;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p><strong>&#x603B;&#x7ED3;&#xFF1A;</strong></p>
+<ol>
+<li><p>&#x672A;&#x88AB;external&#x4FEE;&#x9970;&#x7684;&#x662F;&#x5185;&#x90E8;&#x8868;&#x3010;<em>managed table</em>&#x3011;&#xFF0C;&#x88AB;external&#x4FEE;&#x9970;&#x7684;&#x4E3A;&#x5916;&#x90E8;&#x8868;&#x3010;<em>external table</em>&#x3011;&#x3002;</p>
+</li>
+<li><p>&#x5185;&#x90E8;&#x8868;&#x6570;&#x636E;&#x7531;Hive&#x81EA;&#x8EAB;&#x7BA1;&#x7406;&#xFF0C;&#x5916;&#x90E8;&#x8868;&#x6570;&#x636E;&#x7531;HDFS&#x7BA1;&#x7406;&#x3002;</p>
+</li>
+<li><p>&#x5185;&#x90E8;&#x8868;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;<em>hive.metastore.warehouse.dir</em>&#x3010;&#x9ED8;&#x8BA4;:<em>/user/hive/warehouse</em>&#x3011;&#xFF0C;&#x5916;&#x90E8;&#x8868;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;&#x7531;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x51B3;&#x5B9A;&#x3002;&#x5982; <em>location &apos;/hive/emp_external&apos;</em></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200904222601364.png?imageslim" alt="image-20200904222601364"></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200904222820733.png?imageslim" alt="image-20200904222820733"></p>
+</li>
+<li><p>&#x5220;&#x9664;&#x5185;&#x90E8;&#x8868;&#x4F1A;&#x76F4;&#x63A5;&#x5220;&#x9664;&#x5143;&#x6570;&#x636E;&#x3010;<em>metadata</em>&#x3011;&#x53CA;<strong>&#x5B58;&#x50A8;&#x6570;&#x636E;</strong>&#xFF0C;&#x5220;&#x9664;&#x5916;&#x90E8;&#x8868;&#x4EC5;&#x4EC5;&#x5220;&#x9664;&#x5143;&#x6570;&#x636E;&#xFF0C;<em>HDFS</em>&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
+</li>
+<li><p>&#x5BF9;&#x5185;&#x90E8;&#x8868;&#x7684;&#x4FEE;&#x6539;&#x4F1A;&#x76F4;&#x63A5;&#x540C;&#x6B65;&#x5230;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x5BF9;&#x5916;&#x90E8;&#x8868;&#x7684;&#x8868;&#x7ED3;&#x6784;&#x548C;&#x5206;&#x533A;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x3010;<em>MSCK REPAIR TABLE table_name</em>&#x3011;&#x3002;</p>
+</li>
+</ol>
+<h3 id="25-&#x521B;&#x5EFA;&#x5206;&#x533A;&#x8868;">2.5 &#x521B;&#x5EFA;&#x5206;&#x533A;&#x8868;</h3>
+<ul>
+<li>&#x793A;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-sql"> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">EXTERNAL</span> <span class="hljs-keyword">TABLE</span> emp_partition(
+    empno <span class="hljs-built_in">INT</span>,
+    ename <span class="hljs-keyword">STRING</span>,
+    job <span class="hljs-keyword">STRING</span>,
+    mgr <span class="hljs-built_in">INT</span>,
+    hiredate <span class="hljs-keyword">TIMESTAMP</span>,
+    sal <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>),
+    comm <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>)
+    )
+    PARTITIONED <span class="hljs-keyword">BY</span> (deptno <span class="hljs-built_in">INT</span>)  <span class="hljs-comment">-- &#x6309;&#x7167;&#x90E8;&#x95E8;&#x7F16;&#x53F7;&#x8FDB;&#x884C;&#x5206;&#x533A;</span>
+    <span class="hljs-keyword">ROW</span> <span class="hljs-keyword">FORMAT</span> <span class="hljs-keyword">DELIMITED</span> <span class="hljs-keyword">FIELDS</span> <span class="hljs-keyword">TERMINATED</span> <span class="hljs-keyword">BY</span> <span class="hljs-string">&quot;\t&quot;</span>
+    LOCATION <span class="hljs-string">&apos;/hive/emp_partition&apos;</span>;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200903191518107.png?imageslim" alt="image-20200903191518107"></p>
+<p><em>&#x7528;<strong>DESC TABLENAME</strong>&#x67E5;&#x770B;&#x8868;&#x683C;&#x4FE1;&#x606F;</em></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200903193011185.png?imageslim" alt="image-20200903193011185"></p>
+<p><em>&#x7528;<strong>DESC FORMATTED TABLENAME</strong>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x8868;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</em></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200903192022966.png?imageslim" alt="image-20200903192022966"></p>
+<p><em>&#x901A;&#x8FC7;<strong>hdfs dfs -ls</strong>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x770B;&#x5230;Location&#x7684;&#x5916;&#x90E8;&#x8868;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;</em></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200903191648232.png?imageslim" alt="image-20200903191648232"></p>
+<h3 id="26-&#x5206;&#x6876;&#x8868;">2.6 &#x5206;&#x6876;&#x8868;</h3>
+<ul>
+<li>&#x793A;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-sql"> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">EXTERNAL</span> <span class="hljs-keyword">TABLE</span> emp_bucket(
+    empno <span class="hljs-built_in">INT</span>,
+    ename <span class="hljs-keyword">STRING</span>,
+    job <span class="hljs-keyword">STRING</span>,
+    mgr <span class="hljs-built_in">INT</span>,
+    hiredate <span class="hljs-keyword">TIMESTAMP</span>,
+    sal <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>),
+    comm <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>),
+    deptno <span class="hljs-built_in">INT</span>)
+    CLUSTERED <span class="hljs-keyword">BY</span>(empno) SORTED <span class="hljs-keyword">BY</span>(empno <span class="hljs-keyword">ASC</span>) <span class="hljs-keyword">INTO</span> <span class="hljs-number">4</span> BUCKETS  <span class="hljs-comment">--&#x6309;&#x7167;&#x5458;&#x5DE5;&#x7F16;&#x53F7;&#x6563;&#x5217;&#x5230;&#x56DB;&#x4E2A; bucket &#x4E2D;</span>
+    <span class="hljs-keyword">ROW</span> <span class="hljs-keyword">FORMAT</span> <span class="hljs-keyword">DELIMITED</span> <span class="hljs-keyword">FIELDS</span> <span class="hljs-keyword">TERMINATED</span> <span class="hljs-keyword">BY</span> <span class="hljs-string">&quot;\t&quot;</span>
+    LOCATION <span class="hljs-string">&apos;/hive/emp_bucket&apos;</span>;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200903192305213.png?imageslim" alt="image-20200903192305213"></p>
+<p><em>&#x7528;<strong>DESC TABLENAME</strong>&#x67E5;&#x770B;&#x8868;&#x683C;&#x4FE1;&#x606F;</em></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200903192644607.png?imageslim" alt="image-20200903192644607"></p>
+<p><em>&#x7528;<strong>DESC FORMATTED TABLENAME</strong>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x8868;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</em><img src="https://img.jinguo.tech/typora/image-20200903192505630.png?imageslim" alt="image-20200903192505630"></p>
+<p><em>&#x901A;&#x8FC7;<strong>hdfs dfs -ls</strong>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x770B;&#x5230;Location&#x7684;&#x5916;&#x90E8;&#x8868;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;</em></p>
+<p><img src="https://img.jinguo.tech/typora/image-20200903192829644.png?imageslim" alt="image-20200903192829644"></p>
+<h3 id="27-&#x503E;&#x659C;&#x8868;">2.7 &#x503E;&#x659C;&#x8868;</h3>
+<p><em>&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5217;&#x7ECF;&#x5E38;&#x51FA;&#x73B0;&#x7684;&#x503C;&#xFF08;&#x4E25;&#x91CD;&#x504F;&#x659C;&#xFF09;&#xFF0C;<strong>Hive</strong>&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x6D89;&#x53CA;&#x5230;&#x8FD9;&#x4E9B;&#x503C;&#x7684;&#x6570;&#x636E;&#x62C6;&#x5206;&#x4E3A;&#x5355;&#x72EC;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x5728;&#x67E5;&#x8BE2;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6D89;&#x53CA;&#x5230;&#x503E;&#x659C;&#x503C;&#xFF0C;&#x5B83;&#x5C31;&#x76F4;&#x63A5;&#x4ECE;&#x72EC;&#x7ACB;&#x6587;&#x4EF6;&#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x626B;&#x63CF;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;&#x6027;&#x80FD;&#x5F97;&#x5230;&#x63D0;&#x5347;</em></p>
+<ul>
+<li>&#x793A;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-sql"> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">EXTERNAL</span> <span class="hljs-keyword">TABLE</span> emp_skewed(
+    empno <span class="hljs-built_in">INT</span>,
+    ename <span class="hljs-keyword">STRING</span>,
+    job <span class="hljs-keyword">STRING</span>,
+    mgr <span class="hljs-built_in">INT</span>,
+    hiredate <span class="hljs-keyword">TIMESTAMP</span>,
+    sal <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>),
+    comm <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">7</span>,<span class="hljs-number">2</span>)
+    )
+    SKEWED <span class="hljs-keyword">BY</span> (empno) <span class="hljs-keyword">ON</span> (<span class="hljs-number">66</span>,<span class="hljs-number">88</span>,<span class="hljs-number">100</span>)  <span class="hljs-comment">--&#x6307;&#x5B9A; empno &#x7684;&#x503E;&#x659C;&#x503C; 66,88,100</span>
+    <span class="hljs-keyword">ROW</span> <span class="hljs-keyword">FORMAT</span> <span class="hljs-keyword">DELIMITED</span> <span class="hljs-keyword">FIELDS</span> <span class="hljs-keyword">TERMINATED</span> <span class="hljs-keyword">BY</span> <span class="hljs-string">&quot;\t&quot;</span>
+    LOCATION <span class="hljs-string">&apos;/hive/emp_skewed&apos;</span>;
+</code></pre>
+<p><img src="https://img.jinguo.tech/typora/image-20200903193642678.png?imageslim" alt="image-20200903193642678"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Chapter2/Netty笔记.html" class="navigation navigation-next " aria-label="Next page: 第二章">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第一章","level":"1.2","depth":1,"next":{"title":"第二章","level":"1.3","depth":1,"path":"Chapter2/Netty笔记.md","ref":"Chapter2/Netty笔记.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter1/Hive实操.md","mtime":"2021-05-04T12:13:41.117Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-04T12:15:51.708Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
