@@ -1160,7 +1160,7 @@ pre .javascript .function {
   background: transparent;
 }
 .header-inner {
-  position: relative;
+  position: positive;
 }
 .headband {
   height: 3px;
@@ -2014,7 +2014,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3659ff;
+  background: #5fb;
 }
 .links-of-blogroll {
   font-size: 13px;
