@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="JinGuo, Java, Spring">
+  <meta name="keywords" content="32个Java常用面试点,">
 
 
 
@@ -97,17 +97,23 @@
 
 
 
-<meta name="description" content="从初学者开始，学习涵盖Java,Scala,Python,Go等核心编程语言，逐步掌握分布式、高并发的开发诀窍。习得算法，框架原理，工程化的开发流程。练代码修炼之道，提升知识软实力，项目开发实战。">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
-<meta property="og:type" content="website">
-<meta property="og:title" content="架构师成长之旅">
-<meta property="og:url" content="https://jinguo.tech/categories/Java/index.html">
+<meta name="description" content="操作系统与计算机网络 本节主要介绍面试中经常考察的计算机基础知识以及 Java 语言特性。其中，计算机的基础知识是工程师基本能力的体现，也是面试前必须要牢牢掌握的部分。 本节结构如下：  面试中经常考察的知识点汇总，方便系统化复习； 对 TCP 协议、设计模式、Java 基础知识进行详细讲解； 从面试官角度，总结上述部分内容在面试时的考察点； 提供一些面试真题及重点题目解题思路。   操作系统知识">
+<meta name="keywords" content="32个Java常用面试点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="32个Java常用面试点-操作系统与计算机网络">
+<meta property="og:url" content="https://jinguo.tech/2021/05/07/第二节：操作系统与计算机网络/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="从初学者开始，学习涵盖Java,Scala,Python,Go等核心编程语言，逐步掌握分布式、高并发的开发诀窍。习得算法，框架原理，工程化的开发流程。练代码修炼之道，提升知识软实力，项目开发实战。">
+<meta property="og:description" content="操作系统与计算机网络 本节主要介绍面试中经常考察的计算机基础知识以及 Java 语言特性。其中，计算机的基础知识是工程师基本能力的体现，也是面试前必须要牢牢掌握的部分。 本节结构如下：  面试中经常考察的知识点汇总，方便系统化复习； 对 TCP 协议、设计模式、Java 基础知识进行详细讲解； 从面试官角度，总结上述部分内容在面试时的考察点； 提供一些面试真题及重点题目解题思路。   操作系统知识">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img.jinguo.tech/blog/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F,.jpg?imageslim">
+<meta property="og:image" content="https://img.jinguo.tech/blog/CgoB5l13hviANIAQAAJGI9kixgc615.jpg?imageslim">
+<meta property="og:image" content="https://img.jinguo.tech/blog/20210506225316.png?imageslim">
+<meta property="og:image" content="https://img.jinguo.tech/blog/20210506225406.png?imageslim">
+<meta property="og:updated_time" content="2021-05-06T16:50:45.125Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="从初学者开始，学习涵盖Java,Scala,Python,Go等核心编程语言，逐步掌握分布式、高并发的开发诀窍。习得算法，框架原理，工程化的开发流程。练代码修炼之道，提升知识软实力，项目开发实战。">
+<meta name="twitter:title" content="32个Java常用面试点-操作系统与计算机网络">
+<meta name="twitter:description" content="操作系统与计算机网络 本节主要介绍面试中经常考察的计算机基础知识以及 Java 语言特性。其中，计算机的基础知识是工程师基本能力的体现，也是面试前必须要牢牢掌握的部分。 本节结构如下：  面试中经常考察的知识点汇总，方便系统化复习； 对 TCP 协议、设计模式、Java 基础知识进行详细讲解； 从面试官角度，总结上述部分内容在面试时的考察点； 提供一些面试真题及重点题目解题思路。   操作系统知识">
+<meta name="twitter:image" content="https://img.jinguo.tech/blog/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F,.jpg?imageslim">
 
 
 
@@ -137,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://jinguo.tech/categories/Java/">
+  <link rel="canonical" href="https://jinguo.tech/2021/05/07/第二节：操作系统与计算机网络/">
 
 
 
 
 
-  <title>分类: Java | 架构师成长之旅</title>
+  <title>32个Java常用面试点-操作系统与计算机网络 | 架构师成长之旅</title>
   
 
 
@@ -161,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband">
 	<a href="https://github.com/QianJinGuo" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/images/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     </div>     
@@ -309,183 +315,359 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>Java<small>分类</small>
-        </h2>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jinguo.tech/2021/05/07/第二节：操作系统与计算机网络/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qian JinGuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="架构师成长之旅">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2021/05/07/开篇：建立年薪50万的能力框架/" itemprop="url">
-              
-                <span itemprop="name">32个Java常用面试点-Java能力框架及学习路径</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">32个Java常用面试点-操作系统与计算机网络</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2021-05-07T00:00:00+08:00" content="2021-05-07">
-          05-07
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-05-07T00:00:00+08:00">
+                2021-05-07
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2021-05-07T00:50:45+08:00">
+                2021-05-07
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/05/07/第二节：操作系统与计算机网络/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/05/07/第二节：操作系统与计算机网络/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2021/05/07/概述/" itemprop="url">
-              
-                <span itemprop="name">32个Java常用面试点-概述</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2021-05-07T00:00:00+08:00" content="2021-05-07">
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2021/05/07/第一节：技术人职业发展路径/" itemprop="url">
-              
-                <span itemprop="name">32个Java常用面试点-技术人职业发展路径</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2021-05-07T00:00:00+08:00" content="2021-05-07">
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2021/05/07/第二节：操作系统与计算机网络/" itemprop="url">
-              
-                <span itemprop="name">32个Java常用面试点-操作系统与计算机网络</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2021-05-07T00:00:00+08:00" content="2021-05-07">
-          05-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2020/01/16/Netty笔记/" itemprop="url">
-              
-                <span itemprop="name">Netty(笔记)</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-01-16T15:31:51+08:00" content="2020-01-16">
-          01-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2020/01/16/RocketMQ-上/" itemprop="url">
-              
-                <span itemprop="name">RocketMQ(上)</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-01-16T14:24:26+08:00" content="2020-01-16">
-          01-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h2 id="操作系统与计算机网络"><a class="header-anchor" href="#操作系统与计算机网络"></a>操作系统与计算机网络</h2>
+<p>本节主要介绍面试中经常考察的计算机基础知识以及 Java 语言特性。其中，计算机的基础知识是工程师基本能力的体现，也是面试前必须要牢牢掌握的部分。</p>
+<p>本节结构如下：</p>
+<ol>
+<li>面试中经常考察的知识点汇总，方便系统化复习；</li>
+<li>对 TCP 协议、设计模式、Java 基础知识进行详细讲解；</li>
+<li>从面试官角度，总结上述部分内容在面试时的考察点；</li>
+<li>提供一些面试真题及重点题目解题思路。</li>
+</ol>
+<hr>
+<h3 id="操作系统知识点"><a class="header-anchor" href="#操作系统知识点"></a>操作系统知识点</h3>
+<p>先看操作系统相关知识的汇总，如下图所示。操作系统知识对于服务问题的排查定位十分重要，在面试时一般以了解和应用考察为主，面试题目占的比重一般不会太高。</p>
+<p><img src="https://img.jinguo.tech/blog/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F,.jpg?imageslim" alt="操作系统"></p>
+<h3 id="进程与线程"><a class="header-anchor" href="#进程与线程"></a>进程与线程</h3>
+<p>上图左上角的<strong>进程与线程</strong>部分是一个非常重要的考察点。</p>
+<ol>
+<li>
+<p>首先需要掌握进程与线程的区别和联系：</p>
+<ul>
+<li>进程是系统<strong>资源分配</strong>的最小单位，线程是<strong>程序执行</strong>的最小单位；</li>
+<li>进程使用<strong>独立</strong>的数据空间，而线程<strong>共享</strong>进程的数据空间。</li>
+</ul>
+</li>
+<li>
+<p>线程<strong>调度</strong>，简单了解线程的几种调度算法就可以了。比如时间片轮转调度、先来先服务调度、优先级调度、多级反馈队列调度以及高响应比优先调度。</p>
+</li>
+<li>
+<p>线程切换的步骤，主要是了解线程的<strong>上下文切换</strong>，明白线程切换的代价。关于线程的知识在后面的多线程课程中还会有详细讲解，这里先略过。</p>
+</li>
+<li>
+<p>在进程与线程部分还有一个比较常见的考察点，就是<strong>进程间通信</strong>，也就是 IPC。这部分在面试中间件研发的相关职位时经常会考察。如上面知识点汇总图中所示，需要了解这 6 种进程通信方式的原理与适用场景。例如，进程间数据共享的场景可以使用共享内存；进程间数据交换的场景可以使用 Unix Socket 或者消息队列。</p>
+</li>
+<li>
+<p>最后<strong>协程</strong>部分，简单了解协程更轻量化，是在用户态进行调度，切换的代价比线程上下文切换要低很多就可以了，也可以了解 Java 的第三方协程框架，例如 <em>Kilim</em>、<em>Quasar</em> 等。</p>
+</li>
+</ol>
+<hr>
+<h3 id="Linux常用命令"><a class="header-anchor" href="#Linux常用命令"></a>Linux常用命令</h3>
+<p>大部分互联网公司的服务都是在 Linux 系统上运行的，因此 Linux 命令也是面试时的常考点，这部分其实主要考察的是候选人是否有线上问题的<strong>排查</strong>经验，重点学习 <em>AWK</em>、<em>top</em>、<em>netstat</em>、<em>grep</em> 等高频使用的工具。</p>
+<p>还有一些知识点不常考，做适当了解，例如内存分页管理与 Swap 机制、任务队列与 CPU Load 等，这些知识在分析线上问题中十分有用。</p>
+<hr>
+<h3 id="拓展知识"><a class="header-anchor" href="#拓展知识"></a>拓展知识</h3>
+<p>最后是扩展知识点，例如内存屏障、指令乱序、分支预测、<em>NUMA</em> 与 <em>CPU</em> 亲和性等，如果在面试时有机会谈到的话，会在知识深度上给面试官留下比较好的印象。</p>
+<hr>
+<h3 id="计算机网络知识点"><a class="header-anchor" href="#计算机网络知识点"></a>计算机网络知识点</h3>
+<p>计算机网络也是非常重要的基础知识，服务之间通过不同的网络协议进行交互，例如 <em><strong>HTTP</strong></em> 协议、<em><strong>RPC</strong></em> 协议等，在 Java 面试中网络知识被考到的几率非常大。网络知识点汇总如下图。</p>
+<p><img src="https://img.jinguo.tech/blog/CgoB5l13hviANIAQAAJGI9kixgc615.jpg?imageslim" alt="计算机网络"></p>
+<p>首先你应该深刻理解网络的 4/7 层模型，这是网络知识的基础。</p>
+<ul>
+<li>另外两个非常重要的网络协议就是 <em>HTTP</em>和 <em>TCP</em> 了，这两个协议也是服务交互中使用最多的协议。先来看 TCP 协议，TCP 协议中的<strong>三次握手建连与四次挥手断连</strong>是一个高频考点，后面会详细介绍。</li>
+<li>TCP 的报文状态标志与链接状态，在排查网络问题时非常重要，必须要明白<strong>协议状态</strong>，才方便抓包分析。</li>
+<li>另一个知识点是 <em><strong>Nagel</strong></em>算法和 <em><strong>ACK</strong></em> 延迟，需要了解产生的背景，是要解决小包问题，提高数据载荷比。知道对于延迟比较敏感且发送数据频率较低的场景可以关闭 Nagel 算法。</li>
+<li>关于 TCP 的 Keepalive，是一种长时间没有数据发送的场景下，TCP 保持链接可用的机制，需要知道 TCP Keepalive 的开启和设置方式。</li>
+<li>最后一点，需要明白 TCP 是如何通过滑动窗口机制来实现流量控制的。</li>
+</ul>
+<p>再来看 HTTP 协议部分。</p>
+<ul>
+<li>
+<p>需要掌握 HTTP 协议的规范，知道协议中的 Method、Header、Cookies，需要了解常见状态码的含义，例如 404、503、302 等。</p>
+</li>
+<li>
+<p>另外还有 HTTPS 的交互流程。</p>
+</li>
+<li>
+<p>HTTP2 目前还比较新，对 HTTP2 协议的了解可以在一定程度上体现对新技术的关注程度。可以关注：HTTP2 多路复用、Stream 流式交互、流量控制、服务端推送、头部压缩等新特性</p>
+</li>
+</ul>
+<p>除了 HTTP 和 TCP 外，UDP 也是一个比较常见的传输层协议，UDP 的特点是非链接、非可靠传输，但是效率非常高。</p>
+<p>最后可以对 QUIC 协议进行一些了解，QUIC 已经被标准化为 HTTP3 协议。QUIC 是基于 UDP 协议，但 QUIC 提供了类似 TCP 的可靠性保证和流量控制。QUIC 可以有效避免 HTTP2 协议的前序包阻塞问题，能实现零 RTT 建连，提供 FEC 前向纠错能力。</p>
+<hr>
+<h3 id="详解-TCP-协议特点"><a class="header-anchor" href="#详解-TCP-协议特点"></a>详解 TCP 协议特点</h3>
+<p>TCP 是传输层协议，对应 <em>OSI</em>网络模型的第四层传输层，特点如下。</p>
+<ul>
+<li>
+<p>TCP 协议是基于链接的，也就是传输数据前需要先建立好链接，然后再进行传输。</p>
+</li>
+<li>
+<p>TCP 链接一旦建立，就可以在链接上进行双向的通信。</p>
+</li>
+<li>
+<p>TCP 的传输是基于字节流而不是报文，将数据按字节大小进行编号，接收端通过 ACK 来确认收到的数据编号，通过这种机制，TCP 协议能够保证接收数据的有序性和完整性，因此 TCP 能够提供可靠性传输。</p>
+</li>
+<li>
+<p>TCP 还能提供流量控制能力，通过滑动窗口来控制数据的发送速率。滑动窗口的本质是动态缓冲区，接收端根据自己的处理能力，在 TCP 的 Header 中动态调整窗口大小，通过 ACK 应答包通知给发送端，发送端根据窗口大小调整发送的的速度。</p>
+</li>
+<li>
+<p>仅仅有了流量控制能力还不够，TCP 协议还考虑到了网络问题可能会导致大量重传，进而导致网络情况进一步恶化，因此 TCP 协议还提供拥塞控制。TCP 处理拥塞控制主要用到了慢启动、拥塞避免、拥塞发生、快速恢复四个算法，感兴趣的同学可以进一步了解。</p>
+</li>
+</ul>
+<p>除了 TCP 协议的特点，还可以进一步了解 TCP 协议的报文状态、滑动窗口的工作流程、 Keepalive 的参数设置和 Nagel 算法的规则等一些细节。</p>
+<p>另外还有典型的 TCP 协议问题，例如特定场景下 Nagel 和 ACK 延迟机制配合使用可能会出现 delay40ms 超时后才回复 ACK 包的问题。</p>
+<hr>
+<h3 id="详解三次握手建连"><a class="header-anchor" href="#详解三次握手建连"></a>详解三次握手建连</h3>
+<p>接下来看 TCP 建连的三次握手。TCP 是基于链接的，所以在传输数据前需要先建立链接，TCP 在传输上是双工传输，不区分 Client 端与 Server 端，为了便于理解，我们把主动发起建连请求的一端称作 Client 端，把被动建立链接的一端称作 Server 端。</p>
+<p>如下图，建连的时序是从上到下，左右两边的绿色字分别代表 Client 端与 Server 端当时的链接状态。</p>
+<p><img src="https://img.jinguo.tech/blog/20210506225316.png?imageslim" alt="握手建连"></p>
+<p>首先建立链接前需要 Server 端先监听端口，因此 Server 端建立链接前的初始状态就是 LISTEN 状态，这时 Client 端准备建立链接，先发送一个 SYN 同步包，发送完同步包后，Client 端的链接状态变成了 SYN_SENT 状态。Server 端收到 SYN 后，同意建立链接，会向 Client 端回复一个 ACK。</p>
+<p>由于 TCP 是双工传输，Server 端也会同时向 Client 端发送一个 SYN，申请 Server 向 Client 方向建立链接。发送完 ACK 和 SYN 后，Server 端的链接状态就变成了 SYN_RCVD。</p>
+<p>Client 收到 Server 的 ACK 后，Client 端的链接状态就变成了 ESTABLISHED 状态，同时，Client 向 Server 端发送 ACK，回复 Server 端的 SYN 请求。</p>
+<p>Server 端收到 Client 端的 ACK 后，Server 端的链接状态也就变成了的 ESTABLISHED 状态，此时建连完成，双方随时可以进行数据传输。</p>
+<p>在面试时需要明白三次握手是为了建立双向的链接，需要记住 Client 端和 Server 端的链接状态变化。另外回答建连的问题时，可以提到 SYN 洪水攻击发生的原因，就是 Server 端收到 Client 端的 SYN 请求后，发送了 ACK 和 SYN，但是 Client 端不进行回复，导致 Server 端大量的链接处在 SYN_RCVD 状态，进而影响其他正常请求的建连。可以设置 tcp_synack_retries = 0 加快半链接的回收速度，或者调大 tcp_max_syn_backlog 来应对少量的 SYN 洪水攻击。</p>
+<hr>
+<h3 id="详解四次挥手断连"><a class="header-anchor" href="#详解四次挥手断连"></a>详解四次挥手断连</h3>
+<p>再来看看 TCP 的断连，如下图所示。</p>
+<p><img src="https://img.jinguo.tech/blog/20210506225406.png?imageslim" alt="TCP"></p>
+<p>TCP 链接的关闭，通信双方都可以先发起，我们暂且把先发起的一方看作 Client，从图中看出，通信中 Client 和 Server 两端的链接都是 ESTABLISHED 状态，然后 Client 先主动发起了关闭链接请求，Client 向 Server 发送了一个 FIN 包，表示 Client 端已经没有数据要发送了，然后 Client 进入了 FIN_WAIT_1 状态。</p>
+<p>Server 端收到 FIN 后，返回 ACK，然后进入 CLOSE_WAIT 状态。此时 Server 属于半关闭状态，因为此时 Client 向 Server 方向已经不会发送数据了，可是 Server 向 Client 端可能还有数据要发送。</p>
+<p>当 Server 端数据发送完毕后，Server 端会向 Client 端发送 FIN，表示 Server 端也没有数据要发送了，此时 Server 进入 LAST_ACK 状态，就等待 Client 的应答就可以关闭链接了。</p>
+<p>Client 端收到 Server 端的 FIN 后，回复 ACK，然后进入 TIME_WAIT 状态。TIME_WAIT 状态下需要等待 2 倍的最大报文段生存时间，来保证链接的可靠关闭，之后才会进入 CLOSED 关闭状态。而 Server 端收到 ACK 后直接就进入 CLOSED 状态。</p>
+<p>这里面试官可能会问为什么需要等待 2 倍最大报文段生存时间之后再关闭链接，原因有两个：</p>
+<ol>
+<li>保证 TCP 协议的全双工连接能够可靠关闭；</li>
+<li>保证这次连接的重复数据段从网络中消失，防止端口被重用时可能产生数据混淆。</li>
+</ol>
+<p>从这个交互流程可以看出，无论是建连还是断链，都是需要在两个方向上进行，只不过建连时，Server 端的 SYN 和 ACK 合并为一次发送，而断链时，两个方向上数据发送停止的时间可能不同，所以不能合并发送 FIN 和 ACK。这就是建连三次握手而断链需要四次的原因。</p>
+<p>另外回答断链的问题时，可以提到实际应用中有可能遇到大量 Socket 处在 TIME_WAIT 或者 CLOSE_WAIT 状态的问题。一般开启 <em>tcp_tw_reuse</em>和 <em>tcp_tw_recycle</em>能够加快 TIME-WAIT 的 Sockets 回收；而大量 CLOSE_WAIT 可能是被动关闭的一方存在代码 bug，没有正确关闭链接导致的。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Qian JinGuo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://jinguo.tech/2021/05/07/第二节：操作系统与计算机网络/" title="32个Java常用面试点-操作系统与计算机网络">https://jinguo.tech/2021/05/07/第二节：操作系统与计算机网络/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/32个Java常用面试点/" rel="tag"><i class="fa fa-tag"></i> 32个Java常用面试点</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/05/04/32个java常用知识点/" rel="next" title="32个java常用知识点">
+                <i class="fa fa-chevron-left"></i> 32个java常用知识点
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/05/07/第一节：技术人职业发展路径/" rel="prev" title="32个Java常用面试点-技术人职业发展路径">
+                32个Java常用面试点-技术人职业发展路径 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -493,6 +675,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -513,8 +702,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -635,6 +833,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统与计算机网络"><span class="nav-number">1.</span> <span class="nav-text">操作系统与计算机网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作系统知识点"><span class="nav-number">1.1.</span> <span class="nav-text">操作系统知识点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程与线程"><span class="nav-number">1.2.</span> <span class="nav-text">进程与线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux常用命令"><span class="nav-number">1.3.</span> <span class="nav-text">Linux常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展知识"><span class="nav-number">1.4.</span> <span class="nav-text">拓展知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络知识点"><span class="nav-number">1.5.</span> <span class="nav-text">计算机网络知识点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详解-TCP-协议特点"><span class="nav-number">1.6.</span> <span class="nav-text">详解 TCP 协议特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详解三次握手建连"><span class="nav-number">1.7.</span> <span class="nav-text">详解三次握手建连</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详解四次挥手断连"><span class="nav-number">1.8.</span> <span class="nav-text">详解四次挥手断连</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -789,6 +1003,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
