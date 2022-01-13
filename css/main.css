@@ -2014,7 +2014,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b4455c;
+  background: #2f5862;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2426,7 +2426,7 @@ img:hover {
   border: none;
 }
 .local-search-pop-overlay {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0;
@@ -2436,7 +2436,7 @@ img:hover {
 }
 .local-search-popup {
   display: none;
-  position: fixed;
+  position: relative;
   top: 10%;
   left: 50%;
   margin-left: -350px;
