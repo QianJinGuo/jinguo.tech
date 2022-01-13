@@ -258,30 +258,6 @@
   
   <entry>
     <title></title>
-    <link href="https://jinguo.tech/2022/01/14/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E6%8C%87%E5%8D%97/"/>
-    <id>https://jinguo.tech/2022/01/14/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E6%8C%87%E5%8D%97/</id>
-    <published>2022-01-13T18:02:14.336Z</published>
-    <updated>2021-12-14T15:59:45.833Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="阿里巴巴面试参考指南"><a class="header-anchor" href="#阿里巴巴面试参考指南"></a>阿里巴巴面试参考指南</h1><p>#面试</p><h2 id="面试参考指南"><a class="header-anchor" href="#面试参考指南"></a>面试参考指南</h2><ol><li><strong>主从热备机制以及读写分离架构</strong></li></ol><p>Mybatis如何实现？使数据库读写分离对应用透明。</p><ol start="2"><li><strong>cdn刷新和预热资源</strong></li></ol><p>缓存刷新：提交缓存刷新请求后，CDN节点的缓存内容将会被强制过期。当用户向CDN节点请求资源时，CDN会直接回源站拉取对应的资源返回给用户，并将其缓存。</p><p>缓存预热：提交缓存预热请求后，源站将会主动将对应的资源缓存到CDN节点。当用户首次请求时，就能直接从CDN节点缓存中获取到最新的请求资源，无需再回源站拉取。</p><ol start="3"><li><p><strong>nginx针对前端静态资源的缓存处理</strong></p></li><li><p><strong>CPU负载压力</strong></p></li><li><p><strong>分布式文件系统 分布式数据库</strong><br>分库分表、MPP、分布式数据库</p></li><li><p><strong>NOSQL和搜索引擎</strong><br>为什么使用NOSQL数据库?</p></li></ol><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="https://www.cnblogs.com/youzhibing/p/7301463.html" target="_blank" rel="noopener">spring集成mybatis实现mysql读写分离-博客园</a><br><a href="https://shardingsphere.apache.org/blog/cn/material/database/" target="_blank" rel="noopener">我们是怎样打造一款分布式数据库的 · ShardingSphere - 博客</a><br><a href="https://www.cnblogs.com/shenzs-whj/p/10224671.html" target="_blank" rel="noopener">为什么要使用NoSQL数据库-博客园</a><br><a href="https://juejin.cn/post/6844903602935300104" target="_blank" rel="noopener">消息队列之 RocketMQ - 掘金</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;阿里巴巴面试参考指南&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#阿里巴巴面试参考指南&quot;&gt;&lt;/a&gt;阿里巴巴面试参考指南&lt;/h1&gt;
-&lt;p&gt;#面试&lt;/p&gt;
-&lt;h2 id=&quot;面试参考指南&quot;&gt;&lt;a class=&quot;header-anchor&quot; href
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="https://jinguo.tech/2022/01/14/Vue%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
     <id>https://jinguo.tech/2022/01/14/Vue%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</id>
     <published>2022-01-13T18:02:14.324Z</published>
@@ -487,6 +463,30 @@
         &lt;h1 id=&quot;OKHttp原理&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#OKHttp原理&quot;&gt;&lt;/a&gt;OKHttp原理&lt;/h1&gt;
 &lt;p&gt;#http&lt;/p&gt;
 &lt;h2 id=&quot;原理概述&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#原理概
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://jinguo.tech/2022/01/14/MySQL%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92/"/>
+    <id>https://jinguo.tech/2022/01/14/MySQL%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92/</id>
+    <published>2022-01-13T18:02:14.266Z</published>
+    <updated>2021-12-13T16:57:25.535Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MySQL"><a class="header-anchor" href="#MySQL"></a>MySQL</h1><p>#mysql #执行计划</p><h2 id="Explain-用途"><a class="header-anchor" href="#Explain-用途"></a><code>Explain</code> 用途</h2><ol><li>表的读取顺序如何</li><li>数据读取操作有哪些操作类型</li><li>哪些索引可以使用</li><li>哪些索引被实际使用</li><li>表之间是如何引用</li><li>每张表有多少行被优化器查询</li></ol><h2 id="Explain语法"><a class="header-anchor" href="#Explain语法"></a><code>Explain</code>语法</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">explain</span> <span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span></span><br></pre></td></tr></table></figure><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="https://blog.csdn.net/Dreamhai/article/details/104558854" target="_blank" rel="noopener">MySQL查询优化之explain 执行计划</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;MySQL&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#MySQL&quot;&gt;&lt;/a&gt;MySQL&lt;/h1&gt;
+&lt;p&gt;#mysql #执行计划&lt;/p&gt;
+&lt;h2 id=&quot;Explain-用途&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;
       
     
     </summary>
