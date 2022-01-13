@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="JinGuo, Java, Spring">
+  <meta name="keywords" content="presto,">
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="Presto引擎 #presto Presto数据模型 Presto使用Catalog、Schema和Table这3层结构来管理数据。  ** Catalog**:就是数据源。Hive是数据源，Mysql也是数据源，Hive 和Mysql都是数据源类型，可以连接多个Hive和多个Mysql，每个连接都有一个名字。一个Catalog可以包含多个Schema，大家可以通过show catalogs 命">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
+<meta name="description" content="Presto数据模型 Presto使用Catalog、Schema和Table这3层结构来管理数据。  ** Catalog**:就是数据源。Hive是数据源，Mysql也是数据源，Hive 和Mysql都是数据源类型，可以连接多个Hive和多个Mysql，每个连接都有一个名字。一个Catalog可以包含多个Schema，大家可以通过show catalogs 命令看到Presto连接的所有数据源">
+<meta name="keywords" content="presto">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构师成长之旅">
+<meta property="og:title" content="Presto引擎">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/Presto引擎/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="Presto引擎 #presto Presto数据模型 Presto使用Catalog、Schema和Table这3层结构来管理数据。  ** Catalog**:就是数据源。Hive是数据源，Mysql也是数据源，Hive 和Mysql都是数据源类型，可以连接多个Hive和多个Mysql，每个连接都有一个名字。一个Catalog可以包含多个Schema，大家可以通过show catalogs 命">
+<meta property="og:description" content="Presto数据模型 Presto使用Catalog、Schema和Table这3层结构来管理数据。  ** Catalog**:就是数据源。Hive是数据源，Mysql也是数据源，Hive 和Mysql都是数据源类型，可以连接多个Hive和多个Mysql，每个连接都有一个名字。一个Catalog可以包含多个Schema，大家可以通过show catalogs 命令看到Presto连接的所有数据源">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-14T12:03:25.568Z">
+<meta property="og:updated_time" content="2022-01-13T19:06:51.061Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="Presto引擎 #presto Presto数据模型 Presto使用Catalog、Schema和Table这3层结构来管理数据。  ** Catalog**:就是数据源。Hive是数据源，Mysql也是数据源，Hive 和Mysql都是数据源类型，可以连接多个Hive和多个Mysql，每个连接都有一个名字。一个Catalog可以包含多个Schema，大家可以通过show catalogs 命">
+<meta name="twitter:title" content="Presto引擎">
+<meta name="twitter:description" content="Presto数据模型 Presto使用Catalog、Schema和Table这3层结构来管理数据。  ** Catalog**:就是数据源。Hive是数据源，Mysql也是数据源，Hive 和Mysql都是数据源类型，可以连接多个Hive和多个Mysql，每个连接都有一个名字。一个Catalog可以包含多个Schema，大家可以通过show catalogs 命令看到Presto连接的所有数据源">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title> | 架构师成长之旅</title>
+  <title>Presto引擎 | 架构师成长之旅</title>
   
 
 
@@ -341,7 +341,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">Presto引擎</h2>
         
 
         <div class="post-meta">
@@ -369,12 +369,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-12-14T20:03:25+08:00">
-                2021-12-14
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:06:51+08:00">
+                2022-01-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大数据/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -407,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  241
+                  237
                 </span>
               
 
@@ -444,9 +466,7 @@
       
 
       
-        <h1 id="Presto引擎"><a class="header-anchor" href="#Presto引擎"></a>Presto引擎</h1>
-<p>#presto</p>
-<h2 id="Presto数据模型"><a class="header-anchor" href="#Presto数据模型"></a>Presto数据模型</h2>
+        <h2 id="Presto数据模型"><a class="header-anchor" href="#Presto数据模型"></a>Presto数据模型</h2>
 <p>Presto使用Catalog、Schema和Table这3层结构来管理数据。</p>
 <blockquote>
 <p>** Catalog**:就是数据源。Hive是数据源，Mysql也是数据源，Hive 和Mysql都是数据源类型，可以连接多个Hive和多个Mysql，每个连接都有一个名字。一个Catalog可以包含多个Schema，大家可以通过show catalogs 命令看到Presto连接的所有数据源。<br>
@@ -480,7 +500,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jinguo.tech/2022/01/14/Presto引擎/" title>https://jinguo.tech/2022/01/14/Presto引擎/</a>
+    <a href="https://jinguo.tech/2022/01/14/Presto引擎/" title="Presto引擎">https://jinguo.tech/2022/01/14/Presto引擎/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -493,6 +513,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/presto/" rel="tag"><i class="fa fa-tag"></i> presto</a>
+          
+        </div>
+      
 
       
       
@@ -502,8 +528,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/01/14/OKHttp原理/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2022/01/14/MySQL执行计划/" rel="next" title="MySQL执行计划">
+                <i class="fa fa-chevron-left"></i> MySQL执行计划
               </a>
             
           </div>
@@ -512,8 +538,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/14/Redis锁/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/01/14/Redis锁/" rel="prev" title="Redis锁">
+                Redis锁 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -596,7 +622,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -607,7 +633,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -618,7 +644,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -710,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Presto引擎"><span class="nav-number">1.</span> <span class="nav-text">Presto引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Presto数据模型"><span class="nav-number">1.1.</span> <span class="nav-text">Presto数据模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">1.2.</span> <span class="nav-text">引用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Presto数据模型"><span class="nav-number">1.</span> <span class="nav-text">Presto数据模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">2.</span> <span class="nav-text">引用</span></a></li></ol></div>
             
 
           </div>

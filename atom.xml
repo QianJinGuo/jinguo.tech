@@ -400,74 +400,59 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>Redis锁</title>
     <link href="https://jinguo.tech/2022/01/14/Redis%E9%94%81/"/>
     <id>https://jinguo.tech/2022/01/14/Redis%E9%94%81/</id>
     <published>2022-01-13T18:02:14.285Z</published>
-    <updated>2021-12-14T11:52:10.491Z</updated>
+    <updated>2022-01-13T19:07:43.096Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Redis锁"><a class="header-anchor" href="#Redis锁"></a>Redis锁</h1><p>#redis  #分布式锁</p><h2 id="项目应用"><a class="header-anchor" href="#项目应用"></a>项目应用</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果不存在(为空)就set值，并返回1；如果存在(不为空)不进行操作，并返回0</span></span><br><span class="line">Boolean success = stringRedisTemplate.opsForValue().setIfAbsent(lockKey, String.valueOf(System.currentTimeMillis()), seconds, TimeUnit.SECONDS);</span><br><span class="line"><span class="keyword">return</span> success != <span class="keyword">null</span> &amp;&amp; success;</span><br></pre></td></tr></table></figure><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="https://xie.infoq.cn/article/556aaceb68789b9de4807f1c2" target="_blank" rel="noopener">Redis分布式锁原理</a><br><a href="https://juejin.cn/post/6901484610031452174" target="_blank" rel="noopener">Redis实现分布式锁</a><br><a href="https://blog.csdn.net/amosjob/article/details/99681707" target="_blank" rel="noopener">企业级分布式锁</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="项目应用"><a class="header-anchor" href="#项目应用"></a>项目应用</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果不存在(为空)就set值，并返回1；如果存在(不为空)不进行操作，并返回0</span></span><br><span class="line">Boolean success = stringRedisTemplate.opsForValue().setIfAbsent(lockKey, String.valueOf(System.currentTimeMillis()), seconds, TimeUnit.SECONDS);</span><br><span class="line"><span class="keyword">return</span> success != <span class="keyword">null</span> &amp;&amp; success;</span><br></pre></td></tr></table></figure><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="https://xie.infoq.cn/article/556aaceb68789b9de4807f1c2" target="_blank" rel="noopener">Redis分布式锁原理</a><br><a href="https://juejin.cn/post/6901484610031452174" target="_blank" rel="noopener">Redis实现分布式锁</a><br><a href="https://blog.csdn.net/amosjob/article/details/99681707" target="_blank" rel="noopener">企业级分布式锁</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Redis锁&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Redis锁&quot;&gt;&lt;/a&gt;Redis锁&lt;/h1&gt;
-&lt;p&gt;#redis  #分布式锁&lt;/p&gt;
-&lt;h2 id=&quot;项目应用&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#项
+        &lt;h2 id=&quot;项目应用&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#项目应用&quot;&gt;&lt;/a&gt;项目应用&lt;/h2&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span cl
       
     
     </summary>
     
     
+      <category term="redis" scheme="https://jinguo.tech/categories/redis/"/>
+    
+    
+      <category term="redis" scheme="https://jinguo.tech/tags/redis/"/>
+    
+      <category term="分布式锁" scheme="https://jinguo.tech/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>Presto引擎</title>
     <link href="https://jinguo.tech/2022/01/14/Presto%E5%BC%95%E6%93%8E/"/>
     <id>https://jinguo.tech/2022/01/14/Presto%E5%BC%95%E6%93%8E/</id>
     <published>2022-01-13T18:02:14.279Z</published>
-    <updated>2021-12-14T12:03:25.568Z</updated>
+    <updated>2022-01-13T19:06:51.061Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Presto引擎"><a class="header-anchor" href="#Presto引擎"></a>Presto引擎</h1><p>#presto</p><h2 id="Presto数据模型"><a class="header-anchor" href="#Presto数据模型"></a>Presto数据模型</h2><p>Presto使用Catalog、Schema和Table这3层结构来管理数据。</p><blockquote><p>** Catalog**:就是数据源。Hive是数据源，Mysql也是数据源，Hive 和Mysql都是数据源类型，可以连接多个Hive和多个Mysql，每个连接都有一个名字。一个Catalog可以包含多个Schema，大家可以通过show catalogs 命令看到Presto连接的所有数据源。<br>** Schema**：相当于一个数据库实例，一个Schema包含多张数据表。show schemas from 'catalog_name’可列出catalog_name下的所有schema。<br><strong>Table</strong>：数据表，与一般意义上的数据库表相同。show tables from 'catalog_name.schema_name’可查看’catalog_name.schema_name’下的所有表。</p></blockquote><blockquote><p>在Presto中定位一张表，一般是catalog为根，例如：一张表的全称为 hive.test_data.test，标识 hive(catalog)下的 test_data(schema)中test表。可以简理解为：数据源的大类.数据库.数据表。</p></blockquote><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="http://blog.chinaunix.net/uid-31012107-id-5819785.html" target="_blank" rel="noopener">Presto入门介绍</a><br><a href="https://www.alibabacloud.com/help/zh/doc-detail/166150.htm" target="_blank" rel="noopener">Presto数据源</a><br><a href="https://cloud.tencent.com/developer/article/1630733" target="_blank" rel="noopener">Presto查询引擎及原理分析</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Presto引擎&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Presto引擎&quot;&gt;&lt;/a&gt;Presto引擎&lt;/h1&gt;
-&lt;p&gt;#presto&lt;/p&gt;
-&lt;h2 id=&quot;Presto数据模型&quot;&gt;&lt;a class=&quot;header-anchor&quot; hr
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://jinguo.tech/2022/01/14/OKHttp%E5%8E%9F%E7%90%86/"/>
-    <id>https://jinguo.tech/2022/01/14/OKHttp%E5%8E%9F%E7%90%86/</id>
-    <published>2022-01-13T18:02:14.272Z</published>
-    <updated>2021-12-14T15:39:18.870Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="OKHttp原理"><a class="header-anchor" href="#OKHttp原理"></a>OKHttp原理</h1><p>#http</p><h2 id="原理概述"><a class="header-anchor" href="#原理概述"></a>原理概述</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/webp/1136954/1629450431169-f6cf4ce4-1a30-4f9f-98de-af6e4dcf12f0.webp" alt="okhttp原理"></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="https://juejin.cn/post/6968773787374321677?utm_source=gold_browser_extension" target="_blank" rel="noopener">探索 OkHttp 原理 - 掘金</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Presto数据模型"><a class="header-anchor" href="#Presto数据模型"></a>Presto数据模型</h2><p>Presto使用Catalog、Schema和Table这3层结构来管理数据。</p><blockquote><p>** Catalog**:就是数据源。Hive是数据源，Mysql也是数据源，Hive 和Mysql都是数据源类型，可以连接多个Hive和多个Mysql，每个连接都有一个名字。一个Catalog可以包含多个Schema，大家可以通过show catalogs 命令看到Presto连接的所有数据源。<br>** Schema**：相当于一个数据库实例，一个Schema包含多张数据表。show schemas from 'catalog_name’可列出catalog_name下的所有schema。<br><strong>Table</strong>：数据表，与一般意义上的数据库表相同。show tables from 'catalog_name.schema_name’可查看’catalog_name.schema_name’下的所有表。</p></blockquote><blockquote><p>在Presto中定位一张表，一般是catalog为根，例如：一张表的全称为 hive.test_data.test，标识 hive(catalog)下的 test_data(schema)中test表。可以简理解为：数据源的大类.数据库.数据表。</p></blockquote><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="http://blog.chinaunix.net/uid-31012107-id-5819785.html" target="_blank" rel="noopener">Presto入门介绍</a><br><a href="https://www.alibabacloud.com/help/zh/doc-detail/166150.htm" target="_blank" rel="noopener">Presto数据源</a><br><a href="https://cloud.tencent.com/developer/article/1630733" target="_blank" rel="noopener">Presto查询引擎及原理分析</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;OKHttp原理&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#OKHttp原理&quot;&gt;&lt;/a&gt;OKHttp原理&lt;/h1&gt;
-&lt;p&gt;#http&lt;/p&gt;
-&lt;h2 id=&quot;原理概述&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#原理概
+        &lt;h2 id=&quot;Presto数据模型&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Presto数据模型&quot;&gt;&lt;/a&gt;Presto数据模型&lt;/h2&gt;
+&lt;p&gt;Presto使用Catalog、Schema和Table这3层结构来管理数据。&lt;/p&gt;
+&lt;blockquo
       
     
     </summary>
     
     
+      <category term="大数据" scheme="https://jinguo.tech/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+      <category term="presto" scheme="https://jinguo.tech/tags/presto/"/>
     
   </entry>
   
@@ -476,16 +461,18 @@
     <link href="https://jinguo.tech/2022/01/14/MySQL%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92/"/>
     <id>https://jinguo.tech/2022/01/14/MySQL%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92/</id>
     <published>2022-01-13T18:02:14.266Z</published>
-    <updated>2022-01-13T18:57:47.915Z</updated>
+    <updated>2022-01-13T19:04:22.652Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="MySQL执行计划"><a class="header-anchor" href="#MySQL执行计划"></a>MySQL执行计划</h1><h2 id="Explain-用途"><a class="header-anchor" href="#Explain-用途"></a><code>Explain</code> 用途</h2><ol><li>表的读取顺序如何</li><li>数据读取操作有哪些操作类型</li><li>哪些索引可以使用</li><li>哪些索引被实际使用</li><li>表之间是如何引用</li><li>每张表有多少行被优化器查询</li></ol><h2 id="Explain语法"><a class="header-anchor" href="#Explain语法"></a><code>Explain</code>语法</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">explain</span> <span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span></span><br></pre></td></tr></table></figure><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="https://blog.csdn.net/Dreamhai/article/details/104558854" target="_blank" rel="noopener">MySQL查询优化之explain 执行计划</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Explain-用途"><a class="header-anchor" href="#Explain-用途"></a><code>Explain</code> 用途</h2><ol><li>表的读取顺序如何</li><li>数据读取操作有哪些操作类型</li><li>哪些索引可以使用</li><li>哪些索引被实际使用</li><li>表之间是如何引用</li><li>每张表有多少行被优化器查询</li></ol><h2 id="Explain语法"><a class="header-anchor" href="#Explain语法"></a><code>Explain</code>语法</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">explain</span> <span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">user</span></span><br></pre></td></tr></table></figure><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="https://blog.csdn.net/Dreamhai/article/details/104558854" target="_blank" rel="noopener">MySQL查询优化之explain 执行计划</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;MySQL执行计划&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#MySQL执行计划&quot;&gt;&lt;/a&gt;MySQL执行计划&lt;/h1&gt;
-&lt;h2 id=&quot;Explain-用途&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Explain
+        &lt;h2 id=&quot;Explain-用途&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Explain-用途&quot;&gt;&lt;/a&gt;&lt;code&gt;Explain&lt;/code&gt; 用途&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;表的读取顺序如何&lt;/li&gt;
+&lt;li&gt;数据读取操作有哪些操作类型&lt;/l
       
     
     </summary>
@@ -495,6 +482,41 @@
     
     
       <category term="mysql" scheme="https://jinguo.tech/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis转义字符</title>
+    <link href="https://jinguo.tech/2022/01/14/Mybatis%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/"/>
+    <id>https://jinguo.tech/2022/01/14/Mybatis%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</id>
+    <published>2022-01-13T18:02:14.252Z</published>
+    <updated>2022-01-13T19:04:09.744Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="转义字符"><a class="header-anchor" href="#转义字符"></a>转义字符</h2><table><thead><tr><th>字符</th><th>转义</th><th>描述</th></tr></thead><tbody><tr><td>&lt;</td><td><code>&amp;lt;</code></td><td>小于</td></tr><tr><td>&lt;=</td><td><code>&amp;lt;=</code></td><td>小于等于</td></tr><tr><td>&gt;</td><td><code>&amp;gt;</code></td><td>大于</td></tr><tr><td>&gt;=</td><td><code>&amp;gt;=</code></td><td>大于等于</td></tr><tr><td>&lt;&gt;</td><td><code>&amp;lt;&amp;gt;</code></td><td>不等于</td></tr><tr><td>&amp;</td><td><code>&amp;amp;</code></td><td></td></tr><tr><td>’</td><td><code>&amp;apos</code></td><td></td></tr><tr><td>‘’</td><td><code>&amp;qots</code></td><td></td></tr></tbody></table><p>此外，也可以用CDATA标志<br><code>&lt;![CDATA[ 这里写你的sql ]]&gt;</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;转义字符&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#转义字符&quot;&gt;&lt;/a&gt;转义字符&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字符&lt;/th&gt;
+&lt;th&gt;转义&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;t
+      
+    
+    </summary>
+    
+    
+      <category term="ORM" scheme="https://jinguo.tech/categories/ORM/"/>
+    
+    
+      <category term="mybatis" scheme="https://jinguo.tech/tags/mybatis/"/>
     
   </entry>
   

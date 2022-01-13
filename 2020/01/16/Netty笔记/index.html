@@ -97,13 +97,13 @@
 
 
 
-<meta name="description" content="[TOC] 业界哪些流行的开源框架用Netty作为底层通信框架  Dubbo： 阿里开源的高性能RPC框架 RocketMQ： 阿里出品的高性能消息队列 Spark： 炙手可热的大数据处理引擎，底层使用Netty Elasticsearch： 分布式多用户的全文搜索引擎 Apache Cassandra：开源分布式搜索数据库 Flink:分布式高性能高可用的流处理框架 Netty-SocketIO">
+<meta name="description" content="业界哪些流行的开源框架用Netty作为底层通信框架  Dubbo： 阿里开源的高性能RPC框架 RocketMQ： 阿里出品的高性能消息队列 Spark： 炙手可热的大数据处理引擎，底层使用Netty Elasticsearch： 分布式多用户的全文搜索引擎 Apache Cassandra：开源分布式搜索数据库 Flink:分布式高性能高可用的流处理框架 Netty-SocketIO的java服">
 <meta name="keywords" content="Netty">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Netty教程">
 <meta property="og:url" content="https://jinguo.tech/2020/01/16/Netty笔记/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="[TOC] 业界哪些流行的开源框架用Netty作为底层通信框架  Dubbo： 阿里开源的高性能RPC框架 RocketMQ： 阿里出品的高性能消息队列 Spark： 炙手可热的大数据处理引擎，底层使用Netty Elasticsearch： 分布式多用户的全文搜索引擎 Apache Cassandra：开源分布式搜索数据库 Flink:分布式高性能高可用的流处理框架 Netty-SocketIO">
+<meta property="og:description" content="业界哪些流行的开源框架用Netty作为底层通信框架  Dubbo： 阿里开源的高性能RPC框架 RocketMQ： 阿里出品的高性能消息队列 Spark： 炙手可热的大数据处理引擎，底层使用Netty Elasticsearch： 分布式多用户的全文搜索引擎 Apache Cassandra：开源分布式搜索数据库 Flink:分布式高性能高可用的流处理框架 Netty-SocketIO的java服">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img.jinguo.tech/blog/20200116/556rRkzcJvAd.jpg?imageslim">
 <meta property="og:image" content="https://img.jinguo.tech/blog/20200116/HPr4j4YYplQS.jpg?imageslim">
@@ -119,10 +119,10 @@
 <meta property="og:image" content="https://img.jinguo.tech/blog/20200116/hLvJCvXn7BzQ.png?imageslim">
 <meta property="og:image" content="https://img.jinguo.tech/blog/20200116/cIhXBNgNE4y8.png?imageslim">
 <meta property="og:image" content="https://img.jinguo.tech/blog/20200116/b2FvBccopV9G.png?imageslim">
-<meta property="og:updated_time" content="2022-01-13T18:58:20.644Z">
+<meta property="og:updated_time" content="2022-01-13T19:05:01.124Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Netty教程">
-<meta name="twitter:description" content="[TOC] 业界哪些流行的开源框架用Netty作为底层通信框架  Dubbo： 阿里开源的高性能RPC框架 RocketMQ： 阿里出品的高性能消息队列 Spark： 炙手可热的大数据处理引擎，底层使用Netty Elasticsearch： 分布式多用户的全文搜索引擎 Apache Cassandra：开源分布式搜索数据库 Flink:分布式高性能高可用的流处理框架 Netty-SocketIO">
+<meta name="twitter:description" content="业界哪些流行的开源框架用Netty作为底层通信框架  Dubbo： 阿里开源的高性能RPC框架 RocketMQ： 阿里出品的高性能消息队列 Spark： 炙手可热的大数据处理引擎，底层使用Netty Elasticsearch： 分布式多用户的全文搜索引擎 Apache Cassandra：开源分布式搜索数据库 Flink:分布式高性能高可用的流处理框架 Netty-SocketIO的java服">
 <meta name="twitter:image" content="https://img.jinguo.tech/blog/20200116/556rRkzcJvAd.jpg?imageslim">
 
 
@@ -384,7 +384,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T02:58:20+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:05:01+08:00">
                 2022-01-14
               </time>
             
@@ -481,8 +481,7 @@
       
 
       
-        <p>[TOC]</p>
-<h2 id="业界哪些流行的开源框架用Netty作为底层通信框架"><a class="header-anchor" href="#业界哪些流行的开源框架用Netty作为底层通信框架"></a>业界哪些流行的开源框架用Netty作为底层通信框架</h2>
+        <h2 id="业界哪些流行的开源框架用Netty作为底层通信框架"><a class="header-anchor" href="#业界哪些流行的开源框架用Netty作为底层通信框架"></a>业界哪些流行的开源框架用Netty作为底层通信框架</h2>
 <ul>
 <li>Dubbo： 阿里开源的高性能RPC框架</li>
 <li>RocketMQ： 阿里出品的高性能消息队列</li>
@@ -884,7 +883,7 @@ Netty的优点总结如下：<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -895,7 +894,7 @@ Netty的优点总结如下：<br>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -906,7 +905,7 @@ Netty的优点总结如下：<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

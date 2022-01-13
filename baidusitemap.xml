@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jinguo.tech/2022/01/14/Guava%20%E4%B8%AD%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98%20LoadingCache%20%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://jinguo.tech/2022/01/14/Redis%E9%94%81/</loc>
+    <lastmod>2022-01-13</lastmod>
+  </url>  <url>
+    <loc>https://jinguo.tech/2022/01/14/Presto%E5%BC%95%E6%93%8E/</loc>
     <lastmod>2022-01-13</lastmod>
   </url>  <url>
     <loc>https://jinguo.tech/2020/01/16/Netty%E7%AC%94%E8%AE%B0/</loc>
@@ -28,11 +31,11 @@
     <loc>https://jinguo.tech/2022/01/14/Guava%E4%B9%8BJoiner/</loc>
     <lastmod>2022-01-13</lastmod>
   </url>  <url>
-    <loc>https://jinguo.tech/2022/01/14/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://jinguo.tech/2022/01/14/Guava%20%E4%B8%AD%E6%9C%AC%E5%9C%B0%E7%BC%93%E5%AD%98%20LoadingCache%20%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2022-01-13</lastmod>
   </url>  <url>
-    <loc>https://jinguo.tech/2022/01/14/OKHttp%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2021-12-14</lastmod>
+    <loc>https://jinguo.tech/2022/01/14/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2022-01-13</lastmod>
   </url>  <url>
     <loc>https://jinguo.tech/2022/01/14/SQL%20Where%E5%A6%99%E7%94%A8/</loc>
     <lastmod>2021-12-14</lastmod>
@@ -43,16 +46,10 @@
     <loc>https://jinguo.tech/2022/01/14/Vue%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2021-12-14</lastmod>
   </url>  <url>
-    <loc>https://jinguo.tech/2022/01/14/Presto%E5%BC%95%E6%93%8E/</loc>
-    <lastmod>2021-12-14</lastmod>
-  </url>  <url>
     <loc>https://jinguo.tech/2022/01/14/%E5%90%8C%E6%AD%A5%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7%E6%A0%87%E6%B3%A8/</loc>
     <lastmod>2021-12-14</lastmod>
   </url>  <url>
     <loc>https://jinguo.tech/2022/01/14/SpringBoot%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C/</loc>
-    <lastmod>2021-12-14</lastmod>
-  </url>  <url>
-    <loc>https://jinguo.tech/2022/01/14/Redis%E9%94%81/</loc>
     <lastmod>2021-12-14</lastmod>
   </url>  <url>
     <loc>https://jinguo.tech/2022/01/14/SpringBoot%E9%9B%86%E6%88%90Kafka/</loc>

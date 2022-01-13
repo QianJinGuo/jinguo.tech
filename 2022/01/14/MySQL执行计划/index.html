@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="MySQL执行计划 Explain 用途  表的读取顺序如何 数据读取操作有哪些操作类型 哪些索引可以使用 哪些索引被实际使用 表之间是如何引用 每张表有多少行被优化器查询  Explain语法 1explain select * from user 引用 MySQL查询优化之explain 执行计划">
+<meta name="description" content="Explain 用途  表的读取顺序如何 数据读取操作有哪些操作类型 哪些索引可以使用 哪些索引被实际使用 表之间是如何引用 每张表有多少行被优化器查询  Explain语法 1explain select * from user 引用 MySQL查询优化之explain 执行计划">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL执行计划">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/MySQL执行计划/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="MySQL执行计划 Explain 用途  表的读取顺序如何 数据读取操作有哪些操作类型 哪些索引可以使用 哪些索引被实际使用 表之间是如何引用 每张表有多少行被优化器查询  Explain语法 1explain select * from user 引用 MySQL查询优化之explain 执行计划">
+<meta property="og:description" content="Explain 用途  表的读取顺序如何 数据读取操作有哪些操作类型 哪些索引可以使用 哪些索引被实际使用 表之间是如何引用 每张表有多少行被优化器查询  Explain语法 1explain select * from user 引用 MySQL查询优化之explain 执行计划">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-01-13T18:57:47.915Z">
+<meta property="og:updated_time" content="2022-01-13T19:04:22.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL执行计划">
-<meta name="twitter:description" content="MySQL执行计划 Explain 用途  表的读取顺序如何 数据读取操作有哪些操作类型 哪些索引可以使用 哪些索引被实际使用 表之间是如何引用 每张表有多少行被优化器查询  Explain语法 1explain select * from user 引用 MySQL查询优化之explain 执行计划">
+<meta name="twitter:description" content="Explain 用途  表的读取顺序如何 数据读取操作有哪些操作类型 哪些索引可以使用 哪些索引被实际使用 表之间是如何引用 每张表有多少行被优化器查询  Explain语法 1explain select * from user 引用 MySQL查询优化之explain 执行计划">
 
 
 
@@ -369,7 +369,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T02:57:47+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:04:22+08:00">
                 2022-01-14
               </time>
             
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  86
+                  81
                 </span>
               
 
@@ -466,8 +466,7 @@
       
 
       
-        <h1 id="MySQL执行计划"><a class="header-anchor" href="#MySQL执行计划"></a>MySQL执行计划</h1>
-<h2 id="Explain-用途"><a class="header-anchor" href="#Explain-用途"></a><code>Explain</code> 用途</h2>
+        <h2 id="Explain-用途"><a class="header-anchor" href="#Explain-用途"></a><code>Explain</code> 用途</h2>
 <ol>
 <li>表的读取顺序如何</li>
 <li>数据读取操作有哪些操作类型</li>
@@ -538,8 +537,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/14/OKHttp原理/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/01/14/Presto引擎/" rel="prev" title="Presto引擎">
+                Presto引擎 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -622,7 +621,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -633,7 +632,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -644,7 +643,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -736,7 +735,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL执行计划"><span class="nav-number">1.</span> <span class="nav-text">MySQL执行计划</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Explain-用途"><span class="nav-number">1.1.</span> <span class="nav-text">Explain 用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Explain语法"><span class="nav-number">1.2.</span> <span class="nav-text">Explain语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">1.3.</span> <span class="nav-text">引用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Explain-用途"><span class="nav-number">1.</span> <span class="nav-text">Explain 用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Explain语法"><span class="nav-number">2.</span> <span class="nav-text">Explain语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li></ol></div>
             
 
           </div>
