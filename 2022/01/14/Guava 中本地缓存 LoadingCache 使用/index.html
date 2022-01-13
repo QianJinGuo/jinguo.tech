@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="Guava中本地缓存LoadingCache使用 Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `Cache` 会为了保">
+<meta name="description" content="Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `Cache` 会为了保持内存使用合理，而配置自动将一些值移除。 通常情况">
 <meta name="keywords" content="guava,缓存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Guava中本地缓存LoadingCache使用">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/Guava 中本地缓存 LoadingCache 使用/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="Guava中本地缓存LoadingCache使用 Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `Cache` 会为了保">
+<meta property="og:description" content="Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `Cache` 会为了保持内存使用合理，而配置自动将一些值移除。 通常情况">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-01-13T18:46:33.092Z">
+<meta property="og:updated_time" content="2022-01-13T19:00:53.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Guava中本地缓存LoadingCache使用">
-<meta name="twitter:description" content="Guava中本地缓存LoadingCache使用 Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `Cache` 会为了保">
+<meta name="twitter:description" content="Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `Cache` 会为了保持内存使用合理，而配置自动将一些值移除。 通常情况">
 
 
 
@@ -369,7 +369,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T02:46:33+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:00:53+08:00">
                 2022-01-14
               </time>
             
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  962
+                  954
                 </span>
               
 
@@ -466,8 +466,7 @@
       
 
       
-        <h1 id="Guava中本地缓存LoadingCache使用"><a class="header-anchor" href="#Guava中本地缓存LoadingCache使用"></a>Guava中本地缓存LoadingCache使用</h1>
-<h2 id="Guava-Cache"><a class="header-anchor" href="#Guava-Cache"></a>Guava Cache</h2>
+        <h2 id="Guava-Cache"><a class="header-anchor" href="#Guava-Cache"></a>Guava Cache</h2>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`Cache`</span> 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，</span><br><span class="line">就应当将值保存到缓存中。<span class="code">`Cache`</span> 和 <span class="code">`ConcurrentMap`</span> 类似，但又不尽相同。</span><br><span class="line">最大的不同是 <span class="code">`ConcurrentMap`</span> 会永久的存储所有的元素值直到他们被显示的移除，</span><br><span class="line">但是 <span class="code">`Cache`</span> 会为了保持内存使用合理，而配置自动将一些值移除。</span><br></pre></td></tr></table></figure>
 <p>通常情况下，Guava Cache 适用于以下场景：</p>
 <ul>
@@ -758,7 +757,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Guava中本地缓存LoadingCache使用"><span class="nav-number">1.</span> <span class="nav-text">Guava中本地缓存LoadingCache使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Guava-Cache"><span class="nav-number">1.1.</span> <span class="nav-text">Guava Cache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LoadingCache"><span class="nav-number">1.2.</span> <span class="nav-text">LoadingCache</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LoadingCache-不能-Cache-null"><span class="nav-number">1.2.1.</span> <span class="nav-text">LoadingCache 不能 Cache null</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get-vs-getUnchecked"><span class="nav-number">1.2.2.</span> <span class="nav-text">get() vs getUnchecked()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定时回收"><span class="nav-number">1.2.3.</span> <span class="nav-text">定时回收</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#失效"><span class="nav-number">1.2.4.</span> <span class="nav-text">失效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">1.3.</span> <span class="nav-text">引用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Guava-Cache"><span class="nav-number">1.</span> <span class="nav-text">Guava Cache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LoadingCache"><span class="nav-number">2.</span> <span class="nav-text">LoadingCache</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LoadingCache-不能-Cache-null"><span class="nav-number">2.1.</span> <span class="nav-text">LoadingCache 不能 Cache null</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get-vs-getUnchecked"><span class="nav-number">2.2.</span> <span class="nav-text">get() vs getUnchecked()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定时回收"><span class="nav-number">2.3.</span> <span class="nav-text">定时回收</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#失效"><span class="nav-number">2.4.</span> <span class="nav-text">失效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li></ol></div>
             
 
           </div>
