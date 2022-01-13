@@ -407,13 +407,19 @@
     
     
     <entry>
-      <title></title>
+      <title>CentOS修改主机名</title>
       <link href="/2022/01/14/CentOS%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/"/>
       <url>/2022/01/14/CentOS%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/</url>
       
         <content type="html"><![CDATA[<h1 id="CentOS修改主机名"><a class="header-anchor" href="#CentOS修改主机名"></a>CentOS修改主机名</h1><p>#centos #hostname</p><h2 id="修改主机名"><a class="header-anchor" href="#修改主机名"></a>修改主机名</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  sudo vim /etc/hosts</span><br><span class="line">2.  sudo vim /etc/sysconfig/network</span><br><span class="line">3.  hostnamectl set-hostname name</span><br></pre></td></tr></table></figure><p><img src="https://cdn.nlark.com/yuque/0/2021/png/1136954/1627996123050-be05bd32-cf02-4ee4-906d-53d634f64593.png" alt="hosts配置"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/1136954/1627996147903-0f77b4b7-18fd-47d4-9fd1-503e2ae90ca7.png" alt="network配置"></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> centos | hostname </tag>
+            
+        </tags>
       
     </entry>
     
