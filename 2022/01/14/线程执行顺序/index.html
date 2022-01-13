@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="JinGuo, Java, Spring">
+  <meta name="keywords" content="多线程,jvm,">
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="线程执行顺序 #线程 #jvm 线程执行顺序  jvm为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行（Out-Of-Order Execution）优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的，但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此，如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
+<meta name="description" content="线程执行顺序  jvm为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行（Out-Of-Order Execution）优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的，但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此，如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不能靠代码的先后顺序来保证[^1]">
+<meta name="keywords" content="多线程,jvm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构师成长之旅">
+<meta property="og:title" content="线程执行顺序">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/线程执行顺序/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="线程执行顺序 #线程 #jvm 线程执行顺序  jvm为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行（Out-Of-Order Execution）优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的，但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此，如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不">
+<meta property="og:description" content="线程执行顺序  jvm为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行（Out-Of-Order Execution）优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的，但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此，如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不能靠代码的先后顺序来保证[^1]">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-13T13:35:51.046Z">
+<meta property="og:updated_time" content="2022-01-13T19:27:02.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="线程执行顺序 #线程 #jvm 线程执行顺序  jvm为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行（Out-Of-Order Execution）优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的，但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此，如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不">
+<meta name="twitter:title" content="线程执行顺序">
+<meta name="twitter:description" content="线程执行顺序  jvm为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行（Out-Of-Order Execution）优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的，但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此，如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不能靠代码的先后顺序来保证[^1]">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title> | 架构师成长之旅</title>
+  <title>线程执行顺序 | 架构师成长之旅</title>
   
 
 
@@ -341,7 +341,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">线程执行顺序</h2>
         
 
         <div class="post-meta">
@@ -369,12 +369,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-12-13T21:35:51+08:00">
-                2021-12-13
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:27:02+08:00">
+                2022-01-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -407,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  693
+                  684
                 </span>
               
 
@@ -444,9 +466,7 @@
       
 
       
-        <h1 id="线程执行顺序"><a class="header-anchor" href="#线程执行顺序"></a>线程执行顺序</h1>
-<p>#线程 #jvm</p>
-<h2 id="线程执行顺序-v2"><a class="header-anchor" href="#线程执行顺序-v2"></a>线程执行顺序</h2>
+        <h2 id="线程执行顺序"><a class="header-anchor" href="#线程执行顺序"></a>线程执行顺序</h2>
 <blockquote>
 <p>jvm为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行（Out-Of-Order Execution）优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的，但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此，如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不能靠代码的先后顺序来保证[^1]<br>
 <code>1.《深入理解Java虚拟机：JVM高级特性与最佳实践》 — 周志明</code></p>
@@ -485,7 +505,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jinguo.tech/2022/01/14/线程执行顺序/" title>https://jinguo.tech/2022/01/14/线程执行顺序/</a>
+    <a href="https://jinguo.tech/2022/01/14/线程执行顺序/" title="线程执行顺序">https://jinguo.tech/2022/01/14/线程执行顺序/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -498,6 +518,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/多线程/" rel="tag"><i class="fa fa-tag"></i> 多线程</a>
+          
+            <a href="/tags/jvm/" rel="tag"><i class="fa fa-tag"></i> jvm</a>
+          
+        </div>
+      
 
       
       
@@ -507,8 +535,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/01/14/线程池实现原理/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2022/01/14/线程池实现原理/" rel="next" title="线程池实现原理">
+                <i class="fa fa-chevron-left"></i> 线程池实现原理
               </a>
             
           </div>
@@ -517,8 +545,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/14/线程中断/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/01/14/字节数组妙用/" rel="prev" title="字节数组">
+                字节数组 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -601,7 +629,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -612,7 +640,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -623,7 +651,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -715,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程执行顺序"><span class="nav-number">1.</span> <span class="nav-text">线程执行顺序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程执行顺序-v2"><span class="nav-number">1.1.</span> <span class="nav-text">线程执行顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">1.2.</span> <span class="nav-text">引用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程执行顺序"><span class="nav-number">1.</span> <span class="nav-text">线程执行顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">2.</span> <span class="nav-text">引用</span></a></li></ol></div>
             
 
           </div>
@@ -758,7 +786,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">30.6k</span>
+    <span title="Site words total count">27k</span>
    
 </div>
 

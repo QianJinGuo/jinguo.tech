@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="JinGuo, Java, Spring">
+  <meta name="keywords" content="list,jdk,stream,">
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="空list #list #jdk8 #stream 返回空List的方式  new ArrayList() new ArrayList(0) Collections.emptyList() Lists.newArrayList()  返回空List的方式 因为返回空集合的替代方法通常是返回null; 然后呼叫者必须添加针对NullPointerException的警卫。如果返回空集合，则会减轻错误">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
+<meta name="description" content="返回空List的方式  new ArrayList() new ArrayList(0) Collections.emptyList() Lists.newArrayList()  返回空List的方式 因为返回空集合的替代方法通常是返回null; 然后呼叫者必须添加针对NullPointerException的警卫。如果返回空集合，则会减轻错误类别。在Java 8+中，还有一个Optional类">
+<meta name="keywords" content="list,jdk,stream">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构师成长之旅">
+<meta property="og:title" content="Empty List">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/返回空List的几种方式/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="空list #list #jdk8 #stream 返回空List的方式  new ArrayList() new ArrayList(0) Collections.emptyList() Lists.newArrayList()  返回空List的方式 因为返回空集合的替代方法通常是返回null; 然后呼叫者必须添加针对NullPointerException的警卫。如果返回空集合，则会减轻错误">
+<meta property="og:description" content="返回空List的方式  new ArrayList() new ArrayList(0) Collections.emptyList() Lists.newArrayList()  返回空List的方式 因为返回空集合的替代方法通常是返回null; 然后呼叫者必须添加针对NullPointerException的警卫。如果返回空集合，则会减轻错误类别。在Java 8+中，还有一个Optional类">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-13T13:37:54.438Z">
+<meta property="og:updated_time" content="2022-01-13T19:20:53.595Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="空list #list #jdk8 #stream 返回空List的方式  new ArrayList() new ArrayList(0) Collections.emptyList() Lists.newArrayList()  返回空List的方式 因为返回空集合的替代方法通常是返回null; 然后呼叫者必须添加针对NullPointerException的警卫。如果返回空集合，则会减轻错误">
+<meta name="twitter:title" content="Empty List">
+<meta name="twitter:description" content="返回空List的方式  new ArrayList() new ArrayList(0) Collections.emptyList() Lists.newArrayList()  返回空List的方式 因为返回空集合的替代方法通常是返回null; 然后呼叫者必须添加针对NullPointerException的警卫。如果返回空集合，则会减轻错误类别。在Java 8+中，还有一个Optional类">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title> | 架构师成长之旅</title>
+  <title>Empty List | 架构师成长之旅</title>
   
 
 
@@ -341,7 +341,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">Empty List</h2>
         
 
         <div class="post-meta">
@@ -369,12 +369,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-12-13T21:37:54+08:00">
-                2021-12-13
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:20:53+08:00">
+                2022-01-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -407,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  488
+                  483
                 </span>
               
 
@@ -444,9 +466,7 @@
       
 
       
-        <h1 id="空list"><a class="header-anchor" href="#空list"></a>空list</h1>
-<p>#list #jdk8 #stream</p>
-<h2 id="返回空List的方式"><a class="header-anchor" href="#返回空List的方式"></a>返回空List的方式</h2>
+        <h2 id="返回空List的方式"><a class="header-anchor" href="#返回空List的方式"></a>返回空List的方式</h2>
 <ol>
 <li><code>new ArrayList()</code></li>
 <li><code>new ArrayList(0)</code></li>
@@ -490,7 +510,7 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jinguo.tech/2022/01/14/返回空List的几种方式/" title>https://jinguo.tech/2022/01/14/返回空List的几种方式/</a>
+    <a href="https://jinguo.tech/2022/01/14/返回空List的几种方式/" title="Empty List">https://jinguo.tech/2022/01/14/返回空List的几种方式/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -503,6 +523,16 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/list/" rel="tag"><i class="fa fa-tag"></i> list</a>
+          
+            <a href="/tags/jdk/" rel="tag"><i class="fa fa-tag"></i> jdk</a>
+          
+            <a href="/tags/stream/" rel="tag"><i class="fa fa-tag"></i> stream</a>
+          
+        </div>
+      
 
       
       
@@ -512,8 +542,8 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/01/14/测试端口连通性/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2022/01/14/测试端口连通性/" rel="next" title="测试端口连通性">
+                <i class="fa fa-chevron-left"></i> 测试端口连通性
               </a>
             
           </div>
@@ -522,8 +552,8 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/14/关闭线程池/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/01/14/关闭线程池/" rel="prev" title="关闭线程池">
+                关闭线程池 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -606,7 +636,7 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -617,7 +647,7 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -628,7 +658,7 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -720,7 +750,7 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#空list"><span class="nav-number">1.</span> <span class="nav-text">空list</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#返回空List的方式"><span class="nav-number">1.1.</span> <span class="nav-text">返回空List的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回null-还是-空集合？-推荐空集合"><span class="nav-number">1.2.</span> <span class="nav-text">返回null 还是 空集合？ 推荐空集合</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#返回空List的方式"><span class="nav-number">1.</span> <span class="nav-text">返回空List的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回null-还是-空集合？-推荐空集合"><span class="nav-number">2.</span> <span class="nav-text">返回null 还是 空集合？ 推荐空集合</span></a></li></ol></div>
             
 
           </div>
@@ -763,7 +793,7 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">30.6k</span>
+    <span title="Site words total count">27k</span>
    
 </div>
 

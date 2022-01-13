@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="JinGuo, Java, Spring">
+  <meta name="keywords" content="线程池,">
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="线程池实现原理 #线程 #线程池 #并发 线程池是什么 线程池（Thread Pool）是一种基于==池化==思想管理线程的工具，经常出现在多线程服务器中，如MySQL。 线程过多会带来额外的开销，其中包括创建销毁线程的开销、调度线程的开销等等，同时也降低了计算机的整体性能。线程池维护多个线程，等待监督管理者分配可并发执行的任务。这种做法，一方面避免了处理任务时创建销毁线程开销的代价，另一方面避免">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
+<meta name="description" content="线程池是什么 线程池（Thread Pool）是一种基于==池化==思想管理线程的工具，经常出现在多线程服务器中，如MySQL。 线程过多会带来额外的开销，其中包括创建销毁线程的开销、调度线程的开销等等，同时也降低了计算机的整体性能。线程池维护多个线程，等待监督管理者分配可并发执行的任务。这种做法，一方面避免了处理任务时创建销毁线程开销的代价，另一方面避免了线程数量膨胀导致的过分调度问题，保证了对">
+<meta name="keywords" content="线程池">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构师成长之旅">
+<meta property="og:title" content="线程池实现原理">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/线程池实现原理/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="线程池实现原理 #线程 #线程池 #并发 线程池是什么 线程池（Thread Pool）是一种基于==池化==思想管理线程的工具，经常出现在多线程服务器中，如MySQL。 线程过多会带来额外的开销，其中包括创建销毁线程的开销、调度线程的开销等等，同时也降低了计算机的整体性能。线程池维护多个线程，等待监督管理者分配可并发执行的任务。这种做法，一方面避免了处理任务时创建销毁线程开销的代价，另一方面避免">
+<meta property="og:description" content="线程池是什么 线程池（Thread Pool）是一种基于==池化==思想管理线程的工具，经常出现在多线程服务器中，如MySQL。 线程过多会带来额外的开销，其中包括创建销毁线程的开销、调度线程的开销等等，同时也降低了计算机的整体性能。线程池维护多个线程，等待监督管理者分配可并发执行的任务。这种做法，一方面避免了处理任务时创建销毁线程开销的代价，另一方面避免了线程数量膨胀导致的过分调度问题，保证了对">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-13T16:00:33.137Z">
+<meta property="og:updated_time" content="2022-01-13T19:26:03.165Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="线程池实现原理 #线程 #线程池 #并发 线程池是什么 线程池（Thread Pool）是一种基于==池化==思想管理线程的工具，经常出现在多线程服务器中，如MySQL。 线程过多会带来额外的开销，其中包括创建销毁线程的开销、调度线程的开销等等，同时也降低了计算机的整体性能。线程池维护多个线程，等待监督管理者分配可并发执行的任务。这种做法，一方面避免了处理任务时创建销毁线程开销的代价，另一方面避免">
+<meta name="twitter:title" content="线程池实现原理">
+<meta name="twitter:description" content="线程池是什么 线程池（Thread Pool）是一种基于==池化==思想管理线程的工具，经常出现在多线程服务器中，如MySQL。 线程过多会带来额外的开销，其中包括创建销毁线程的开销、调度线程的开销等等，同时也降低了计算机的整体性能。线程池维护多个线程，等待监督管理者分配可并发执行的任务。这种做法，一方面避免了处理任务时创建销毁线程开销的代价，另一方面避免了线程数量膨胀导致的过分调度问题，保证了对">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title> | 架构师成长之旅</title>
+  <title>线程池实现原理 | 架构师成长之旅</title>
   
 
 
@@ -341,7 +341,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">线程池实现原理</h2>
         
 
         <div class="post-meta">
@@ -369,12 +369,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-12-14T00:00:33+08:00">
-                2021-12-14
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:26:03+08:00">
+                2022-01-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -407,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  751
+                  737
                 </span>
               
 
@@ -444,9 +466,7 @@
       
 
       
-        <h1 id="线程池实现原理"><a class="header-anchor" href="#线程池实现原理"></a>线程池实现原理</h1>
-<p>#线程 #线程池 #并发</p>
-<h2 id="线程池是什么"><a class="header-anchor" href="#线程池是什么"></a>线程池是什么</h2>
+        <h2 id="线程池是什么"><a class="header-anchor" href="#线程池是什么"></a>线程池是什么</h2>
 <p>线程池（Thread Pool）是一种基于==池化==思想管理线程的工具，经常出现在多线程服务器中，如MySQL。<br>
 线程过多会带来额外的开销，其中包括创建销毁线程的开销、调度线程的开销等等，同时也降低了计算机的整体性能。线程池维护多个线程，等待监督管理者分配可并发执行的任务。这种做法，一方面避免了处理任务时创建销毁线程开销的代价，另一方面避免了线程数量膨胀导致的过分调度问题，保证了对内核的充分利用。</p>
 <h2 id="线程池解决的问题是什么"><a class="header-anchor" href="#线程池解决的问题是什么"></a>线程池解决的问题是什么</h2>
@@ -495,7 +515,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jinguo.tech/2022/01/14/线程池实现原理/" title>https://jinguo.tech/2022/01/14/线程池实现原理/</a>
+    <a href="https://jinguo.tech/2022/01/14/线程池实现原理/" title="线程池实现原理">https://jinguo.tech/2022/01/14/线程池实现原理/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -508,6 +528,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/线程池/" rel="tag"><i class="fa fa-tag"></i> 线程池</a>
+          
+        </div>
+      
 
       
       
@@ -517,8 +543,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/01/14/先更新数据库还是先更新缓存/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2022/01/14/同步注解与并发性标注/" rel="next" title="同步注解与并发性标注">
+                <i class="fa fa-chevron-left"></i> 同步注解与并发性标注
               </a>
             
           </div>
@@ -527,8 +553,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/14/线程执行顺序/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/01/14/线程执行顺序/" rel="prev" title="线程执行顺序">
+                线程执行顺序 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -611,7 +637,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -622,7 +648,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -633,7 +659,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -725,7 +751,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程池实现原理"><span class="nav-number">1.</span> <span class="nav-text">线程池实现原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池是什么"><span class="nav-number">1.1.</span> <span class="nav-text">线程池是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池解决的问题是什么"><span class="nav-number">1.2.</span> <span class="nav-text">线程池解决的问题是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池核心设计与实现"><span class="nav-number">1.3.</span> <span class="nav-text">线程池核心设计与实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池在业务中的实践"><span class="nav-number">1.4.</span> <span class="nav-text">线程池在业务中的实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">1.5.</span> <span class="nav-text">引用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池是什么"><span class="nav-number">1.</span> <span class="nav-text">线程池是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池解决的问题是什么"><span class="nav-number">2.</span> <span class="nav-text">线程池解决的问题是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池核心设计与实现"><span class="nav-number">3.</span> <span class="nav-text">线程池核心设计与实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池在业务中的实践"><span class="nav-number">4.</span> <span class="nav-text">线程池在业务中的实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">5.</span> <span class="nav-text">引用</span></a></li></ol></div>
             
 
           </div>
@@ -768,7 +794,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">30.6k</span>
+    <span title="Site words total count">27k</span>
    
 </div>
 

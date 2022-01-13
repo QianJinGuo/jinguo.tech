@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="JinGuo, Java, Spring">
+  <meta name="keywords" content="SpringBoot,">
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="SpringBoot参数校验 #spring 参数校验 123456789101112131415161718192021222324252627 @ResponseBody @ExceptionHandler(MethodArgumentNotValidException.class) public BaseResponse argValidException(HttpServletRespon">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
+<meta name="description" content="参数校验 123456789101112131415161718192021222324252627 @ResponseBody @ExceptionHandler(MethodArgumentNotValidException.class) public BaseResponse argValidException(HttpServletResponse response, MethodArgu">
+<meta name="keywords" content="SpringBoot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构师成长之旅">
+<meta property="og:title" content="SpringBoot参数校验">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/SpringBoot参数校验/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="SpringBoot参数校验 #spring 参数校验 123456789101112131415161718192021222324252627 @ResponseBody @ExceptionHandler(MethodArgumentNotValidException.class) public BaseResponse argValidException(HttpServletRespon">
+<meta property="og:description" content="参数校验 123456789101112131415161718192021222324252627 @ResponseBody @ExceptionHandler(MethodArgumentNotValidException.class) public BaseResponse argValidException(HttpServletResponse response, MethodArgu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-14T11:55:07.588Z">
+<meta property="og:updated_time" content="2022-01-13T19:13:48.928Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="SpringBoot参数校验 #spring 参数校验 123456789101112131415161718192021222324252627 @ResponseBody @ExceptionHandler(MethodArgumentNotValidException.class) public BaseResponse argValidException(HttpServletRespon">
+<meta name="twitter:title" content="SpringBoot参数校验">
+<meta name="twitter:description" content="参数校验 123456789101112131415161718192021222324252627 @ResponseBody @ExceptionHandler(MethodArgumentNotValidException.class) public BaseResponse argValidException(HttpServletResponse response, MethodArgu">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title> | 架构师成长之旅</title>
+  <title>SpringBoot参数校验 | 架构师成长之旅</title>
   
 
 
@@ -341,7 +341,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">SpringBoot参数校验</h2>
         
 
         <div class="post-meta">
@@ -369,12 +369,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-12-14T19:55:07+08:00">
-                2021-12-14
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:13:48+08:00">
+                2022-01-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -407,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  144
+                  138
                 </span>
               
 
@@ -444,9 +466,7 @@
       
 
       
-        <h1 id="SpringBoot参数校验"><a class="header-anchor" href="#SpringBoot参数校验"></a>SpringBoot参数校验</h1>
-<p>#spring</p>
-<h2 id="参数校验"><a class="header-anchor" href="#参数校验"></a>参数校验</h2>
+        <h2 id="参数校验"><a class="header-anchor" href="#参数校验"></a>参数校验</h2>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">@ResponseBody</span></span><br><span class="line"> <span class="meta">@ExceptionHandler</span>(MethodArgumentNotValidException.class)</span><br><span class="line"> <span class="function"><span class="keyword">public</span> BaseResponse <span class="title">argValidException</span><span class="params">(HttpServletResponse response, MethodArgumentNotValidException ex)</span> </span>&#123;</span><br><span class="line">        logger.error(<span class="string">"参数校验异常："</span>, ex);</span><br><span class="line">        StringBuilder builder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">if</span> (ex.getBindingResult().hasErrors()) &#123;</span><br><span class="line">            ex.getBindingResult().getFieldErrors().forEach(err-&gt;&#123;</span><br><span class="line">                builder.append(err.getDefaultMessage()).append(<span class="string">"\n"</span>);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> BaseResponse.fail(builder.toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"> <span class="meta">@RequestMapping</span>(value = <span class="string">"/apply/collection"</span>, method = &#123;RequestMethod.POST&#125;)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> BaseResponse <span class="title">applyCollectionPermission</span><span class="params">(@Valid @RequestBody ApplyCollectionPermissionRequest request)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> success = metabaseService.applyCollection(request);</span><br><span class="line">        <span class="keyword">return</span> success ? BaseResponse.success(<span class="string">"已提交申请，等待审批。"</span>) : BaseResponse.fail(<span class="string">"操作失败，请重试"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Getter</span></span><br><span class="line"><span class="meta">@Setter</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ApplyCollectionPermissionRequest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@NotBlank</span>(message = <span class="string">"申请理由不能为空"</span>)</span><br><span class="line">    String reason;</span><br><span class="line">    List&lt;MBCollection&gt; collections;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
 <p><a href="https://www.cnblogs.com/mr-yang-localhost/p/7812038.html" target="_blank" rel="noopener">springboot使用hibernate validator</a><br>
@@ -472,7 +492,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jinguo.tech/2022/01/14/SpringBoot参数校验/" title>https://jinguo.tech/2022/01/14/SpringBoot参数校验/</a>
+    <a href="https://jinguo.tech/2022/01/14/SpringBoot参数校验/" title="SpringBoot参数校验">https://jinguo.tech/2022/01/14/SpringBoot参数校验/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -485,6 +505,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/SpringBoot/" rel="tag"><i class="fa fa-tag"></i> SpringBoot</a>
+          
+        </div>
+      
 
       
       
@@ -494,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/01/14/Redis延迟队列/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2022/01/14/Redis锁/" rel="next" title="Redis锁">
+                <i class="fa fa-chevron-left"></i> Redis锁
               </a>
             
           </div>
@@ -504,8 +530,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/14/SpringBoot集成Kafka/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/01/14/SQL Where妙用/" rel="prev" title="SQL Where妙用">
+                SQL Where妙用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -588,7 +614,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -599,7 +625,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -610,7 +636,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -702,7 +728,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringBoot参数校验"><span class="nav-number">1.</span> <span class="nav-text">SpringBoot参数校验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#参数校验"><span class="nav-number">1.1.</span> <span class="nav-text">参数校验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">1.2.</span> <span class="nav-text">引用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参数校验"><span class="nav-number">1.</span> <span class="nav-text">参数校验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">2.</span> <span class="nav-text">引用</span></a></li></ol></div>
             
 
           </div>
@@ -745,7 +771,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">30.6k</span>
+    <span title="Site words total count">27k</span>
    
 </div>
 

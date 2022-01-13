@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="JinGuo, Java, Spring">
+  <meta name="keywords" content="stream,">
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="stream排序和分页 #stream #排序 #分页 Java 8 stream排序&amp;amp;分页 排序 123456789101112131415List&amp;lt;Student newList = new ArrayList&amp;lt;&amp;gt;(10);//升序list.stream().sorted((v1,v2)-&amp;gt;v1.getId().compareTo(	v2.getId())).c">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
+<meta name="description" content="Java 8 stream排序&amp;amp;分页 排序 123456789101112131415List&amp;lt;Student newList = new ArrayList&amp;lt;&amp;gt;(10);//升序list.stream().sorted((v1,v2)-&amp;gt;v1.getId().compareTo(	v2.getId())).collect(Collectors.toList());">
+<meta name="keywords" content="stream">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构师成长之旅">
+<meta property="og:title" content="stream排序和分页">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/Stream排序和分页/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="stream排序和分页 #stream #排序 #分页 Java 8 stream排序&amp;amp;分页 排序 123456789101112131415List&amp;lt;Student newList = new ArrayList&amp;lt;&amp;gt;(10);//升序list.stream().sorted((v1,v2)-&amp;gt;v1.getId().compareTo(	v2.getId())).c">
+<meta property="og:description" content="Java 8 stream排序&amp;amp;分页 排序 123456789101112131415List&amp;lt;Student newList = new ArrayList&amp;lt;&amp;gt;(10);//升序list.stream().sorted((v1,v2)-&amp;gt;v1.getId().compareTo(	v2.getId())).collect(Collectors.toList());">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-13T13:02:43.243Z">
+<meta property="og:updated_time" content="2022-01-13T19:16:42.828Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="stream排序和分页 #stream #排序 #分页 Java 8 stream排序&amp;amp;分页 排序 123456789101112131415List&amp;lt;Student newList = new ArrayList&amp;lt;&amp;gt;(10);//升序list.stream().sorted((v1,v2)-&amp;gt;v1.getId().compareTo(	v2.getId())).c">
+<meta name="twitter:title" content="stream排序和分页">
+<meta name="twitter:description" content="Java 8 stream排序&amp;amp;分页 排序 123456789101112131415List&amp;lt;Student newList = new ArrayList&amp;lt;&amp;gt;(10);//升序list.stream().sorted((v1,v2)-&amp;gt;v1.getId().compareTo(	v2.getId())).collect(Collectors.toList());">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title> | 架构师成长之旅</title>
+  <title>stream排序和分页 | 架构师成长之旅</title>
   
 
 
@@ -341,7 +341,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">stream排序和分页</h2>
         
 
         <div class="post-meta">
@@ -369,12 +369,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-12-13T21:02:43+08:00">
-                2021-12-13
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:16:42+08:00">
+                2022-01-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -407,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  178
+                  167
                 </span>
               
 
@@ -444,9 +466,7 @@
       
 
       
-        <h1 id="stream排序和分页"><a class="header-anchor" href="#stream排序和分页"></a>stream排序和分页</h1>
-<p>#stream #排序 #分页</p>
-<h2 id="Java-8-stream排序-分页"><a class="header-anchor" href="#Java-8-stream排序-分页"></a>Java 8 stream排序&amp;分页</h2>
+        <h2 id="Java-8-stream排序-分页"><a class="header-anchor" href="#Java-8-stream排序-分页"></a>Java 8 stream排序&amp;分页</h2>
 <h3 id="排序"><a class="header-anchor" href="#排序"></a>排序</h3>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Student newList = <span class="keyword">new</span> ArrayList&lt;&gt;(<span class="number">10</span>);</span><br><span class="line"><span class="comment">//升序</span></span><br><span class="line">list.stream().sorted((v1,v2)-&gt;v1.getId().compareTo(</span><br><span class="line">	v2.getId()</span><br><span class="line">)).collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line"><span class="comment">//降序</span></span><br><span class="line">list.stream().sorted((v1,v2)-&gt;v2getId().compareTo(</span><br><span class="line">	v1.getId()</span><br><span class="line">)).collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line"><span class="comment">//根据子对象id，升序排序，Student对象中还有一个Boy的对象属性</span></span><br><span class="line">list.stream().sorted((v1,v2)-&gt;v1.getBoy().getbId().compareTo(</span><br><span class="line">	v2.getBoy().getbId()</span><br><span class="line">	)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
 <h3 id="分页"><a class="header-anchor" href="#分页"></a>分页</h3>
@@ -477,7 +497,7 @@ List&lt;MarketingTaskEntity&gt; paginationResults = resultList.stream().skip((re
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jinguo.tech/2022/01/14/Stream排序和分页/" title>https://jinguo.tech/2022/01/14/Stream排序和分页/</a>
+    <a href="https://jinguo.tech/2022/01/14/Stream排序和分页/" title="stream排序和分页">https://jinguo.tech/2022/01/14/Stream排序和分页/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -490,6 +510,12 @@ List&lt;MarketingTaskEntity&gt; paginationResults = resultList.stream().skip((re
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/stream/" rel="tag"><i class="fa fa-tag"></i> stream</a>
+          
+        </div>
+      
 
       
       
@@ -499,8 +525,8 @@ List&lt;MarketingTaskEntity&gt; paginationResults = resultList.stream().skip((re
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/01/14/SQL Where妙用/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2022/01/14/SQL Where妙用/" rel="next" title="SQL Where妙用">
+                <i class="fa fa-chevron-left"></i> SQL Where妙用
               </a>
             
           </div>
@@ -509,8 +535,8 @@ List&lt;MarketingTaskEntity&gt; paginationResults = resultList.stream().skip((re
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/14/Vue基础语法/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/01/14/测试端口连通性/" rel="prev" title="测试端口连通性">
+                测试端口连通性 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -593,7 +619,7 @@ List&lt;MarketingTaskEntity&gt; paginationResults = resultList.stream().skip((re
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -604,7 +630,7 @@ List&lt;MarketingTaskEntity&gt; paginationResults = resultList.stream().skip((re
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -615,7 +641,7 @@ List&lt;MarketingTaskEntity&gt; paginationResults = resultList.stream().skip((re
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -707,7 +733,7 @@ List&lt;MarketingTaskEntity&gt; paginationResults = resultList.stream().skip((re
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#stream排序和分页"><span class="nav-number">1.</span> <span class="nav-text">stream排序和分页</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-8-stream排序-分页"><span class="nav-number">1.1.</span> <span class="nav-text">Java 8 stream排序&amp;分页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">1.1.1.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分页"><span class="nav-number">1.1.2.</span> <span class="nav-text">分页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在项目中的运用："><span class="nav-number">1.1.3.</span> <span class="nav-text">在项目中的运用：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-8-stream排序-分页"><span class="nav-number">1.</span> <span class="nav-text">Java 8 stream排序&amp;分页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">1.1.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分页"><span class="nav-number">1.2.</span> <span class="nav-text">分页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在项目中的运用："><span class="nav-number">1.3.</span> <span class="nav-text">在项目中的运用：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -750,7 +776,7 @@ List&lt;MarketingTaskEntity&gt; paginationResults = resultList.stream().skip((re
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">30.6k</span>
+    <span title="Site words total count">27k</span>
    
 </div>
 

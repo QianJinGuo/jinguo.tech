@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="JinGuo, Java, Spring">
+  <meta name="keywords" content="SQL,">
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="SQL Where妙用 #sql 深入理解SQL中where 1=1的用处   where 的条件为永真 SQL注入时: DELETE FROM table_a WHERE name= &apos;张三&apos; DELETE FROM table_a WHERE name= &apos;张三&apos; or 1=1 本来是删除ａ值为张三的这一条数据，这就又变成了无约束的删除了。 1=1 永真， 1&amp;lt;&amp;gt;1 永假。   在">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
+<meta name="description" content="深入理解SQL中where 1=1的用处   where 的条件为永真 SQL注入时: DELETE FROM table_a WHERE name= &apos;张三&apos; DELETE FROM table_a WHERE name= &apos;张三&apos; or 1=1 本来是删除ａ值为张三的这一条数据，这就又变成了无约束的删除了。 1=1 永真， 1&amp;lt;&amp;gt;1 永假。   在后台写不定数量的查询条件下，便于规">
+<meta name="keywords" content="SQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构师成长之旅">
+<meta property="og:title" content="SQL Where妙用">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/SQL Where妙用/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="SQL Where妙用 #sql 深入理解SQL中where 1=1的用处   where 的条件为永真 SQL注入时: DELETE FROM table_a WHERE name= &apos;张三&apos; DELETE FROM table_a WHERE name= &apos;张三&apos; or 1=1 本来是删除ａ值为张三的这一条数据，这就又变成了无约束的删除了。 1=1 永真， 1&amp;lt;&amp;gt;1 永假。   在">
+<meta property="og:description" content="深入理解SQL中where 1=1的用处   where 的条件为永真 SQL注入时: DELETE FROM table_a WHERE name= &apos;张三&apos; DELETE FROM table_a WHERE name= &apos;张三&apos; or 1=1 本来是删除ａ值为张三的这一条数据，这就又变成了无约束的删除了。 1=1 永真， 1&amp;lt;&amp;gt;1 永假。   在后台写不定数量的查询条件下，便于规">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-14T14:53:32.785Z">
+<meta property="og:updated_time" content="2022-01-13T19:14:43.860Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="SQL Where妙用 #sql 深入理解SQL中where 1=1的用处   where 的条件为永真 SQL注入时: DELETE FROM table_a WHERE name= &apos;张三&apos; DELETE FROM table_a WHERE name= &apos;张三&apos; or 1=1 本来是删除ａ值为张三的这一条数据，这就又变成了无约束的删除了。 1=1 永真， 1&amp;lt;&amp;gt;1 永假。   在">
+<meta name="twitter:title" content="SQL Where妙用">
+<meta name="twitter:description" content="深入理解SQL中where 1=1的用处   where 的条件为永真 SQL注入时: DELETE FROM table_a WHERE name= &apos;张三&apos; DELETE FROM table_a WHERE name= &apos;张三&apos; or 1=1 本来是删除ａ值为张三的这一条数据，这就又变成了无约束的删除了。 1=1 永真， 1&amp;lt;&amp;gt;1 永假。   在后台写不定数量的查询条件下，便于规">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title> | 架构师成长之旅</title>
+  <title>SQL Where妙用 | 架构师成长之旅</title>
   
 
 
@@ -341,7 +341,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">SQL Where妙用</h2>
         
 
         <div class="post-meta">
@@ -369,12 +369,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-12-14T22:53:32+08:00">
-                2021-12-14
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T03:14:43+08:00">
+                2022-01-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SQL/" itemprop="url" rel="index">
+                    <span itemprop="name">SQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -407,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  543
+                  538
                 </span>
               
 
@@ -444,9 +466,7 @@
       
 
       
-        <h1 id="SQL-Where妙用"><a class="header-anchor" href="#SQL-Where妙用"></a>SQL Where妙用</h1>
-<p>#sql</p>
-<h2 id="深入理解SQL中where-1-1的用处"><a class="header-anchor" href="#深入理解SQL中where-1-1的用处"></a>深入理解SQL中where 1=1的用处</h2>
+        <h2 id="深入理解SQL中where-1-1的用处"><a class="header-anchor" href="#深入理解SQL中where-1-1的用处"></a>深入理解SQL中where 1=1的用处</h2>
 <ol>
 <li>
 <p>where 的条件为永真<br>
@@ -498,7 +518,7 @@ SQL注入时:<br>
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jinguo.tech/2022/01/14/SQL Where妙用/" title>https://jinguo.tech/2022/01/14/SQL Where妙用/</a>
+    <a href="https://jinguo.tech/2022/01/14/SQL Where妙用/" title="SQL Where妙用">https://jinguo.tech/2022/01/14/SQL Where妙用/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -511,6 +531,12 @@ SQL注入时:<br>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/SQL/" rel="tag"><i class="fa fa-tag"></i> SQL</a>
+          
+        </div>
+      
 
       
       
@@ -520,8 +546,8 @@ SQL注入时:<br>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/01/14/SpringBoot集成Kafka/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2022/01/14/SpringBoot参数校验/" rel="next" title="SpringBoot参数校验">
+                <i class="fa fa-chevron-left"></i> SpringBoot参数校验
               </a>
             
           </div>
@@ -530,8 +556,8 @@ SQL注入时:<br>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/14/Stream排序和分页/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/01/14/Stream排序和分页/" rel="prev" title="stream排序和分页">
+                stream排序和分页 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -614,7 +640,7 @@ SQL注入时:<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -625,7 +651,7 @@ SQL注入时:<br>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -636,7 +662,7 @@ SQL注入时:<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -728,7 +754,7 @@ SQL注入时:<br>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL-Where妙用"><span class="nav-number">1.</span> <span class="nav-text">SQL Where妙用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#深入理解SQL中where-1-1的用处"><span class="nav-number">1.1.</span> <span class="nav-text">深入理解SQL中where 1=1的用处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mybatis-where-1-1-和-where标签"><span class="nav-number">1.2.</span> <span class="nav-text">Mybatis where 1=1 和 where标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">1.3.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#深入理解SQL中where-1-1的用处"><span class="nav-number">1.</span> <span class="nav-text">深入理解SQL中where 1=1的用处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mybatis-where-1-1-和-where标签"><span class="nav-number">2.</span> <span class="nav-text">Mybatis where 1=1 和 where标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -771,7 +797,7 @@ SQL注入时:<br>
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">30.6k</span>
+    <span title="Site words total count">27k</span>
    
 </div>
 
