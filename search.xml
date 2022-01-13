@@ -74,38 +74,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JS基础语法</title>
-    <url>/2022/01/14/JS%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="Javascript中-的含义"><a class="header-anchor" href="#Javascript中-的含义"></a>Javascript中!!的含义</h2>
-<p>Javascript中!!(两个感叹号，双感叹号)可以用来做什么，可以做出如下判断：</p>
-<ul>
-<li>数值：表示不是0，且有确定含义的值（包括无穷大）</li>
-<li>字符串：表示长度大于0的字符串</li>
-<li>数组，对象，函数：只能表示不是undefined或null,并不能判断是否有元素和内容。<br>
-<code>if(!!arr &amp;&amp; arr.length&gt;0)</code></li>
-</ul>
-<h2 id="js判断为空Null与字符串为空简写方法"><a class="header-anchor" href="#js判断为空Null与字符串为空简写方法"></a>js判断为空Null与字符串为空简写方法</h2>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (variable1 !== <span class="literal">null</span> || variable1 !== <span class="literal">undefined</span> || variable1 !== <span class="string">''</span>) &#123; </span><br><span class="line"> 	 <span class="keyword">var</span> variable2 = variable1; </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>上面的意思是说如果variable1不是一个空对象，或者未定义，或者不等于空字符串，那么声明一个variable2变量，将variable1赋给variable2。也就是说如果variable1存在那么就将variable1的值赋给variable2，若不存在则为空字符串。如下面的简写代码。<br>
-<code>var variable2 = variable1 || '';</code><br>
-判断字符串是否为空：<br>
-<code>str.length==0</code><br>
-如果用户输入的是空格，制表符，换页符呢?这样的话，是不为空的<br>
-可以用正则表达式来判断<br>
-<code>str.replace(/(^s*)|(s*$)/g, &quot;&quot;).length ==0</code><br>
-或者<br>
-<code>str.replace(/(^\s*)|(\s*$)/g, &quot;&quot;)) != &quot;&quot;</code></p>
-<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
-<p><a href="https://www.cnblogs.com/daysme/p/6979231.html" target="_blank" rel="noopener">js判空</a></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hive实战</title>
     <url>/2020/12/28/Hive%20%E5%AE%9E%E6%93%8D/</url>
     <content><![CDATA[<h2 id="一、Database"><a class="header-anchor" href="#一、Database"></a>一、Database</h2>
@@ -239,6 +207,38 @@
       </categories>
       <tags>
         <tag>Hive</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS基础语法</title>
+    <url>/2022/01/14/JS%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="Javascript中-的含义"><a class="header-anchor" href="#Javascript中-的含义"></a>Javascript中!!的含义</h2>
+<p>Javascript中!!(两个感叹号，双感叹号)可以用来做什么，可以做出如下判断：</p>
+<ul>
+<li>数值：表示不是0，且有确定含义的值（包括无穷大）</li>
+<li>字符串：表示长度大于0的字符串</li>
+<li>数组，对象，函数：只能表示不是undefined或null,并不能判断是否有元素和内容。<br>
+<code>if(!!arr &amp;&amp; arr.length&gt;0)</code></li>
+</ul>
+<h2 id="js判断为空Null与字符串为空简写方法"><a class="header-anchor" href="#js判断为空Null与字符串为空简写方法"></a>js判断为空Null与字符串为空简写方法</h2>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (variable1 !== <span class="literal">null</span> || variable1 !== <span class="literal">undefined</span> || variable1 !== <span class="string">''</span>) &#123; </span><br><span class="line"> 	 <span class="keyword">var</span> variable2 = variable1; </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>上面的意思是说如果variable1不是一个空对象，或者未定义，或者不等于空字符串，那么声明一个variable2变量，将variable1赋给variable2。也就是说如果variable1存在那么就将variable1的值赋给variable2，若不存在则为空字符串。如下面的简写代码。<br>
+<code>var variable2 = variable1 || '';</code><br>
+判断字符串是否为空：<br>
+<code>str.length==0</code><br>
+如果用户输入的是空格，制表符，换页符呢?这样的话，是不为空的<br>
+可以用正则表达式来判断<br>
+<code>str.replace(/(^s*)|(s*$)/g, &quot;&quot;).length ==0</code><br>
+或者<br>
+<code>str.replace(/(^\s*)|(\s*$)/g, &quot;&quot;)) != &quot;&quot;</code></p>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<p><a href="https://www.cnblogs.com/daysme/p/6979231.html" target="_blank" rel="noopener">js判空</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -1343,6 +1343,33 @@ Sender发送消息给Queue；Receiver从Queue拿到消息来处理。</p>
       </tags>
   </entry>
   <entry>
+    <title>字节数组妙用</title>
+    <url>/2022/01/14/%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%E5%A6%99%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="字节属于最小单位"><a class="header-anchor" href="#字节属于最小单位"></a>字节属于最小单位</h1>
+<p>例如在Java中，int占用4个字节，long占用8个字节等。基本上所有基本类型(包括String)都可以转换成字节，那么这到底有何作用。<br>
+在实际开发中，经常会用到本地缓存，或使用<code>Redis</code>或者<code>Memcached</code>来作分布式缓存,Java一般存入缓存中的对象无非是以下几种:</p>
+<ul>
+<li>序列化的Java对象：一个Java对象序列化后所占用的字节是按对象中属性个数，方法个数，以及属性的值决定，最小也需要几百个字节来存储，大的话可能需要几万个字节</li>
+<li>String(可能是json串)：占用字节由字符串的长度决定</li>
+<li>规则的byte[]数组：占用字节由数组长度决定，相比较于String来说，基本类型转换成固定字节的数组，而不是转换成内容长度的String，故字节数组所占用的字节比String更少</li>
+</ul>
+<blockquote>
+<ol>
+<li>在大量的缓存数据(亿级以上)的情况下，为了提高空间利用率，切勿将<strong>Java对象</strong>当做缓存的内容</li>
+<li>字节数组所需空间最少</li>
+</ol>
+</blockquote>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<p><a href="https://www.jianshu.com/p/665f4dd77f30" target="_blank" rel="noopener">字节数组的妙用</a></p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>jdk</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>同步注解与并发性标注</title>
     <url>/2022/01/14/%E5%90%8C%E6%AD%A5%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7%E6%A0%87%E6%B3%A8/</url>
     <content><![CDATA[<h2 id="同步注解"><a class="header-anchor" href="#同步注解"></a>同步注解</h2>
@@ -1373,33 +1400,6 @@ Sender发送消息给Queue；Receiver从Queue拿到消息来处理。</p>
       <tags>
         <tag>Spring</tag>
         <tag>多线程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字节数组妙用</title>
-    <url>/2022/01/14/%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%E5%A6%99%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="字节属于最小单位"><a class="header-anchor" href="#字节属于最小单位"></a>字节属于最小单位</h1>
-<p>例如在Java中，int占用4个字节，long占用8个字节等。基本上所有基本类型(包括String)都可以转换成字节，那么这到底有何作用。<br>
-在实际开发中，经常会用到本地缓存，或使用<code>Redis</code>或者<code>Memcached</code>来作分布式缓存,Java一般存入缓存中的对象无非是以下几种:</p>
-<ul>
-<li>序列化的Java对象：一个Java对象序列化后所占用的字节是按对象中属性个数，方法个数，以及属性的值决定，最小也需要几百个字节来存储，大的话可能需要几万个字节</li>
-<li>String(可能是json串)：占用字节由字符串的长度决定</li>
-<li>规则的byte[]数组：占用字节由数组长度决定，相比较于String来说，基本类型转换成固定字节的数组，而不是转换成内容长度的String，故字节数组所占用的字节比String更少</li>
-</ul>
-<blockquote>
-<ol>
-<li>在大量的缓存数据(亿级以上)的情况下，为了提高空间利用率，切勿将<strong>Java对象</strong>当做缓存的内容</li>
-<li>字节数组所需空间最少</li>
-</ol>
-</blockquote>
-<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
-<p><a href="https://www.jianshu.com/p/665f4dd77f30" target="_blank" rel="noopener">字节数组的妙用</a></p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>jdk</tag>
       </tags>
   </entry>
   <entry>
@@ -1472,43 +1472,6 @@ Sender发送消息给Queue；Receiver从Queue拿到消息来处理。</p>
       </tags>
   </entry>
   <entry>
-    <title>Empty List</title>
-    <url>/2022/01/14/%E8%BF%94%E5%9B%9E%E7%A9%BAList%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="返回空List的方式"><a class="header-anchor" href="#返回空List的方式"></a>返回空List的方式</h2>
-<ol>
-<li><code>new ArrayList()</code></li>
-<li><code>new ArrayList(0)</code></li>
-<li><code>Collections.emptyList()</code></li>
-<li><code>Lists.newArrayList()</code></li>
-</ol>
-<p><a href="https://blog.csdn.net/yangguosb/article/details/84573635" target="_blank" rel="noopener">返回空List的方式</a></p>
-<p>因为返回空集合的替代方法通常是返回null;<br>
-然后呼叫者必须添加针对NullPointerException的警卫。如果返回空集合，则会减轻错误类别。在Java 8+中，还有一个Optional类型，它可以在没有Collection的情况下实现相同的目的。</p>
-<h2 id="返回null-还是-空集合？-推荐空集合"><a class="header-anchor" href="#返回null-还是-空集合？-推荐空集合"></a>返回null 还是 空集合？ 推荐空集合</h2>
-<p>null ?? []<br>
-<strong>返回null 还是 空对象？</strong><br>
-如果您打算指示没有可用数据，则返回null通常是最好的主意。<br>
-<strong>空对象表示已返回数据，而返回null则表示未返回任何内容。</strong></p>
-<p>此外，如果尝试访问<strong>对象中的成员</strong>，则返回null将会导致<strong>null异常</strong>，这对于突出显示错误代码很有用-尝试不访问任何成员是没有意义的。访问空对象的成员不会失败，这意味着错误可能会被发现。<br>
-map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optional 对象，所以可以做链式调用。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">User user = <span class="keyword">new</span> User();</span><br><span class="line">String name = Optional.of(user).map(User::getName).orElse(<span class="string">"佚名"</span>);</span><br><span class="line">System.out.println(name);</span><br></pre></td></tr></table></figure>
-<p>如上，取出user对象的name值，若name为空，返回一个默认值“佚名”（神奇的名字）。<br>
-这里，直接调用map方法，就不需要对user对象进行预先判空了。因为在map方法里边，会调用isPresent方法帮我们处理user为null的情况。<br>
-到这里，脑袋转圈快的小伙伴，是不是对开头的坑已经有启发了。<br>
-没错，我们可以通过 <strong>Optional 的链式调用</strong>，通过 map，orElse 等操作改写。如下，</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">getUserAddr1</span><span class="params">(Optional&lt;User&gt; user)</span></span>&#123;</span><br><span class="line">    <span class="comment">//先获取address对象</span></span><br><span class="line">    <span class="keyword">return</span> user.map((u)-&gt;u.getAddress())</span><br><span class="line">            <span class="comment">//再获取details值，</span></span><br><span class="line">            .map(e -&gt; e.getDetails())</span><br><span class="line">            <span class="comment">//若detail为null，则返回一个默认值</span></span><br><span class="line">            .orElse(<span class="string">"地址信息未填写"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>备注：<a href="https://segmentfault.com/a/1190000023912618" target="_blank" rel="noopener">JDK8新特性</a></p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>list</tag>
-        <tag>jdk</tag>
-        <tag>stream</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>线程池实现原理</title>
     <url>/2022/01/14/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<h2 id="线程池是什么"><a class="header-anchor" href="#线程池是什么"></a>线程池是什么</h2>
@@ -1546,6 +1509,43 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
       </categories>
       <tags>
         <tag>线程池</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Empty List</title>
+    <url>/2022/01/14/%E8%BF%94%E5%9B%9E%E7%A9%BAList%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="返回空List的方式"><a class="header-anchor" href="#返回空List的方式"></a>返回空List的方式</h2>
+<ol>
+<li><code>new ArrayList()</code></li>
+<li><code>new ArrayList(0)</code></li>
+<li><code>Collections.emptyList()</code></li>
+<li><code>Lists.newArrayList()</code></li>
+</ol>
+<p><a href="https://blog.csdn.net/yangguosb/article/details/84573635" target="_blank" rel="noopener">返回空List的方式</a></p>
+<p>因为返回空集合的替代方法通常是返回null;<br>
+然后呼叫者必须添加针对NullPointerException的警卫。如果返回空集合，则会减轻错误类别。在Java 8+中，还有一个Optional类型，它可以在没有Collection的情况下实现相同的目的。</p>
+<h2 id="返回null-还是-空集合？-推荐空集合"><a class="header-anchor" href="#返回null-还是-空集合？-推荐空集合"></a>返回null 还是 空集合？ 推荐空集合</h2>
+<p>null ?? []<br>
+<strong>返回null 还是 空对象？</strong><br>
+如果您打算指示没有可用数据，则返回null通常是最好的主意。<br>
+<strong>空对象表示已返回数据，而返回null则表示未返回任何内容。</strong></p>
+<p>此外，如果尝试访问<strong>对象中的成员</strong>，则返回null将会导致<strong>null异常</strong>，这对于突出显示错误代码很有用-尝试不访问任何成员是没有意义的。访问空对象的成员不会失败，这意味着错误可能会被发现。<br>
+map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optional 对象，所以可以做链式调用。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">User user = <span class="keyword">new</span> User();</span><br><span class="line">String name = Optional.of(user).map(User::getName).orElse(<span class="string">"佚名"</span>);</span><br><span class="line">System.out.println(name);</span><br></pre></td></tr></table></figure>
+<p>如上，取出user对象的name值，若name为空，返回一个默认值“佚名”（神奇的名字）。<br>
+这里，直接调用map方法，就不需要对user对象进行预先判空了。因为在map方法里边，会调用isPresent方法帮我们处理user为null的情况。<br>
+到这里，脑袋转圈快的小伙伴，是不是对开头的坑已经有启发了。<br>
+没错，我们可以通过 <strong>Optional 的链式调用</strong>，通过 map，orElse 等操作改写。如下，</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">getUserAddr1</span><span class="params">(Optional&lt;User&gt; user)</span></span>&#123;</span><br><span class="line">    <span class="comment">//先获取address对象</span></span><br><span class="line">    <span class="keyword">return</span> user.map((u)-&gt;u.getAddress())</span><br><span class="line">            <span class="comment">//再获取details值，</span></span><br><span class="line">            .map(e -&gt; e.getDetails())</span><br><span class="line">            <span class="comment">//若detail为null，则返回一个默认值</span></span><br><span class="line">            .orElse(<span class="string">"地址信息未填写"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>备注：<a href="https://segmentfault.com/a/1190000023912618" target="_blank" rel="noopener">JDK8新特性</a></p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>list</tag>
+        <tag>jdk</tag>
+        <tag>stream</tag>
       </tags>
   </entry>
 </search>
