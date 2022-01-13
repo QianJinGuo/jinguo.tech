@@ -242,6 +242,20 @@
       </tags>
   </entry>
   <entry>
+    <title>List按照对象属性去重</title>
+    <url>/2022/01/14/List%E6%8C%89%E7%85%A7%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8E%BB%E9%87%8D/</url>
+    <content><![CDATA[<h2 id="通过stream去重"><a class="header-anchor" href="#通过stream去重"></a>通过stream去重</h2>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List <span class="title">getFileDetailList</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (CollectionUtils.isNotEmpty(fileDetailList)) &#123;</span><br><span class="line"><span class="keyword">return</span> fileDetailList.stream().filter(distinctByKey(SecurityResource::getName)).collect(Collectors.toList());</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">Predicate&lt;T&gt; <span class="title">distinctByKey</span><span class="params">(Function&lt;? <span class="keyword">super</span> T, Object&gt; keyExtractor)</span> </span>&#123;</span><br><span class="line">    Map&lt;Object, Boolean&gt; seen = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">2</span> &gt;&gt; <span class="number">4</span>);</span><br><span class="line">    <span class="keyword">return</span> t -&gt; seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>list</tag>
+        <tag>jdk</tag>
+        <tag>stream</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL执行计划</title>
     <url>/2022/01/14/MySQL%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92/</url>
     <content><![CDATA[<h2 id="Explain-用途"><a class="header-anchor" href="#Explain-用途"></a><code>Explain</code> 用途</h2>
@@ -263,20 +277,6 @@
       </categories>
       <tags>
         <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>List按照对象属性去重</title>
-    <url>/2022/01/14/List%E6%8C%89%E7%85%A7%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8E%BB%E9%87%8D/</url>
-    <content><![CDATA[<h2 id="通过stream去重"><a class="header-anchor" href="#通过stream去重"></a>通过stream去重</h2>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List <span class="title">getFileDetailList</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (CollectionUtils.isNotEmpty(fileDetailList)) &#123;</span><br><span class="line"><span class="keyword">return</span> fileDetailList.stream().filter(distinctByKey(SecurityResource::getName)).collect(Collectors.toList());</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">Predicate&lt;T&gt; <span class="title">distinctByKey</span><span class="params">(Function&lt;? <span class="keyword">super</span> T, Object&gt; keyExtractor)</span> </span>&#123;</span><br><span class="line">    Map&lt;Object, Boolean&gt; seen = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">2</span> &gt;&gt; <span class="number">4</span>);</span><br><span class="line">    <span class="keyword">return</span> t -&gt; seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>list</tag>
-        <tag>jdk</tag>
-        <tag>stream</tag>
       </tags>
   </entry>
   <entry>
@@ -641,24 +641,6 @@ Netty的优点总结如下：<br>
       </tags>
   </entry>
   <entry>
-    <title>Redis锁</title>
-    <url>/2022/01/14/Redis%E9%94%81/</url>
-    <content><![CDATA[<h2 id="项目应用"><a class="header-anchor" href="#项目应用"></a>项目应用</h2>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//如果不存在(为空)就set值，并返回1；如果存在(不为空)不进行操作，并返回0</span></span><br><span class="line">Boolean success = stringRedisTemplate.opsForValue().setIfAbsent(lockKey, String.valueOf(System.currentTimeMillis()), seconds, TimeUnit.SECONDS);</span><br><span class="line"><span class="keyword">return</span> success != <span class="keyword">null</span> &amp;&amp; success;</span><br></pre></td></tr></table></figure>
-<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
-<p><a href="https://xie.infoq.cn/article/556aaceb68789b9de4807f1c2" target="_blank" rel="noopener">Redis分布式锁原理</a><br>
-<a href="https://juejin.cn/post/6901484610031452174" target="_blank" rel="noopener">Redis实现分布式锁</a><br>
-<a href="https://blog.csdn.net/amosjob/article/details/99681707" target="_blank" rel="noopener">企业级分布式锁</a></p>
-]]></content>
-      <categories>
-        <category>缓存</category>
-      </categories>
-      <tags>
-        <tag>redis</tag>
-        <tag>分布式锁</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RocketMQ知识点</title>
     <url>/2020/01/16/RocketMQ%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<h2 id="1-RocketMQ-是什么"><a class="header-anchor" href="#1-RocketMQ-是什么"></a>1. RocketMQ 是什么</h2>
@@ -717,6 +699,24 @@ Netty的优点总结如下：<br>
       </categories>
       <tags>
         <tag>消息队列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis锁</title>
+    <url>/2022/01/14/Redis%E9%94%81/</url>
+    <content><![CDATA[<h2 id="项目应用"><a class="header-anchor" href="#项目应用"></a>项目应用</h2>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//如果不存在(为空)就set值，并返回1；如果存在(不为空)不进行操作，并返回0</span></span><br><span class="line">Boolean success = stringRedisTemplate.opsForValue().setIfAbsent(lockKey, String.valueOf(System.currentTimeMillis()), seconds, TimeUnit.SECONDS);</span><br><span class="line"><span class="keyword">return</span> success != <span class="keyword">null</span> &amp;&amp; success;</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<p><a href="https://xie.infoq.cn/article/556aaceb68789b9de4807f1c2" target="_blank" rel="noopener">Redis分布式锁原理</a><br>
+<a href="https://juejin.cn/post/6901484610031452174" target="_blank" rel="noopener">Redis实现分布式锁</a><br>
+<a href="https://blog.csdn.net/amosjob/article/details/99681707" target="_blank" rel="noopener">企业级分布式锁</a></p>
+]]></content>
+      <categories>
+        <category>缓存</category>
+      </categories>
+      <tags>
+        <tag>redis</tag>
+        <tag>分布式锁</tag>
       </tags>
   </entry>
   <entry>
@@ -1322,27 +1322,6 @@ Sender发送消息给Queue；Receiver从Queue拿到消息来处理。</p>
 ]]></content>
   </entry>
   <entry>
-    <title>关闭线程池</title>
-    <url>/2022/01/14/%E5%85%B3%E9%97%AD%E7%BA%BF%E7%A8%8B%E6%B1%A0/</url>
-    <content><![CDATA[<h2 id="dubbo优雅关闭线程池"><a class="header-anchor" href="#dubbo优雅关闭线程池"></a>dubbo优雅关闭线程池</h2>
-<ul>
-<li>shutDown：通知线程池启动有序关闭，执行线程池之前已经提交的任务，但是不再接受新的任务。调用shutDown后再提交任务将会抛出RejectedExecutionException异常。</li>
-<li>shutDownNow：尝试立即停止所有已经提交的任务，并会返回正在等待执行（未执行）的任务列表。shutDownNow通过向线程池中的线程发送一个中断请求而中止线程，如果线程池中运行了会抛出InterruptedException的程序，将会抛出一个InterruptedException。如过这个线程不能响应中断那么可能永远无法被终止。</li>
-<li>isTerminated：所有的任务都被关闭返回true，否则返回false。只有调用了shutDown或者shutDownNow，isTerminated才可能为true。</li>
-<li>awaitTermination(long timeout,TimeUnit unit)throws InterruptedException：阻塞当前线程</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger logger = LoggerFactory.getLogger(ExecutorUtil.class);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ThreadPoolExecutor shutdownExecutor = <span class="keyword">new</span> ThreadPoolExecutor(<span class="number">0</span>, <span class="number">1</span>,</span><br><span class="line">            <span class="number">0L</span>, TimeUnit.MILLISECONDS,</span><br><span class="line">            <span class="keyword">new</span> LinkedBlockingQueue&lt;Runnable&gt;(<span class="number">100</span>),</span><br><span class="line">            <span class="keyword">new</span> NamedThreadFactory(<span class="string">"Close-ExecutorService-Timer"</span>, <span class="keyword">true</span>));</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isTerminated</span><span class="params">(Executor executor)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (executor <span class="keyword">instanceof</span> ExecutorService) &#123;</span><br><span class="line">            <span class="keyword">if</span> (((ExecutorService) executor).isTerminated()) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Use the shutdown pattern from:</span></span><br><span class="line"><span class="comment">     *  https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> executor the Executor to shutdown</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> timeout the timeout in milliseconds before termination</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">gracefulShutdown</span><span class="params">(Executor executor, <span class="keyword">int</span> timeout)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!(executor <span class="keyword">instanceof</span> ExecutorService) || isTerminated(executor)) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">final</span> ExecutorService es = (ExecutorService) executor;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// Disable new tasks from being submitted</span></span><br><span class="line">            es.shutdown();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SecurityException ex2) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NullPointerException ex2) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// Wait a while for existing tasks to terminate</span></span><br><span class="line">            <span class="keyword">if</span> (!es.awaitTermination(timeout, TimeUnit.MILLISECONDS)) &#123;</span><br><span class="line">                es.shutdownNow();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException ex) &#123;</span><br><span class="line">            es.shutdownNow();</span><br><span class="line">            Thread.currentThread().interrupt();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!isTerminated(es)) &#123;</span><br><span class="line">            newThreadToCloseExecutor(es);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">shutdownNow</span><span class="params">(Executor executor, <span class="keyword">final</span> <span class="keyword">int</span> timeout)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!(executor <span class="keyword">instanceof</span> ExecutorService) || isTerminated(executor)) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">final</span> ExecutorService es = (ExecutorService) executor;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            es.shutdownNow();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SecurityException ex2) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NullPointerException ex2) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            es.awaitTermination(timeout, TimeUnit.MILLISECONDS);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException ex) &#123;</span><br><span class="line">            Thread.currentThread().interrupt();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!isTerminated(es)) &#123;</span><br><span class="line">            newThreadToCloseExecutor(es);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">newThreadToCloseExecutor</span><span class="params">(<span class="keyword">final</span> ExecutorService es)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!isTerminated(es)) &#123;</span><br><span class="line">            shutdownExecutor.execute(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">                <span class="meta">@Override</span></span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">                            es.shutdownNow();</span><br><span class="line">                            <span class="keyword">if</span> (es.awaitTermination(<span class="number">10</span>, TimeUnit.MILLISECONDS)) &#123;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException ex) &#123;</span><br><span class="line">                        Thread.currentThread().interrupt();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">                        logger.warn(e.getMessage(), e);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
-<p><a href="https://developer.aliyun.com/article/756816" target="_blank" rel="noopener">学习dubbo如何优雅关闭线程池</a></p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>线程池</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>同步注解与并发性标注</title>
     <url>/2022/01/14/%E5%90%8C%E6%AD%A5%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7%E6%A0%87%E6%B3%A8/</url>
     <content><![CDATA[<h2 id="同步注解"><a class="header-anchor" href="#同步注解"></a>同步注解</h2>
@@ -1441,37 +1420,6 @@ Sender发送消息给Queue；Receiver从Queue拿到消息来处理。</p>
       </tags>
   </entry>
   <entry>
-    <title>线程执行顺序</title>
-    <url>/2022/01/14/%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
-    <content><![CDATA[<h2 id="线程执行顺序"><a class="header-anchor" href="#线程执行顺序"></a>线程执行顺序</h2>
-<blockquote>
-<p>jvm为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行（Out-Of-Order Execution）优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的，但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此，如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不能靠代码的先后顺序来保证[^1]<br>
-<code>1.《深入理解Java虚拟机：JVM高级特性与最佳实践》 — 周志明</code></p>
-</blockquote>
-<p>如果程序没有正确同步，那么可能会存在数据竞争。JMM对数据竞争的定义如下：</p>
-<blockquote>
-<p>在一个线程中写一个变量，在另一个线程中读取同一个变量，而且写和读没有通过同步来排序</p>
-</blockquote>
-<p>顺序一致性模型有以下<strong>两大特性</strong>：</p>
-<ol>
-<li>一个线程中的所有操作必须按照==程序的顺序==来执行</li>
-<li>（不管程序是否同步）所有线程都只能看到一个单一的操作执行顺序。在顺序一致内存模型中，每一个操作都必须是原子执行且立即对所有线程可见。</li>
-</ol>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">可以把顺序顺序一致模型理解为一个单摆，每一个时刻单摆只能到一个位置，对应过来，任何时刻最多只能有一个线程才能连接到内存。</span><br><span class="line">由于重排序的影响，实际指令的执行顺序是不可知的，但是不管如何排序，每个操作能够立即对其他线程可见，所以所有线程看到的都是一样的执行顺序。</span><br><span class="line">但是在JMM中是没有这个规定的，就是说其他线程看到执行顺序与除自己外的线程看到的执行顺序可能是不一致的。</span><br><span class="line">比如，当前线程把写过的数据缓存缓存到写缓存中，在没有刷新到主内存（计算机系统的DRAM）之前，这个写操作对其他线程是不可见的，意味着其他线程认为该线程根本没有执行写操作。</span><br><span class="line">那么何时才能可见呢？只有在当前线程把写缓存中数据刷新到主内存的时候，对其他内存才是可见的。</span><br></pre></td></tr></table></figure>
-<p><strong>如何控制多线程的执行顺序</strong>？</p>
-<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
-<p><a href="https://blog.csdn.net/hello_worldee/article/details/77823426" target="_blank" rel="noopener">多线程-重排序与顺序一致性</a><br>
-![[并发编程以及锁.pptx]]![[java多线程相关分享.pptx]]</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>多线程</tag>
-        <tag>jvm</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>线程池实现原理</title>
     <url>/2022/01/14/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<h2 id="线程池是什么"><a class="header-anchor" href="#线程池是什么"></a>线程池是什么</h2>
@@ -1512,6 +1460,37 @@ Sender发送消息给Queue；Receiver从Queue拿到消息来处理。</p>
       </tags>
   </entry>
   <entry>
+    <title>线程执行顺序</title>
+    <url>/2022/01/14/%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
+    <content><![CDATA[<h2 id="线程执行顺序"><a class="header-anchor" href="#线程执行顺序"></a>线程执行顺序</h2>
+<blockquote>
+<p>jvm为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行（Out-Of-Order Execution）优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的，但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此，如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不能靠代码的先后顺序来保证[^1]<br>
+<code>1.《深入理解Java虚拟机：JVM高级特性与最佳实践》 — 周志明</code></p>
+</blockquote>
+<p>如果程序没有正确同步，那么可能会存在数据竞争。JMM对数据竞争的定义如下：</p>
+<blockquote>
+<p>在一个线程中写一个变量，在另一个线程中读取同一个变量，而且写和读没有通过同步来排序</p>
+</blockquote>
+<p>顺序一致性模型有以下<strong>两大特性</strong>：</p>
+<ol>
+<li>一个线程中的所有操作必须按照==程序的顺序==来执行</li>
+<li>（不管程序是否同步）所有线程都只能看到一个单一的操作执行顺序。在顺序一致内存模型中，每一个操作都必须是原子执行且立即对所有线程可见。</li>
+</ol>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">可以把顺序顺序一致模型理解为一个单摆，每一个时刻单摆只能到一个位置，对应过来，任何时刻最多只能有一个线程才能连接到内存。</span><br><span class="line">由于重排序的影响，实际指令的执行顺序是不可知的，但是不管如何排序，每个操作能够立即对其他线程可见，所以所有线程看到的都是一样的执行顺序。</span><br><span class="line">但是在JMM中是没有这个规定的，就是说其他线程看到执行顺序与除自己外的线程看到的执行顺序可能是不一致的。</span><br><span class="line">比如，当前线程把写过的数据缓存缓存到写缓存中，在没有刷新到主内存（计算机系统的DRAM）之前，这个写操作对其他线程是不可见的，意味着其他线程认为该线程根本没有执行写操作。</span><br><span class="line">那么何时才能可见呢？只有在当前线程把写缓存中数据刷新到主内存的时候，对其他内存才是可见的。</span><br></pre></td></tr></table></figure>
+<p><strong>如何控制多线程的执行顺序</strong>？</p>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<p><a href="https://blog.csdn.net/hello_worldee/article/details/77823426" target="_blank" rel="noopener">多线程-重排序与顺序一致性</a><br>
+![[并发编程以及锁.pptx]]![[java多线程相关分享.pptx]]</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>多线程</tag>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Empty List</title>
     <url>/2022/01/14/%E8%BF%94%E5%9B%9E%E7%A9%BAList%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<h2 id="返回空List的方式"><a class="header-anchor" href="#返回空List的方式"></a>返回空List的方式</h2>
@@ -1546,6 +1525,27 @@ map类似 Stream 的 map方法。处理完之后，返回的还是一个 Optiona
         <tag>list</tag>
         <tag>jdk</tag>
         <tag>stream</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关闭线程池</title>
+    <url>/2022/01/14/%E5%85%B3%E9%97%AD%E7%BA%BF%E7%A8%8B%E6%B1%A0/</url>
+    <content><![CDATA[<h2 id="dubbo优雅关闭线程池"><a class="header-anchor" href="#dubbo优雅关闭线程池"></a>dubbo优雅关闭线程池</h2>
+<ul>
+<li>shutDown：通知线程池启动有序关闭，执行线程池之前已经提交的任务，但是不再接受新的任务。调用shutDown后再提交任务将会抛出RejectedExecutionException异常。</li>
+<li>shutDownNow：尝试立即停止所有已经提交的任务，并会返回正在等待执行（未执行）的任务列表。shutDownNow通过向线程池中的线程发送一个中断请求而中止线程，如果线程池中运行了会抛出InterruptedException的程序，将会抛出一个InterruptedException。如过这个线程不能响应中断那么可能永远无法被终止。</li>
+<li>isTerminated：所有的任务都被关闭返回true，否则返回false。只有调用了shutDown或者shutDownNow，isTerminated才可能为true。</li>
+<li>awaitTermination(long timeout,TimeUnit unit)throws InterruptedException：阻塞当前线程</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger logger = LoggerFactory.getLogger(ExecutorUtil.class);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ThreadPoolExecutor shutdownExecutor = <span class="keyword">new</span> ThreadPoolExecutor(<span class="number">0</span>, <span class="number">1</span>,</span><br><span class="line">            <span class="number">0L</span>, TimeUnit.MILLISECONDS,</span><br><span class="line">            <span class="keyword">new</span> LinkedBlockingQueue&lt;Runnable&gt;(<span class="number">100</span>),</span><br><span class="line">            <span class="keyword">new</span> NamedThreadFactory(<span class="string">"Close-ExecutorService-Timer"</span>, <span class="keyword">true</span>));</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isTerminated</span><span class="params">(Executor executor)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (executor <span class="keyword">instanceof</span> ExecutorService) &#123;</span><br><span class="line">            <span class="keyword">if</span> (((ExecutorService) executor).isTerminated()) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Use the shutdown pattern from:</span></span><br><span class="line"><span class="comment">     *  https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> executor the Executor to shutdown</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> timeout the timeout in milliseconds before termination</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">gracefulShutdown</span><span class="params">(Executor executor, <span class="keyword">int</span> timeout)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!(executor <span class="keyword">instanceof</span> ExecutorService) || isTerminated(executor)) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">final</span> ExecutorService es = (ExecutorService) executor;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// Disable new tasks from being submitted</span></span><br><span class="line">            es.shutdown();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SecurityException ex2) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NullPointerException ex2) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// Wait a while for existing tasks to terminate</span></span><br><span class="line">            <span class="keyword">if</span> (!es.awaitTermination(timeout, TimeUnit.MILLISECONDS)) &#123;</span><br><span class="line">                es.shutdownNow();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException ex) &#123;</span><br><span class="line">            es.shutdownNow();</span><br><span class="line">            Thread.currentThread().interrupt();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!isTerminated(es)) &#123;</span><br><span class="line">            newThreadToCloseExecutor(es);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">shutdownNow</span><span class="params">(Executor executor, <span class="keyword">final</span> <span class="keyword">int</span> timeout)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!(executor <span class="keyword">instanceof</span> ExecutorService) || isTerminated(executor)) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">final</span> ExecutorService es = (ExecutorService) executor;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            es.shutdownNow();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SecurityException ex2) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NullPointerException ex2) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            es.awaitTermination(timeout, TimeUnit.MILLISECONDS);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException ex) &#123;</span><br><span class="line">            Thread.currentThread().interrupt();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!isTerminated(es)) &#123;</span><br><span class="line">            newThreadToCloseExecutor(es);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">newThreadToCloseExecutor</span><span class="params">(<span class="keyword">final</span> ExecutorService es)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!isTerminated(es)) &#123;</span><br><span class="line">            shutdownExecutor.execute(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">                <span class="meta">@Override</span></span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">                            es.shutdownNow();</span><br><span class="line">                            <span class="keyword">if</span> (es.awaitTermination(<span class="number">10</span>, TimeUnit.MILLISECONDS)) &#123;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException ex) &#123;</span><br><span class="line">                        Thread.currentThread().interrupt();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">                        logger.warn(e.getMessage(), e);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<p><a href="https://developer.aliyun.com/article/756816" target="_blank" rel="noopener">学习dubbo如何优雅关闭线程池</a></p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>线程池</tag>
       </tags>
   </entry>
 </search>
