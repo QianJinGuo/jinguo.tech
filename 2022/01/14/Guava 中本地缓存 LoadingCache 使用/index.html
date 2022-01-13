@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="JinGuo, Java, Spring">
+  <meta name="keywords" content="guava,缓存,">
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="Guava中本地缓存LoadingCache使用 #guava #缓存 Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `">
-<meta name="keywords" content="java,分布式，高并发,云计算,大数据,流式计算">
+<meta name="description" content="Guava中本地缓存LoadingCache使用 Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `Cache` 会为了保">
+<meta name="keywords" content="guava,缓存">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构师成长之旅">
+<meta property="og:title" content="Guava中本地缓存LoadingCache使用">
 <meta property="og:url" content="https://jinguo.tech/2022/01/14/Guava 中本地缓存 LoadingCache 使用/index.html">
 <meta property="og:site_name" content="架构师成长之旅">
-<meta property="og:description" content="Guava中本地缓存LoadingCache使用 #guava #缓存 Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `">
+<meta property="og:description" content="Guava中本地缓存LoadingCache使用 Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `Cache` 会为了保">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-13T16:01:25.127Z">
+<meta property="og:updated_time" content="2022-01-13T18:46:33.092Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构师成长之旅">
-<meta name="twitter:description" content="Guava中本地缓存LoadingCache使用 #guava #缓存 Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `">
+<meta name="twitter:title" content="Guava中本地缓存LoadingCache使用">
+<meta name="twitter:description" content="Guava中本地缓存LoadingCache使用 Guava Cache 1234`Cache` 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，就应当将值保存到缓存中。`Cache` 和 `ConcurrentMap` 类似，但又不尽相同。最大的不同是 `ConcurrentMap` 会永久的存储所有的元素值直到他们被显示的移除，但是 `Cache` 会为了保">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title> | 架构师成长之旅</title>
+  <title>Guava中本地缓存LoadingCache使用 | 架构师成长之旅</title>
   
 
 
@@ -341,7 +341,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">Guava中本地缓存LoadingCache使用</h2>
         
 
         <div class="post-meta">
@@ -369,12 +369,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-12-14T00:01:25+08:00">
-                2021-12-14
+              <time title="更新于" itemprop="dateModified" datetime="2022-01-14T02:46:33+08:00">
+                2022-01-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/缓存/" itemprop="url" rel="index">
+                    <span itemprop="name">缓存</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -407,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  965
+                  962
                 </span>
               
 
@@ -445,7 +467,6 @@
 
       
         <h1 id="Guava中本地缓存LoadingCache使用"><a class="header-anchor" href="#Guava中本地缓存LoadingCache使用"></a>Guava中本地缓存LoadingCache使用</h1>
-<p>#guava #缓存</p>
 <h2 id="Guava-Cache"><a class="header-anchor" href="#Guava-Cache"></a>Guava Cache</h2>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`Cache`</span> 在实际场景中有着非常广泛的使用，通常情况下如果遇到需要大量时间计算或者获取值的场景，</span><br><span class="line">就应当将值保存到缓存中。<span class="code">`Cache`</span> 和 <span class="code">`ConcurrentMap`</span> 类似，但又不尽相同。</span><br><span class="line">最大的不同是 <span class="code">`ConcurrentMap`</span> 会永久的存储所有的元素值直到他们被显示的移除，</span><br><span class="line">但是 <span class="code">`Cache`</span> 会为了保持内存使用合理，而配置自动将一些值移除。</span><br></pre></td></tr></table></figure>
 <p>通常情况下，Guava Cache 适用于以下场景：</p>
@@ -499,7 +520,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://jinguo.tech/2022/01/14/Guava 中本地缓存 LoadingCache 使用/" title>https://jinguo.tech/2022/01/14/Guava 中本地缓存 LoadingCache 使用/</a>
+    <a href="https://jinguo.tech/2022/01/14/Guava 中本地缓存 LoadingCache 使用/" title="Guava中本地缓存LoadingCache使用">https://jinguo.tech/2022/01/14/Guava 中本地缓存 LoadingCache 使用/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -512,6 +533,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/guava/" rel="tag"><i class="fa fa-tag"></i> guava</a>
+          
+            <a href="/tags/缓存/" rel="tag"><i class="fa fa-tag"></i> 缓存</a>
+          
+        </div>
+      
 
       
       
@@ -521,8 +550,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/01/14/ElasticSearch/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2022/01/14/阿里巴巴面试参考指南/" rel="next" title="阿里巴巴面试参考指南">
+                <i class="fa fa-chevron-left"></i> 阿里巴巴面试参考指南
               </a>
             
           </div>
@@ -531,8 +560,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/14/Guava之Joiner/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/01/14/Guava之Joiner/" rel="prev" title="Joiner简化用分隔符连接字符串序列">
+                Joiner简化用分隔符连接字符串序列 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -615,7 +644,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -626,7 +655,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -637,7 +666,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -772,7 +801,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">45.7k</span>
+    <span title="Site words total count">30.6k</span>
    
 </div>
 
