@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinguo.tech/"/>
-  <updated>2022-01-13T19:28:56.227Z</updated>
+  <updated>2022-01-13T19:33:41.034Z</updated>
   <id>https://jinguo.tech/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>字节数组</title>
+    <title>字节数组妙用</title>
     <link href="https://jinguo.tech/2022/01/14/%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%E5%A6%99%E7%94%A8/"/>
     <id>https://jinguo.tech/2022/01/14/%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%E5%A6%99%E7%94%A8/</id>
     <published>2022-01-13T18:02:14.399Z</published>
-    <updated>2022-01-13T19:28:56.227Z</updated>
+    <updated>2022-01-13T19:33:41.034Z</updated>
     
     <content type="html"><![CDATA[<h1 id="字节属于最小单位"><a class="header-anchor" href="#字节属于最小单位"></a>字节属于最小单位</h1><p>例如在Java中，int占用4个字节，long占用8个字节等。基本上所有基本类型(包括String)都可以转换成字节，那么这到底有何作用。<br>在实际开发中，经常会用到本地缓存，或使用<code>Redis</code>或者<code>Memcached</code>来作分布式缓存,Java一般存入缓存中的对象无非是以下几种:</p><ul><li>序列化的Java对象：一个Java对象序列化后所占用的字节是按对象中属性个数，方法个数，以及属性的值决定，最小也需要几百个字节来存储，大的话可能需要几万个字节</li><li>String(可能是json串)：占用字节由字符串的长度决定</li><li>规则的byte[]数组：占用字节由数组长度决定，相比较于String来说，基本类型转换成固定字节的数组，而不是转换成内容长度的String，故字节数组所占用的字节比String更少</li></ul><blockquote><ol><li>在大量的缓存数据(亿级以上)的情况下，为了提高空间利用率，切勿将<strong>Java对象</strong>当做缓存的内容</li><li>字节数组所需空间最少</li></ol></blockquote><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><p><a href="https://www.jianshu.com/p/665f4dd77f30" target="_blank" rel="noopener">字节数组的妙用</a></p>]]></content>
     
@@ -39,7 +39,7 @@
       <category term="java" scheme="https://jinguo.tech/categories/java/"/>
     
     
-      <category term="字节" scheme="https://jinguo.tech/tags/%E5%AD%97%E8%8A%82/"/>
+      <category term="jdk" scheme="https://jinguo.tech/tags/jdk/"/>
     
   </entry>
   
